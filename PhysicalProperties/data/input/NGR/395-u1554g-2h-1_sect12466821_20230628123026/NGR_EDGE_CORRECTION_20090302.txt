@@ -1,0 +1,31 @@
+Distance_to_edge_cm	Correction_Coefficent	Absolute_Error	Relative_Error	%_Relative_Error
+20.0	1.00	0.00	0.000000000	0.94%
+19.0	1.01	0.01	0.009604334000	0.91%
+18.0	1.01	0.01	0.009013193000	0.96%
+17.0	1.02	0.01	0.009076082000	0.90%
+16.0	1.02	0.01	0.01014329600	0.91%
+15.0	1.03	0.01	0.009051241000	1.00%
+14.0	1.03	0.01	0.01002791400	0.92%
+13.0	1.05	0.01	0.009200182000	0.94%
+12.0	1.08	0.01	0.009444834000	0.92%
+11.0	1.09	0.02	0.01923956100	1.72%
+10.0	1.14	0.02	0.01721574600	1.31%
+9.0	1.17	0.01	0.01307999100	1.02%
+8.0	1.21	0.01	0.01018456400	1.41%
+7.0	1.26	0.02	0.01414644800	1.09%
+6.0	1.33	0.01	0.01092953000	1.51%
+5.0	1.42	0.02	0.01510458000	1.09%
+4.0	1.51	0.02	0.01088078400	1.16%
+3.0	1.62	0.03	0.01558770200	1.56%
+2.0	1.76	0.05	0.02861238000	2.82%
+1.0	2.00	0.11	0.05421048100	5.42%
+0.0	2.18	0.12	0.05718165100	5.78%
+
+Edge corrections for NGR estimated on 2009-03-02 UTC
+This is a tab delimited text file
+Column 1: Distance from the detector's response center to the edge of the section in centimeters (cm)
+Column 2: Correction coefficient
+Column 3: Weighting factor
+Column 4: Relative error
+Column 5: Percent Relative error (%)
+

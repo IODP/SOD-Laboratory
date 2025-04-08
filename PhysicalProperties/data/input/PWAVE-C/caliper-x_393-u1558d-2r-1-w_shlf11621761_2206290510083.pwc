@@ -1,0 +1,29 @@
+PWAVE_C
+
+22-06-29 05:10:083 UTC, 393-U1558D-2R-1-W
+
+<HEADER>
+user=
+text_id = SHLF11621761
+instrument = CALIPERPWC
+instrument_group = GANTRY
+comments = 
+</HEADER>
+
+<SINGLE>
+distance_in_caliper = 28.5004
+travel_time =  17.04
+offset =  17.47
+velocity_x = 1672.30
+timestamp = 2022-06-29 05:09:44
+system_delay=  3.79
+liner_time_correction =   1.23
+</SINGLE>
+
+<FILE>
+run = c:\data\in\caliper-x_393-u1558d-2r-1-w_shlf11621761_2206290510083.pwc
+config = c:\ims\config_velocity\velocity.ini
+transducer_signal = c:\data\in\signal\caliper-x_393-u1558d-2r-1-w_shlf11621761_signal_2206290510083.lvm
+aux_file = c:\aux_data\pwave-c\caliperpwc\393-u1558d-2r-1-w_2206290510083_pwave-c.csv
+</FILE>
+

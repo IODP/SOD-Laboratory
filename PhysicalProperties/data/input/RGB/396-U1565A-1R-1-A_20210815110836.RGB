@@ -1,0 +1,52 @@
+RGB
+
+2021-08-15 11:08:36 UTC, 396-U1565A-1R-1-A
+
+<HEADER>
+user =
+text_id = SHLF11053441
+instrument = SW-2001T-L200725A
+instrument_group = SHIL
+observed_length = 21.00
+comment = 
+</HEADER>
+
+<SINGLE>
+sub_sample_width = 2.0
+decimate_interval = 1.0
+decimate_method = interval-average
+</SINGLE>
+
+<MULTI>
+offset=0.50, red=87.7, green=76.5, blue=64.1
+offset=1.50, red=114.1, green=95.7, blue=76.4
+offset=2.50, red=112.4, green=93.8, blue=75.0
+offset=3.50, red=116.6, green=98.1, blue=79.2
+offset=4.50, red=117.2, green=98.6, blue=79.7
+offset=5.50, red=115.6, green=96.8, blue=78.0
+offset=6.50, red=116.0, green=97.7, blue=79.3
+offset=7.50, red=119.1, green=101.0, blue=83.1
+offset=8.50, red=119.6, green=102.2, blue=84.8
+offset=9.50, red=117.2, green=99.6, blue=82.5
+offset=10.50, red=113.8, green=96.5, blue=79.3
+offset=11.50, red=116.5, green=98.8, blue=80.7
+offset=12.50, red=114.3, green=96.9, blue=79.5
+offset=13.50, red=107.7, green=90.1, blue=73.5
+offset=14.50, red=108.2, green=91.8, blue=75.4
+offset=15.50, red=107.5, green=90.7, blue=74.2
+offset=16.50, red=82.8, green=77.8, blue=69.9
+offset=17.50, red=81.5, green=82.1, blue=78.1
+offset=18.50, red=73.1, green=69.1, blue=63.2
+offset=19.50, red=100.6, green=88.9, blue=77.8
+offset=20.50, red=97.9, green=83.2, blue=69.4
+</MULTI>
+
+<FILE>
+config = c:\ims\config_shil\i_pi_ajai-cv-l107cl.ini
+</FILE>
+
+<NOTES>
+positions_excluded = FALSE
+positions_specified = FALSE
+</NOTES>
+

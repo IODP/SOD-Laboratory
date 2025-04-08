@@ -1,0 +1,90 @@
+MSPOINT
+
+2024-11-20 22:03:39 UTC, COVERED-STANDARDS-20241120
+
+<HEADER>
+user =
+text_id = COVERED_STANDARDS_20241120
+instrument = 0) BARTINGTON MODEL: MS2K S/N: 121, 1) BARTINGTON MODEL: MS3 V0.0.0.0 S/N: 0659
+instrument_group = SHMSL
+observed_length = 116.95
+comment = These are the Spectralon standards covered with Glad Cling n Seal Wrap. barcode 12587 70257
+</HEADER>
+
+<SINGLE>
+ms_units = SI
+ms_correction = 1.0000
+ms_zero = 1.34142584E+1
+zero_timestamp = 2024-11-20 21:49:57.6
+ms_sample_integration_time = 1000
+ms_zero_integration_time = 1000
+</SINGLE>
+
+<MULTI>
+offset =    2.00,magnetic_susceptibility =   3.05,timestamp = 2024-11-20 22:03:22.6,time_since_zero = 805.0
+offset =    4.00,magnetic_susceptibility =   1.43,timestamp = 2024-11-20 22:03:16.1,time_since_zero = 798.5
+offset =    6.00,magnetic_susceptibility =   1.84,timestamp = 2024-11-20 22:03:09.6,time_since_zero = 791.9
+offset =    8.00,magnetic_susceptibility =   9.59,timestamp = 2024-11-20 22:03:03.0,time_since_zero = 785.4
+offset =   10.00,magnetic_susceptibility =   4.34,timestamp = 2024-11-20 22:02:56.5,time_since_zero = 778.9
+offset =   12.00,magnetic_susceptibility =  -1.43,timestamp = 2024-11-20 22:02:43.7,time_since_zero = 766.1
+offset =   14.00,magnetic_susceptibility = -14.90,timestamp = 2024-11-20 22:02:30.8,time_since_zero = 753.1
+offset =   16.00,magnetic_susceptibility = -147.15,timestamp = 2024-11-20 22:02:18.2,time_since_zero = 740.6
+offset =   18.00,magnetic_susceptibility = -2867.04,timestamp = 2024-11-20 22:02:05.8,time_since_zero = 728.2
+offset =   20.00,magnetic_susceptibility = -11574.50,timestamp = 2024-11-20 22:01:53.5,time_since_zero = 715.9
+offset =   22.00,magnetic_susceptibility = -13309.05,timestamp = 2024-11-20 22:01:41.1,time_since_zero = 703.5
+offset =   24.00,magnetic_susceptibility = -1205.86,timestamp = 2024-11-20 22:01:28.8,time_since_zero = 691.2
+offset =   26.00,magnetic_susceptibility = -76.83,timestamp = 2024-11-20 22:01:16.2,time_since_zero = 678.6
+offset =   28.00,magnetic_susceptibility =  -3.50,timestamp = 2024-11-20 22:01:03.7,time_since_zero = 666.1
+offset =   30.00,magnetic_susceptibility =   3.73,timestamp = 2024-11-20 22:00:51.4,time_since_zero = 653.7
+offset =   32.00,magnetic_susceptibility =  12.16,timestamp = 2024-11-20 22:00:39.0,time_since_zero = 641.4
+offset =   34.00,magnetic_susceptibility =   4.23,timestamp = 2024-11-20 22:00:26.6,time_since_zero = 628.9
+offset =   36.00,magnetic_susceptibility =  -0.34,timestamp = 2024-11-20 22:00:14.2,time_since_zero = 616.5
+offset =   38.00,magnetic_susceptibility = -13.81,timestamp = 2024-11-20 22:00:01.8,time_since_zero = 604.2
+offset =   40.00,magnetic_susceptibility = -148.68,timestamp = 2024-11-20 21:59:49.1,time_since_zero = 591.5
+offset =   42.00,magnetic_susceptibility = -3730.89,timestamp = 2024-11-20 21:59:36.4,time_since_zero = 578.7
+offset =   44.00,magnetic_susceptibility = -11135.31,timestamp = 2024-11-20 21:59:23.7,time_since_zero = 566.1
+offset =   46.00,magnetic_susceptibility = -13075.14,timestamp = 2024-11-20 21:59:11.0,time_since_zero = 553.4
+offset =   48.00,magnetic_susceptibility = -1064.51,timestamp = 2024-11-20 21:58:58.2,time_since_zero = 540.6
+offset =   50.00,magnetic_susceptibility = -58.99,timestamp = 2024-11-20 21:58:45.3,time_since_zero = 527.7
+offset =   52.00,magnetic_susceptibility =   5.42,timestamp = 2024-11-20 21:58:32.5,time_since_zero = 514.8
+offset =   54.00,magnetic_susceptibility =  12.22,timestamp = 2024-11-20 21:58:19.8,time_since_zero = 502.2
+offset =   56.00,magnetic_susceptibility =  18.67,timestamp = 2024-11-20 21:58:07.3,time_since_zero = 489.7
+offset =   58.00,magnetic_susceptibility =   6.08,timestamp = 2024-11-20 21:57:54.8,time_since_zero = 477.1
+offset =   60.00,magnetic_susceptibility =   3.80,timestamp = 2024-11-20 21:57:42.3,time_since_zero = 464.7
+offset =   62.00,magnetic_susceptibility =   4.16,timestamp = 2024-11-20 21:57:29.7,time_since_zero = 452.1
+offset =   64.00,magnetic_susceptibility =  18.25,timestamp = 2024-11-20 21:57:17.2,time_since_zero = 439.6
+offset =   66.00,magnetic_susceptibility =   5.31,timestamp = 2024-11-20 21:57:04.5,time_since_zero = 426.9
+offset =   68.00,magnetic_susceptibility =   1.06,timestamp = 2024-11-20 21:56:51.8,time_since_zero = 414.2
+offset =   70.00,magnetic_susceptibility =   1.40,timestamp = 2024-11-20 21:56:39.1,time_since_zero = 401.5
+offset =   72.00,magnetic_susceptibility =  11.29,timestamp = 2024-11-20 21:56:26.3,time_since_zero = 388.7
+offset =   74.00,magnetic_susceptibility =   4.30,timestamp = 2024-11-20 21:56:13.5,time_since_zero = 375.8
+offset =   76.00,magnetic_susceptibility =   1.26,timestamp = 2024-11-20 21:56:00.7,time_since_zero = 363.0
+offset =   78.00,magnetic_susceptibility =   1.56,timestamp = 2024-11-20 21:55:48.0,time_since_zero = 350.4
+offset =   80.00,magnetic_susceptibility =  10.37,timestamp = 2024-11-20 21:55:35.2,time_since_zero = 337.6
+offset =   82.00,magnetic_susceptibility =   3.27,timestamp = 2024-11-20 21:55:22.3,time_since_zero = 324.7
+offset =   84.00,magnetic_susceptibility =   1.20,timestamp = 2024-11-20 21:55:09.5,time_since_zero = 311.9
+offset =   86.00,magnetic_susceptibility =   1.65,timestamp = 2024-11-20 21:54:56.9,time_since_zero = 299.2
+offset =   88.00,magnetic_susceptibility =  13.19,timestamp = 2024-11-20 21:54:44.4,time_since_zero = 286.7
+offset =   90.00,magnetic_susceptibility =   4.81,timestamp = 2024-11-20 21:54:31.7,time_since_zero = 274.0
+offset =   92.00,magnetic_susceptibility =   1.62,timestamp = 2024-11-20 21:54:19.1,time_since_zero = 261.5
+offset =   94.00,magnetic_susceptibility =   1.79,timestamp = 2024-11-20 21:54:06.6,time_since_zero = 248.9
+offset =   98.00,magnetic_susceptibility =  15.26,timestamp = 2024-11-20 21:53:41.7,time_since_zero = 224.1
+offset =  100.00,magnetic_susceptibility =  16.14,timestamp = 2024-11-20 21:53:29.2,time_since_zero = 211.6
+offset =  102.00,magnetic_susceptibility =  15.21,timestamp = 2024-11-20 21:53:16.7,time_since_zero = 199.1
+offset =  104.00,magnetic_susceptibility =  13.81,timestamp = 2024-11-20 21:53:04.0,time_since_zero = 186.4
+offset =  106.00,magnetic_susceptibility =  12.77,timestamp = 2024-11-20 21:52:51.6,time_since_zero = 174.0
+offset =  108.00,magnetic_susceptibility =  14.34,timestamp = 2024-11-20 21:52:39.0,time_since_zero = 161.4
+offset =  110.00,magnetic_susceptibility =  12.10,timestamp = 2024-11-20 21:52:26.6,time_since_zero = 149.0
+offset =  112.00,magnetic_susceptibility =  11.94,timestamp = 2024-11-20 21:52:14.3,time_since_zero = 136.7
+offset =  114.00,magnetic_susceptibility =  13.45,timestamp = 2024-11-20 21:52:01.9,time_since_zero = 124.3
+offset =  116.00,magnetic_susceptibility =  13.89,timestamp = 2024-11-20 21:51:49.5,time_since_zero = 111.9
+</MULTI>
+
+<FILE>
+aux_file = c:\aux_data\mspoint\run\raw_covered-standards-20241120_2411202203393_mspoint.csv
+config = c:\ims\config_shmsl\i_pi_ms3.ini
+</FILE>
+
+<NOTES>
+positions_excluded = FALSE
+</NOTES>

@@ -1,0 +1,54 @@
+PWAVE_L
+
+2023-09-03 20:32:48 UTC, 400-U1604A-2H-7
+
+<HEADER>
+user =LEWIS
+text_id = SECT12673531
+instrument = 0) ACUITY MODEL: AR700 AP7020040 S/N: 001920, 1) NATIONAL INSTRUMENTS MODEL: USB-5133 S/N: 1B97DA2, 2) OLYMPUS MODEL: M2008 S/N: 1012253, 3) OLYMPUS MODEL: M2008 S/N: 1012264
+instrument_group = WRMSL
+observed_length = 51.80
+comment = 
+</HEADER>
+
+<SINGLE>
+system_delay = 15.492470
+laser_distance_corr = 0.086
+liner_thickness = 2.580
+liner_velocity = 2123.07
+threshold = 0.000000
+stack = 100
+</SINGLE>
+
+<MULTI>
+offset = 4.90, distance_in_caliper = 62.857, travel_time = 40.247, velocity_xy = 1561.77, timestamp = 2023-09-03 20:31:13
+offset = 6.90, distance_in_caliper = 62.588, travel_time = 39.467, velocity_xy = 1585.83, timestamp = 2023-09-03 20:31:18
+offset = 8.90, distance_in_caliper = 62.425, travel_time = 51.308, velocity_xy = 1216.66, timestamp = 2023-09-03 20:31:23
+offset = 12.90, distance_in_caliper = 62.296, travel_time = 60.587, velocity_xy = 1028.20, timestamp = 2023-09-03 20:31:32
+offset = 14.90, distance_in_caliper = 62.301, travel_time = 41.211, velocity_xy = 1511.75, timestamp = 2023-09-03 20:31:36
+offset = 16.90, distance_in_caliper = 62.327, travel_time = 41.455, velocity_xy = 1503.48, timestamp = 2023-09-03 20:31:45
+offset = 18.90, distance_in_caliper = 62.327, travel_time = 41.714, velocity_xy = 1494.15, timestamp = 2023-09-03 20:31:51
+offset = 20.90, distance_in_caliper = 62.325, travel_time = 41.812, velocity_xy = 1490.61, timestamp = 2023-09-03 20:31:54
+offset = 22.90, distance_in_caliper = 62.320, travel_time = 41.645, velocity_xy = 1496.46, timestamp = 2023-09-03 20:31:57
+offset = 24.90, distance_in_caliper = 62.317, travel_time = 41.661, velocity_xy = 1495.81, timestamp = 2023-09-03 20:32:01
+offset = 26.90, distance_in_caliper = 62.310, travel_time = 41.594, velocity_xy = 1498.03, timestamp = 2023-09-03 20:32:04
+offset = 28.90, distance_in_caliper = 62.343, travel_time = 41.404, velocity_xy = 1505.72, timestamp = 2023-09-03 20:32:09
+offset = 30.90, distance_in_caliper = 62.361, travel_time = 41.097, velocity_xy = 1517.41, timestamp = 2023-09-03 20:32:13
+offset = 32.90, distance_in_caliper = 62.367, travel_time = 41.342, velocity_xy = 1508.55, timestamp = 2023-09-03 20:32:18
+offset = 34.90, distance_in_caliper = 62.357, travel_time = 41.319, velocity_xy = 1509.17, timestamp = 2023-09-03 20:32:23
+offset = 36.90, distance_in_caliper = 62.334, travel_time = 41.298, velocity_xy = 1509.37, timestamp = 2023-09-03 20:32:27
+offset = 38.90, distance_in_caliper = 62.339, travel_time = 41.290, velocity_xy = 1509.78, timestamp = 2023-09-03 20:32:30
+offset = 40.90, distance_in_caliper = 62.375, travel_time = 41.438, velocity_xy = 1505.27, timestamp = 2023-09-03 20:32:33
+offset = 42.90, distance_in_caliper = 62.448, travel_time = 41.574, velocity_xy = 1502.08, timestamp = 2023-09-03 20:32:37
+offset = 44.90, distance_in_caliper = 53.104, travel_time = 41.785, velocity_xy = 1270.89, timestamp = 2023-09-03 20:32:40
+offset = 46.90, distance_in_caliper = 63.115, travel_time = 41.884, velocity_xy = 1506.90, timestamp = 2023-09-03 20:32:48
+</MULTI>
+
+<FILE>
+velocity_wfm = c:\aux_data\pwave-l\velocity\raw_400-u1604a-2h-7_2309032032483_pwave-l.csv
+config = c:\ims\config_wrmsl\i_pi_pwave.ini
+</FILE>
+
+<NOTES>
+positions_excluded = FALSE
+</NOTES>

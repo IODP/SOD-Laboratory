@@ -1,0 +1,30 @@
+PWAVE_B
+
+21-08-16 06:57:583 UTC, 396-U1565B-1R-1-W
+
+<HEADER>
+user=
+text_id = SHLF11054261
+instrument = BAYONET-Y
+instrument_group = GANTRY
+comments = 
+</HEADER>
+
+<SINGLE>
+distance_in_caliper = 31.500
+travel_time =  -1.30
+offset = 55.90
+velocity_y = -24261.93
+manual_pick_travel_time =  23.04
+manual_pick_velocity_y = 1366.96
+timestamp = 2021-08-16 06:56:49
+system_delay=1.2162
+</SINGLE>
+
+<FILE>
+run = c:\data\in\y-bayonet_396-u1565b-1r-1-w_shlf11054261_2108160657583.pwc
+config = c:\ims\config_velocity\velocity.ini
+transducer_signal = c:\data\in\signal\y-bayonet_396-u1565b-1r-1-w_shlf11054261_signal_2108160657583.lvm
+aux_file = c:\aux_data\pwave-b\bayonet-y\396-u1565b-1r-1-w_2108160657583_pwave-b.csv
+</FILE>
+

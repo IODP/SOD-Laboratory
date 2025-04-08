@@ -1,0 +1,11 @@
+{
+    "python.languageServer": "Pylance",
+//Example here Pylance will look for file locations under hyperspectral in current working directory. 
+// This is handy when encountering "No definition found".
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/iodp/iodp",
+        "${workspaceFolder}/iodp/"
+       ], 
+    "python.analysis.autoImportCompletions": true,
+    "jupyter.debugJustMyCode": true
+}

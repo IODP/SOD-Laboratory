@@ -1,0 +1,45 @@
+NGR
+
+2023-06-28 12:30:27 UTC, 395-U1554G-2H-1
+
+<HEADER>
+user =JR_MARONE
+text_id = SECT12466821
+instrument = 0) ORTEC MODEL: ASPEC927 S/N: 7022362, 1) ORTEC MODEL: ASPEC927 S/N: 7022362, 2) ORTEC MODEL: ASPEC927 S/N: 7022364, 3) ORTEC MODEL: ASPEC927 S/N: 7022364, 4) ORTEC MODEL: ASPEC927 S/N: 06341987, 5) ORTEC MODEL: ASPEC927 S/N: 06341987, 6) ORTEC MODEL: ASPEC927 S/N: 19093002, 7) ORTEC MODEL: ASPEC927 S/N: 19093002
+instrument_group = NGR SYSTEM
+observed_length = 1.51
+comment = 
+</HEADER>
+
+<SINGLE>
+period = 300.000
+</SINGLE>
+
+<MULTI>
+offset = 0, detector=8, total_counts_per_sec = 19.67026111, relative_error = 0.06248876957, absolute_error = 1.229170414
+offset = 10, detector=8, total_counts_per_sec = 17.79128333, relative_error = 0.02446997953, absolute_error = 0.4353523390
+offset = 20, detector=7, total_counts_per_sec = 17.86916667, relative_error = 0.01598511741, absolute_error = 0.2856407271
+offset = 30, detector=7, total_counts_per_sec = 17.73250000, relative_error = 0.01606328399, absolute_error = 0.2848421834
+offset = 40, detector=6, total_counts_per_sec = 18.62694444, relative_error = 0.01553453767, absolute_error = 0.2893609702
+offset = 50, detector=6, total_counts_per_sec = 19.04694444, relative_error = 0.01531847097, absolute_error = 0.2917700654
+offset = 60, detector=5, total_counts_per_sec = 19.10962963, relative_error = 0.01524167230, absolute_error = 0.2912627126
+offset = 70, detector=5, total_counts_per_sec = 17.87629630, relative_error = 0.01589354284, absolute_error = 0.2841176810
+offset = 80, detector=4, total_counts_per_sec = 19.20458333, relative_error = 0.01524125915, absolute_error = 0.2927020314
+offset = 90, detector=4, total_counts_per_sec = 18.88125000, relative_error = 0.01540444202, absolute_error = 0.2908551210
+offset = 100, detector=3, total_counts_per_sec = 18.05578704, relative_error = 0.01582561324, absolute_error = 0.2857439024
+offset = 110, detector=3, total_counts_per_sec = 18.49245370, relative_error = 0.01558904049, absolute_error = 0.2882796096
+offset = 120, detector=2, total_counts_per_sec = 19.31162037, relative_error = 0.01467433628, absolute_error = 0.2833852115
+offset = 130, detector=2, total_counts_per_sec = 18.13162037, relative_error = 0.01524178073, absolute_error = 0.2763581820
+offset = 140, detector=1, total_counts_per_sec = 15.95936620, relative_error = 0.02654387864, absolute_error = 0.4236234797
+offset = 150, detector=1, total_counts_per_sec = 12.86324074, relative_error = 0.06332697586, absolute_error = 0.8145901359
+</MULTI>
+
+<FILE>
+archive = c:\aux_data\zip\u1554g\395-u1554g-2h-1_sect12466821_20230628123026.zip
+configuration = c:\ims\config_ngr\i_pi_ngr927.ini
+summary = c:\aux_data\reduction\u1554g\395-u1554g-2h-1_sect12466821_20230628123026.csv
+</FILE>
+
+<NOTES>
+positions_excluded = FALSE
+</NOTES>
