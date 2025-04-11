@@ -1,0 +1,1100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ACAML xmlns="urn:schemas-agilent-com:acaml15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Checksum Algorithm="MD5">
+		<Value>r9wjDItTA4Lm14nTIV41Eg==</Value>
+	</Checksum>
+	<Doc ContentVersioned="false">
+		<DocID>91b4d7ce-4e5e-40cc-a294-80c7b12c48d0</DocID>
+		<DocInfo>
+			<Description>Method ACAML</Description>
+			<CreatedByUser>SHIP\daq</CreatedByUser>
+			<CreatedByApplication>
+				<AgilentApp>
+					<Name>ChemStation</Name>
+					<Version>2.189.0.0</Version>
+				</AgilentApp>
+			</CreatedByApplication>
+			<CreationDate>2022-10-18T07:05:55.62+00:00</CreationDate>
+			<ClientName>IP-54150-NGA</ClientName>
+		</DocInfo>
+		<Content>
+			<MethodConfiguration xsi:type="MethodConfigurationType" id="6073e346-9e79-46e4-8ca9-1346afe780b2" ver="0">
+				<MethodDescription>
+					<Name>Method Configuration</Name>
+					<ID>Method_Configuration</ID>
+					<Section>
+						<Name>Acquisition Method</Name>
+						<ID>Acquisition_Method</ID>
+						<Section>
+							<Name>Agilent 7890A</Name>
+							<ID>GC</ID>
+							<Section>
+								<Name>GC Summary</Name>
+								<ID>SUMMARY</ID>
+								<Parameter>
+									<Name>Run Time</Name>
+									<ID>RUN_TIME</ID>
+									<Unit>min</Unit>
+									<Value>15.6</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Post Run Time</Name>
+									<ID>POSTRUN_TIME</ID>
+									<Unit>min</Unit>
+									<Value>0</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>Oven</Name>
+								<ID>OVEN</ID>
+								<Section>
+									<Name>Temperature</Name>
+									<ID>TEMPERATURE</ID>
+									<Parameter>
+										<Name>Setpoint</Name>
+										<ID>STATE</ID>
+										<Value>On</Value>
+									</Parameter>
+									<Parameter>
+										<Name>(Initial)</Name>
+										<ID>INITIAL</ID>
+										<Unit>°C</Unit>
+										<Value>35</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Hold Time</Name>
+										<ID>HOLD</ID>
+										<Unit>min</Unit>
+										<Value>4</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Post Run</Name>
+										<ID>POSTRUN</ID>
+										<Unit>°C</Unit>
+										<Value>50</Value>
+									</Parameter>
+									<Table>
+										<Name>Program</Name>
+										<ID>RAMP</ID>
+										<Row>
+											<Parameter>
+												<Name>Rate</Name>
+												<ID>RATE</ID>
+												<Unit>°C/min</Unit>
+												<Value>25</Value>
+											</Parameter>
+											<Parameter>
+												<Name>Value</Name>
+												<ID>NEXT</ID>
+												<Unit>°C</Unit>
+												<Value>200</Value>
+											</Parameter>
+											<Parameter>
+												<Name>Hold Time</Name>
+												<ID>HOLD</ID>
+												<Unit>min</Unit>
+												<Value>5</Value>
+											</Parameter>
+										</Row>
+									</Table>
+								</Section>
+								<Parameter>
+									<Name>Equilibration Time</Name>
+									<ID>EQUIL_TIME</ID>
+									<Unit>min</Unit>
+									<Value>3</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Max Temperature</Name>
+									<ID>MAX_TEMPERATURE</ID>
+									<Unit>°C</Unit>
+									<Value>200</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Maximum Temperature Override</Name>
+									<ID>MaxTempOverride</ID>
+									<Unit />
+									<Value>Disabled</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Slow Fan</Name>
+									<ID>CR_SlowFan</ID>
+									<Unit />
+									<Value>Disabled</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>Front SS Inlet He</Name>
+								<ID>INLET1</ID>
+								<Parameter>
+									<Name>Mode</Name>
+									<ID>MODE</ID>
+									<Unit />
+									<Value>Split</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Heater</Name>
+									<ID>HEATER</ID>
+									<Unit>°C</Unit>
+									<Value>On    250</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Pressure</Name>
+									<ID>PRESSURE</ID>
+									<Unit>psi</Unit>
+									<Value>On    11.739</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Total Flow</Name>
+									<ID>TOTAL_FLOW</ID>
+									<Unit>mL/min</Unit>
+									<Value>On    65</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Septum Purge Flow</Name>
+									<ID>SEPTUM_PURGE_FLOW</ID>
+									<Unit>mL/min</Unit>
+									<Value>On    3</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Gas Saver</Name>
+									<ID>GAS_SAVER</ID>
+									<Unit>mL/min</Unit>
+									<Value>On    20 After 2 min</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Split Ratio</Name>
+									<ID>SPLIT_RATIO</ID>
+									<Unit>:1</Unit>
+									<Value>30</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Split Flow</Name>
+									<ID>SPLIT_FLOW</ID>
+									<Unit>mL/min</Unit>
+									<Value>60</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>Column</Name>
+								<ID>COLUMN</ID>
+								<Section>
+									<Name>Column #1</Name>
+									<ID>COLUMN1</ID>
+									<Section>
+										<Name>Flow</Name>
+										<ID>FLOW</ID>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>STATE</ID>
+											<Value>On</Value>
+										</Parameter>
+										<Parameter>
+											<Name>(Initial)</Name>
+											<ID>INITIAL</ID>
+											<Unit>mL/min</Unit>
+											<Value>10</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Post Run</Name>
+											<ID>POSTRUN</ID>
+											<Unit>mL/min</Unit>
+											<Value>0</Value>
+										</Parameter>
+									</Section>
+									<Parameter>
+										<Name>HP PLOT Q + HP Molseive PLOT</Name>
+										<ID>DESCRIPTION</ID>
+										<Value />
+									</Parameter>
+									<Parameter>
+										<Name>Temperature Range</Name>
+										<ID>TEMPERATURERANGE</ID>
+										<Value>-60 °C—350 °C (350 °C)</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Dimensions</Name>
+										<ID>DIMENSIONS</ID>
+										<Value>60 m x 530 μm x 40 μm</Value>
+									</Parameter>
+									<Parameter>
+										<Name>In</Name>
+										<ID>IN</ID>
+										<Unit />
+										<Value>PCM A He</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Out</Name>
+										<ID>OUT</ID>
+										<Unit />
+										<Value>Back Detector TCD</Value>
+									</Parameter>
+									<Parameter>
+										<Name>(Initial)</Name>
+										<ID>INITIAL</ID>
+										<Unit>°C</Unit>
+										<Value>35</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Pressure</Name>
+										<ID>PRESSURE</ID>
+										<Unit>psi</Unit>
+										<Value>18.281</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Flow</Name>
+										<ID>FLOW</ID>
+										<Unit>mL/min</Unit>
+										<Value>10</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Average Velocity</Name>
+										<ID>VELOCITY</ID>
+										<Unit>cm/sec</Unit>
+										<Value>63.656</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Holdup Time</Name>
+										<ID>HOLDUPTIME</ID>
+										<Unit>min</Unit>
+										<Value>1.571</Value>
+									</Parameter>
+								</Section>
+								<Section>
+									<Name>Column #2</Name>
+									<ID>COLUMN2</ID>
+									<Section>
+										<Name>Flow</Name>
+										<ID>FLOW</ID>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>STATE</ID>
+											<Value>On</Value>
+										</Parameter>
+										<Parameter>
+											<Name>(Initial)</Name>
+											<ID>INITIAL</ID>
+											<Unit>mL/min</Unit>
+											<Value>21.951</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Post Run</Name>
+											<ID>POSTRUN</ID>
+											<Unit>mL/min</Unit>
+											<Value>0</Value>
+										</Parameter>
+									</Section>
+									<Parameter>
+										<Name>Column Information</Name>
+										<ID>INFO</ID>
+										<Value>J&amp;W</Value>
+									</Parameter>
+									<Parameter>
+										<Name>FSOT Vent Restrictor</Name>
+										<ID>DESCRIPTION</ID>
+										<Value />
+									</Parameter>
+									<Parameter>
+										<Name>Temperature Range</Name>
+										<ID>TEMPERATURERANGE</ID>
+										<Value>-60 °C—270 °C (270 °C)</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Dimensions</Name>
+										<ID>DIMENSIONS</ID>
+										<Value>1.5 m x 250 μm x 0 μm</Value>
+									</Parameter>
+									<Parameter>
+										<Name>In</Name>
+										<ID>IN</ID>
+										<Unit />
+										<Value>Aux PCM C He</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Out</Name>
+										<ID>OUT</ID>
+										<Unit />
+										<Value>Other </Value>
+									</Parameter>
+									<Parameter>
+										<Name>(Initial)</Name>
+										<ID>INITIAL</ID>
+										<Unit>°C</Unit>
+										<Value>35</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Pressure</Name>
+										<ID>PRESSURE</ID>
+										<Unit>psi</Unit>
+										<Value>12.1</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Flow</Name>
+										<ID>FLOW</ID>
+										<Unit>mL/min</Unit>
+										<Value>21.951</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Average Velocity</Name>
+										<ID>VELOCITY</ID>
+										<Unit>cm/sec</Unit>
+										<Value>530.62</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Holdup Time</Name>
+										<ID>HOLDUPTIME</ID>
+										<Unit>min</Unit>
+										<Value>0.0047115</Value>
+									</Parameter>
+								</Section>
+								<Section>
+									<Name>Column #5</Name>
+									<ID>COLUMN5</ID>
+									<Section>
+										<Name>Flow</Name>
+										<ID>FLOW</ID>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>STATE</ID>
+											<Value>On</Value>
+										</Parameter>
+										<Parameter>
+											<Name>(Initial)</Name>
+											<ID>INITIAL</ID>
+											<Unit>mL/min</Unit>
+											<Value>2</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Hold Time</Name>
+											<ID>HOLD</ID>
+											<Unit>min</Unit>
+											<Value>5</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Post Run</Name>
+											<ID>POSTRUN</ID>
+											<Unit>mL/min</Unit>
+											<Value>0</Value>
+										</Parameter>
+										<Table>
+											<Name>Program</Name>
+											<ID>RAMP</ID>
+											<Row>
+												<Parameter>
+													<Name>Rate</Name>
+													<ID>RATE</ID>
+													<Unit>mL/min per min</Unit>
+													<Value>50</Value>
+												</Parameter>
+												<Parameter>
+													<Name>Value</Name>
+													<ID>NEXT</ID>
+													<Unit>mL/min</Unit>
+													<Value>-5</Value>
+												</Parameter>
+												<Parameter>
+													<Name>Hold Time</Name>
+													<ID>HOLD</ID>
+													<Unit>min</Unit>
+													<Value>0</Value>
+												</Parameter>
+											</Row>
+										</Table>
+									</Section>
+									<Parameter>
+										<Name>DB-1 precolumn FID</Name>
+										<ID>DESCRIPTION</ID>
+										<Value />
+									</Parameter>
+									<Parameter>
+										<Name>Temperature Range</Name>
+										<ID>TEMPERATURERANGE</ID>
+										<Value>-60 °C—350 °C (350 °C)</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Dimensions</Name>
+										<ID>DIMENSIONS</ID>
+										<Value>5 m x 320 μm x 0 μm</Value>
+									</Parameter>
+									<Parameter>
+										<Name>In</Name>
+										<ID>IN</ID>
+										<Unit />
+										<Value>Front SS Inlet He</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Out</Name>
+										<ID>OUT</ID>
+										<Unit />
+										<Value>PCM C </Value>
+									</Parameter>
+									<Parameter>
+										<Name>(Initial)</Name>
+										<ID>INITIAL</ID>
+										<Unit>°C</Unit>
+										<Value>35</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Pressure</Name>
+										<ID>PRESSURE</ID>
+										<Unit>psi</Unit>
+										<Value>11.739</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Flow</Name>
+										<ID>FLOW</ID>
+										<Unit>mL/min</Unit>
+										<Value>2</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Average Velocity</Name>
+										<ID>VELOCITY</ID>
+										<Unit>cm/sec</Unit>
+										<Value>24.315</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Holdup Time</Name>
+										<ID>HOLDUPTIME</ID>
+										<Unit>min</Unit>
+										<Value>0.34272</Value>
+									</Parameter>
+								</Section>
+								<Section>
+									<Name>Column #6</Name>
+									<ID>COLUMN6</ID>
+									<Section>
+										<Name>Flow</Name>
+										<ID>FLOW</ID>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>STATE</ID>
+											<Value>On</Value>
+										</Parameter>
+										<Parameter>
+											<Name>(Initial)</Name>
+											<ID>INITIAL</ID>
+											<Unit>mL/min</Unit>
+											<Value>3</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Post Run</Name>
+											<ID>POSTRUN</ID>
+											<Unit>mL/min</Unit>
+											<Value>0</Value>
+										</Parameter>
+									</Section>
+									<Parameter>
+										<Name>HP- ALUMINA PLOT</Name>
+										<ID>DESCRIPTION</ID>
+										<Value />
+									</Parameter>
+									<Parameter>
+										<Name>Temperature Range</Name>
+										<ID>TEMPERATURERANGE</ID>
+										<Value>-60 °C—200 °C (200 °C)</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Dimensions</Name>
+										<ID>DIMENSIONS</ID>
+										<Value>25 m x 320 μm x 0 μm</Value>
+									</Parameter>
+									<Parameter>
+										<Name>In</Name>
+										<ID>IN</ID>
+										<Unit />
+										<Value>PCM C He</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Out</Name>
+										<ID>OUT</ID>
+										<Unit />
+										<Value>Front Detector FID</Value>
+									</Parameter>
+									<Parameter>
+										<Name>(Initial)</Name>
+										<ID>INITIAL</ID>
+										<Unit>°C</Unit>
+										<Value>35</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Pressure</Name>
+										<ID>PRESSURE</ID>
+										<Unit>psi</Unit>
+										<Value>10.642</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Flow</Name>
+										<ID>FLOW</ID>
+										<Unit>mL/min</Unit>
+										<Value>3</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Average Velocity</Name>
+										<ID>VELOCITY</ID>
+										<Unit>cm/sec</Unit>
+										<Value>46.089</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Holdup Time</Name>
+										<ID>HOLDUPTIME</ID>
+										<Unit>min</Unit>
+										<Value>0.90404</Value>
+									</Parameter>
+								</Section>
+								<Parameter>
+									<Name>Column Outlet Pressure</Name>
+									<ID>ColumnOutletPressure</ID>
+									<Unit>psi</Unit>
+									<Value>0</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>Front Detector FID</Name>
+								<ID>Detector 1</ID>
+								<Parameter>
+									<Name>Makeup</Name>
+									<ID>MAKEUP</ID>
+									<Unit />
+									<Value>He</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Heater</Name>
+									<ID>Heater</ID>
+									<Unit>°C</Unit>
+									<Value>On    300</Value>
+								</Parameter>
+								<Parameter>
+									<Name>H2 Flow</Name>
+									<ID>H2 Flow</ID>
+									<Unit>mL/min</Unit>
+									<Value>On    40</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Air Flow</Name>
+									<ID>Air Flow</ID>
+									<Unit>mL/min</Unit>
+									<Value>On    400</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Makeup Flow</Name>
+									<ID>Makeup Flow</ID>
+									<Unit>mL/min</Unit>
+									<Value>On    25</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Carrier Gas Flow Correction</Name>
+									<ID>CARRIER_GAS_CORRECTION</ID>
+									<Unit />
+									<Value>Does not affect Makeup or Fuel Flow</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Flame</Name>
+									<ID>FLAME</ID>
+									<Unit />
+									<Value>On</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>Back Detector TCD</Name>
+								<ID>Detector 2</ID>
+								<Parameter>
+									<Name>Makeup</Name>
+									<ID>MAKEUP</ID>
+									<Unit />
+									<Value>He</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Heater</Name>
+									<ID>Heater</ID>
+									<Unit>°C</Unit>
+									<Value>On    250</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Reference Flow</Name>
+									<ID>REF_FLOW</ID>
+									<Unit>mL/min</Unit>
+									<Value>On    10</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Makeup Flow</Name>
+									<ID>Makeup Flow</ID>
+									<Unit>mL/min</Unit>
+									<Value>On    5</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Filament</Name>
+									<ID>FILAMENT</ID>
+									<Unit />
+									<Value>On</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Negative Polarity</Name>
+									<ID>NEG_POLARITY</ID>
+									<Unit />
+									<Value>Off</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>Valve 1</Name>
+								<ID>VALVE1</ID>
+								<Parameter>
+									<Name>Other</Name>
+									<ID>Other</ID>
+									<Unit />
+									<Value>On</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>Valve 2</Name>
+								<ID>VALVE2</ID>
+								<Parameter>
+									<Name>Other</Name>
+									<ID>Other</ID>
+									<Unit />
+									<Value>Off</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>Valve 3</Name>
+								<ID>VALVE3</ID>
+								<Parameter>
+									<Name>Other</Name>
+									<ID>Other</ID>
+									<Unit />
+									<Value>Off</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>Valve 4</Name>
+								<ID>VALVE4</ID>
+								<Parameter>
+									<Name>Other</Name>
+									<ID>Other</ID>
+									<Unit />
+									<Value>Off</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>PCM A</Name>
+								<ID>PCM_A</ID>
+								<Section>
+									<Name>PCM A He</Name>
+									<ID>PCM0</ID>
+									<Parameter>
+										<Name>PCM A He</Name>
+										<ID>SUPPLIES_COLUMN</ID>
+										<Value>Supplies Column 1</Value>
+									</Parameter>
+								</Section>
+								<Section>
+									<Name>Aux PCM A He</Name>
+									<ID>PCM1</ID>
+									<Section>
+										<Name>Pressure</Name>
+										<ID>PRESSURE</ID>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>STATE</ID>
+											<Value>On</Value>
+										</Parameter>
+										<Parameter>
+											<Name>(Initial)</Name>
+											<ID>INITIAL</ID>
+											<Unit>psi</Unit>
+											<Value>10.642</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Post Run</Name>
+											<ID>POSTRUN</ID>
+											<Unit>psi</Unit>
+											<Value>0</Value>
+										</Parameter>
+									</Section>
+									<Parameter>
+										<Name />
+										<ID>ExcludeFromReadiness</ID>
+										<Value>***Excluded from Affecting GC's Readiness State***</Value>
+									</Parameter>
+								</Section>
+							</Section>
+							<Section>
+								<Name>PCM C</Name>
+								<ID>PCM_C</ID>
+								<Section>
+									<Name>PCM C He</Name>
+									<ID>PCM0</ID>
+									<Parameter>
+										<Name>PCM C He</Name>
+										<ID>SUPPLIES_COLUMN</ID>
+										<Value>Supplies Column 6</Value>
+									</Parameter>
+								</Section>
+								<Section>
+									<Name>Aux PCM C He</Name>
+									<ID>PCM1</ID>
+									<Parameter>
+										<Name />
+										<ID>ExcludeFromReadiness</ID>
+										<Value>***Excluded from Affecting GC's Readiness State***</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Aux PCM C He</Name>
+										<ID>SUPPLIES_COLUMN</ID>
+										<Value>Supplies Column 2</Value>
+									</Parameter>
+								</Section>
+							</Section>
+							<Section>
+								<Name>Valve Box</Name>
+								<ID>VALVE_BOX</ID>
+								<Parameter>
+									<Name />
+									<ID>ExcludeFromReadiness</ID>
+									<Value>***Excluded from Affecting GC's Readiness State***</Value>
+								</Parameter>
+								<Parameter>
+									<Name>Heater</Name>
+									<ID>HEATER</ID>
+									<Unit>°C</Unit>
+									<Value>On    150</Value>
+								</Parameter>
+							</Section>
+							<Section>
+								<Name>Signals</Name>
+								<ID>SIGNALS</ID>
+								<Section>
+									<Name>Signal #1:  Front Signal</Name>
+									<ID>SIGNAL1</ID>
+									<Parameter>
+										<Name>Description</Name>
+										<ID>DESCRIPTION</ID>
+										<Unit />
+										<Value>Front Signal</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Details</Name>
+										<ID>DETAILS</ID>
+										<Unit />
+										<Value>Front Signal (FID)</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Save</Name>
+										<ID>SAVE</ID>
+										<Unit />
+										<Value>On</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Data Rate</Name>
+										<ID>DATA_RATE</ID>
+										<Unit>Hz</Unit>
+										<Value>5</Value>
+									</Parameter>
+								</Section>
+								<Section>
+									<Name>Signal #2:  Back Signal</Name>
+									<ID>SIGNAL2</ID>
+									<Parameter>
+										<Name>Description</Name>
+										<ID>DESCRIPTION</ID>
+										<Unit />
+										<Value>Back Signal</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Details</Name>
+										<ID>DETAILS</ID>
+										<Unit />
+										<Value>Back Signal (TCD)</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Save</Name>
+										<ID>SAVE</ID>
+										<Unit />
+										<Value>On</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Data Rate</Name>
+										<ID>DATA_RATE</ID>
+										<Unit>Hz</Unit>
+										<Value>5</Value>
+									</Parameter>
+								</Section>
+								<Section>
+									<Name>Signal #3:  Test Plot</Name>
+									<ID>SIGNAL3</ID>
+									<Parameter>
+										<Name>Description</Name>
+										<ID>DESCRIPTION</ID>
+										<Unit />
+										<Value>Test Plot</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Details</Name>
+										<ID>DETAILS</ID>
+										<Unit />
+										<Value />
+									</Parameter>
+									<Parameter>
+										<Name>Save</Name>
+										<ID>SAVE</ID>
+										<Unit />
+										<Value>Off</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Data Rate</Name>
+										<ID>DATA_RATE</ID>
+										<Unit>Hz</Unit>
+										<Value>50</Value>
+									</Parameter>
+								</Section>
+								<Section>
+									<Name>Signal #4:  Test Plot</Name>
+									<ID>SIGNAL4</ID>
+									<Parameter>
+										<Name>Description</Name>
+										<ID>DESCRIPTION</ID>
+										<Unit />
+										<Value>Test Plot</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Details</Name>
+										<ID>DETAILS</ID>
+										<Unit />
+										<Value />
+									</Parameter>
+									<Parameter>
+										<Name>Save</Name>
+										<ID>SAVE</ID>
+										<Unit />
+										<Value>Off</Value>
+									</Parameter>
+									<Parameter>
+										<Name>Data Rate</Name>
+										<ID>DATA_RATE</ID>
+										<Unit>Hz</Unit>
+										<Value>50</Value>
+									</Parameter>
+								</Section>
+							</Section>
+							<Section>
+								<Name>Run Time Events</Name>
+								<ID>RUN_TIME_EVENTS</ID>
+								<Table>
+									<Name>Run Time Events</Name>
+									<ID>RUN_TIME_EVENTS</ID>
+									<Row>
+										<Parameter>
+											<Name>Time</Name>
+											<ID>TIME</ID>
+											<Unit>min</Unit>
+											<Value>0.01</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Event</Name>
+											<ID>EVENT</ID>
+											<Unit />
+											<Value>Valve</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Position</Name>
+											<ID>POSITION</ID>
+											<Unit />
+											<Value>Valve 1</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>Setpoint</ID>
+											<Unit />
+											<Value>Off</Value>
+										</Parameter>
+									</Row>
+									<Row>
+										<Parameter>
+											<Name>Time</Name>
+											<ID>TIME</ID>
+											<Unit>min</Unit>
+											<Value>0.03</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Event</Name>
+											<ID>EVENT</ID>
+											<Unit />
+											<Value>Valve</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Position</Name>
+											<ID>POSITION</ID>
+											<Unit />
+											<Value>Valve 3</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>Setpoint</ID>
+											<Unit />
+											<Value>On</Value>
+										</Parameter>
+									</Row>
+									<Row>
+										<Parameter>
+											<Name>Time</Name>
+											<ID>TIME</ID>
+											<Unit>min</Unit>
+											<Value>1</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Event</Name>
+											<ID>EVENT</ID>
+											<Unit />
+											<Value>Valve</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Position</Name>
+											<ID>POSITION</ID>
+											<Unit />
+											<Value>Valve 3</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>Setpoint</ID>
+											<Unit />
+											<Value>Off</Value>
+										</Parameter>
+									</Row>
+									<Row>
+										<Parameter>
+											<Name>Time</Name>
+											<ID>TIME</ID>
+											<Unit>min</Unit>
+											<Value>1.1</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Event</Name>
+											<ID>EVENT</ID>
+											<Unit />
+											<Value>Valve</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Position</Name>
+											<ID>POSITION</ID>
+											<Unit />
+											<Value>Valve 4</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>Setpoint</ID>
+											<Unit />
+											<Value>On</Value>
+										</Parameter>
+									</Row>
+									<Row>
+										<Parameter>
+											<Name>Time</Name>
+											<ID>TIME</ID>
+											<Unit>min</Unit>
+											<Value>2.5</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Event</Name>
+											<ID>EVENT</ID>
+											<Unit />
+											<Value>Valve</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Position</Name>
+											<ID>POSITION</ID>
+											<Unit />
+											<Value>Valve 4</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>Setpoint</ID>
+											<Unit />
+											<Value>Off</Value>
+										</Parameter>
+									</Row>
+									<Row>
+										<Parameter>
+											<Name>Time</Name>
+											<ID>TIME</ID>
+											<Unit>min</Unit>
+											<Value>2.6</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Event</Name>
+											<ID>EVENT</ID>
+											<Unit />
+											<Value>Valve</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Position</Name>
+											<ID>POSITION</ID>
+											<Unit />
+											<Value>Valve 2</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>Setpoint</ID>
+											<Unit />
+											<Value>Off</Value>
+										</Parameter>
+									</Row>
+									<Row>
+										<Parameter>
+											<Name>Time</Name>
+											<ID>TIME</ID>
+											<Unit>min</Unit>
+											<Value>7.5</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Event</Name>
+											<ID>EVENT</ID>
+											<Unit />
+											<Value>Valve</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Position</Name>
+											<ID>POSITION</ID>
+											<Unit />
+											<Value>Valve 1</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>Setpoint</ID>
+											<Unit />
+											<Value>On</Value>
+										</Parameter>
+									</Row>
+									<Row>
+										<Parameter>
+											<Name>Time</Name>
+											<ID>TIME</ID>
+											<Unit>min</Unit>
+											<Value>7.7</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Event</Name>
+											<ID>EVENT</ID>
+											<Unit />
+											<Value>Valve</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Position</Name>
+											<ID>POSITION</ID>
+											<Unit />
+											<Value>Valve 2</Value>
+										</Parameter>
+										<Parameter>
+											<Name>Setpoint</Name>
+											<ID>Setpoint</ID>
+											<Unit />
+											<Value>Off</Value>
+										</Parameter>
+									</Row>
+								</Table>
+							</Section>
+						</Section>
+					</Section>
+				</MethodDescription>
+			</MethodConfiguration>
+		</Content>
+	</Doc>
+</ACAML>

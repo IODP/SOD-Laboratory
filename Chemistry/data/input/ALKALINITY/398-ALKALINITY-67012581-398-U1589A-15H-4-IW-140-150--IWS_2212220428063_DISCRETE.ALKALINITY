@@ -1,0 +1,26 @@
+ALKALINITY
+
+22-12-22 04:28:063 UTC, 398-U1589A-15H-4-IW(140-150)-IWS
+
+<HEADER>
+user=
+text_id = LIQ12012731
+instrument = 794-BASIC-TITRINO-0000
+comment = 
+</HEADER>
+
+<SINGLE>
+alkalinity = 7.080
+
+pH = 7.758
+
+acid_quantity = 0.272
+
+correction_factor = 0.963633
+
+</SINGLE>
+
+<FILE>
+configuration = c:\programdata\iodp\alkalinity\config\current\alkalinity.ini
+</FILE>
+

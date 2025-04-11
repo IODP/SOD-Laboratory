@@ -3,16 +3,15 @@
 ![SOD-Laboratory Overview](./assets/graphics/i-gcr.png)
 
 
-This repository provides code and how-to examples for processing raw data from instrument systems owned and operated by Scientific Ocean Drilling at Texas A&M University. Many of these systems were housed on the R/V JOIDES Resolution overseen by the Joides Science Operator (JRSO) as part of the International Ocean Discovery Program and were shipped back to shore laboratories at the Gulf Core Repository (GCR) College Station, TX after the completion of the ship demobilization.
+This repository provides code and how-to examples for processing raw data from instrument systems owned and operated by Scientific Ocean Drilling at Texas A&M University. Many of these systems were housed on the R/V JOIDES Resolution overseen by the JOIDES Science Operator (JRSO) as part of the International Ocean Discovery Program and were shipped back to shore laboratories located at the Gulf Core Repository (GCR) in College Station, TX after the completion of the ship demobilization.
 
 Folders are organized by laboratory. The `iodp` module contains Python code used within many of the Jupyter Notebooks. Consult the Installation section below to configure a Python environment.
-
-
 
 # Information
 
 - IODP website: https://iodp.tamu.edu/index.html
-- i-GCR website: https://gcr.tamu.edu/
+- i-GCR website: https://gcr.tamu.edu/. *Requests may be made to sample drill cores or measure personal samples with laboratory instrumentation using this site. Day rates are listed.*
+
 
 ### Instrument Systems:
 - Live manuals: https://tamu-eas.atlassian.net/wiki/spaces/LMUG/overview
@@ -34,6 +33,9 @@ Data packaged by expedition:
 
 # Installation 
 
+It is recommended to use Microsoft Visual Studio Code (VSCode) with the Jupyter Extension, however the .py scripts and notebooks should also be compatible with Jupyter Notebooks and JupyterLab. If using VSCode, review this repository's .vscode folder for the [`extensions.json`](./.vscode/settings.json) and [`settings.json`](./.vscode/settings.json) files which specify a few VSCode configuration settings to aid development.
+
+
 ```shell
 # ensure python is installed.
 python --version
@@ -48,7 +50,7 @@ git --version
 conda create --name sod python=3.13
 
 # clone remote repo to local folder
-git clone "remote location"
+git clone https://github.com/IODP/SOD-Laboratory.git
 
 # activate virtual environment
 conda activate sod
