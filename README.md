@@ -33,7 +33,7 @@ Data packaged by expedition:
 
 # Installation 
 
-It is recommended to use Microsoft Visual Studio Code (VSCode) with the Jupyter Extension, however the .py scripts and notebooks should also be compatible with Jupyter Notebooks and JupyterLab. If using VSCode, review this repository's .vscode folder for the [`extensions.json`](./.vscode/settings.json) and [`settings.json`](./.vscode/settings.json) files which specify a few VSCode configuration settings to aid development.
+It is recommended to use Microsoft Visual Studio Code (VSCode) with the Jupyter Extension, however the .py scripts and notebooks should also be compatible with Jupyter Notebooks and JupyterLab. If using VSCode, review this repository's .vscode folder for the [`extensions.json`](./.vscode/extensions.json) and [`settings.json`](./.vscode/settings.json) files which specify a few VSCode configuration settings to aid development.
 
 
 ```shell

@@ -25,7 +25,7 @@ def read_instrument_file(file:str, as_dataframe:bool=False) -> Union[dict,pd.Dat
         fields = t.groupdict()
     
     # Pattern matches complete lines like: ["<HEADER>", "<MULTI>", "<FILE>"]
-    pattern = r"^<(?P<section>\w+)>$"
+    pattern = r"^<(?P<section>\w+-?\w+)>$"
 
     # start parsing from 4th row (3rd index pos)
     # close_pat is the complement to the section. Example: if section is <FILE>, the closing pattern is </FILE>
@@ -54,50 +54,66 @@ def read_instrument_file(file:str, as_dataframe:bool=False) -> Union[dict,pd.Dat
         if len(l) == 0:
             continue
         
+        # Note: many track systems use the "MULTI" section. Only the SRM uses MULTI-LEADER, MULTI-TRAILER, etc
+        multi_sections = ['MULTI-LEADER', 'MULTI', 'MULTI-TRAILER', 'MULTI-DRIFT']
+        
         # Parse from within the section, get key/value pairs. MULTI sections have multiple key/value pairs
-        if section != "MULTI":
-        # Handles non <MULTI> section content
-            key, val = l.split("=",1)
+        if not section in multi_sections:
+        # Handles non <MULTI> like section content
+            key, val = l.split("=",maxsplit=1)
             fields[key.strip()] = val.strip()
             continue
         
-        # Handles <MULTI> section content
-        if section == "MULTI":
-            
-            if not "MULTI" in fields:
-                fields['MULTI'] = []
+        # Handles <MULTI> like section content
+        if section in multi_sections:
+            if not section in fields:
+                fields[section] = []
             
             # split multi, first by comma then by first appearance of "="
-            arr = dict(map(lambda x: map(str.strip, x.split("=", 1)), l.split(",")))
-            fields['MULTI'].append(arr)
+            # list comprehension will remove all empty artifacts from splitting on commas
+            arr = dict(map(lambda x: map(str.strip, x.split("=", 1)), [item for item in l.split(",") if len(item)>0]))
+            fields[section].append(arr)
     
     # return the dictionary of values instead of dataframe
     if not as_dataframe:
         return fields
     
-    # Return results
-    if as_dataframe:
-        
-        contains_multi = "MULTI" in fields
-        # Step 1: Convert parent dict into a DataFrame (except 'multi')
-        base_data = {k: v for k, v in fields.items() if k != 'MULTI'}
-        
-        if contains_multi:
-            multi_data = fields['MULTI']
+    # Return results as a dataframe
+    # NOTE: The various SRM MULTI sections all follow the same format, they can be combined into one dataframe
+    # get all the multi-like sections in fields
+    
+    # Convert parent dict into a DataFrame (except 'multi' sections)
+    base_data = {k: v for k, v in fields.items() if not k in multi_sections}
+    
+    # get the multi sections that appear in the fields
+    # the ordering here is important. the multi_sections list is ordered appropriately based on .SRM files.
+    # other instruments solely use <MULTI> so ordering is irrelevant
+    common = [section for section in multi_sections if section in fields]
+   
 
-            # Step 2: Convert 'multi' into a DataFrame
-            multi_df = pd.DataFrame(multi_data)
-
-            # Step 3: Duplicate the base data for each row in 'multi'
-            base_df = pd.DataFrame([base_data] * len(multi_df))
-
-            # Step 4: Concatenate horizontally
-            df = pd.concat([base_df.reset_index(drop=True), multi_df.reset_index(drop=True)], axis=1)
-        
-            return df
-        
+    # returns a single row dataframe
+    if len(common) == 0:
         # index of 0 here indicates this is df of one row
         return pd.DataFrame(base_data, index=[0])
+    
+    # returns a multi row dataframe
+    multi_df = pd.DataFrame()
+    for section in common:
+        multi_data = fields[section]
+        
+        # stack multi dataframes
+        multi_df = pd.concat(
+            [multi_df,
+                pd.DataFrame(multi_data)], axis=0)
+
+    # Duplicate the base data for each row
+    base_df = pd.DataFrame([base_data] * len(multi_df))
+
+    # Concatenate horizontally
+    df = pd.concat([base_df.reset_index(drop=True), multi_df.reset_index(drop=True)], axis=1)
+
+    return df
+    
         
 
 def read_instrument_ini(file, as_dataframe:bool=False) -> Union[configparser.ConfigParser, pd.DataFrame]:
