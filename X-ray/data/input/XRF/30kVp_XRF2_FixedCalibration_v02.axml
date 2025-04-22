@@ -1,0 +1,2375 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bAxil>
+  <ExperimentalConditions>
+    <Detector Name="Standard 3 mm thick Si(Li) with 8 um Be window">
+      <Crystal>
+        <Composition> Si </Composition>
+        <Thickness> 3.00000E-001 </Thickness>
+        <Density> 2.34000E+000 </Density>
+      </Crystal>
+      <Absorber>
+        <Name> Window </Name>
+        <Composition> Be </Composition>
+        <Thickness> 8.00000E-004 </Thickness>
+        <Density> 1.84800E+000 </Density>
+      </Absorber>
+      <Absorber>
+        <Name> Contact </Name>
+        <Composition> Au </Composition>
+        <Thickness> 2.00000E-006 </Thickness>
+        <Density> 1.93000E+001 </Density>
+      </Absorber>
+      <Absorber>
+        <Name> Dead Layer </Name>
+        <Composition> Si </Composition>
+        <Thickness> 3.00000E-005 </Thickness>
+        <Density> 2.34000E+000 </Density>
+      </Absorber>
+    </Detector>
+    <Geometry>
+      <Source-Sample>
+        <Angle> 45 </Angle>
+        <Distance> 3.00000E+000 </Distance>
+        <SolidAngle> 1.00000E-001 </SolidAngle>
+      </Source-Sample>
+      <Sample-Detector>
+        <Angle> 45 </Angle>
+        <Distance> 3.00000E+000 </Distance>
+        <SolidAngle> 1.00000E-001 </SolidAngle>
+      </Sample-Detector>
+      <SourceFilter>
+        <Composition>  </Composition>
+        <Thickness> 0.00000E+000 </Thickness>
+        <Density> 0.00000E+000 </Density>
+      </SourceFilter>
+      <DetectorAbsorber>
+        <Composition>  </Composition>
+        <Thickness> 0.00000E+000 </Thickness>
+        <Density> 0.00000E+000 </Density>
+      </DetectorAbsorber>
+      <Atmosphere>
+        <Name> Air </Name>
+        <Composition> N2 0.7556 | O2 0.2315 | Ar 0.0129 </Composition>
+        <Thickness> 0.00000E+000 </Thickness>
+        <Density> 1.20350E-003 </Density>
+      </Atmosphere>
+    </Geometry>
+    <Excitation>
+      <DIRECT_TUBE>
+        <XRayTube>
+          <Type> 0 </Type>
+          <Voltage> 30 </Voltage>
+          <Current> 1.25 </Current>
+          <Anode>
+            <Composition> Mo </Composition>
+            <Density> 10.22 </Density>
+          </Anode>
+          <Window>
+            <Composition> Be </Composition>
+            <Thickness> 1.00000E-002 </Thickness>
+            <Density> 1.85000E+000 </Density>
+          </Window>
+          <TakeOffAngle> 20 </TakeOffAngle>
+          <LowEnergyCutoff> 3 </LowEnergyCutoff>
+          <DeltaE> 0.5 </DeltaE>
+          <IsCalculated> 1 </IsCalculated>
+          <CharacteristicLines>
+            <CharLine>Mo-La 2.293 2.1548E+010 </CharLine>
+            <CharLine>Mo-Ka 17.443 3.1639E+012 </CharLine>
+            <CharLine>Mo-Kb 19.602 8.8253E+011 </CharLine>
+          </CharacteristicLines>
+          <Continuum>
+            <ContInterval> 3.25000E+000 8.15365E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 3.75000E+000 9.94566E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 4.25000E+000 1.14516E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 4.75000E+000 1.26439E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 5.25000E+000 1.35106E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 5.75000E+000 1.40653E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 6.25000E+000 1.43428E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 6.75000E+000 1.43888E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 7.25000E+000 1.42516E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 7.75000E+000 1.39760E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 8.25000E+000 1.36006E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 8.75000E+000 1.31569E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 9.25000E+000 1.26696E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 9.75000E+000 1.21577E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 1.02500E+001 1.16352E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 1.07500E+001 1.11122E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 1.12500E+001 1.05960E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 1.17500E+001 1.00917E+012 5.00000E-001 </ContInterval>
+            <ContInterval> 1.22500E+001 9.60252E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.27500E+001 9.13052E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.32500E+001 8.67687E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.37500E+001 8.24208E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.42500E+001 7.82622E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.47500E+001 7.42899E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.52500E+001 7.04992E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.57500E+001 6.68837E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.62500E+001 6.34360E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.67500E+001 6.01487E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.72500E+001 5.70137E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.77500E+001 5.40232E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.82500E+001 5.11694E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.87500E+001 4.84449E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.92500E+001 4.58424E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 1.97500E+001 4.33551E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.02500E+001 3.72777E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.07500E+001 3.54767E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.12500E+001 3.37160E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.17500E+001 3.19965E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.22500E+001 3.03188E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.27500E+001 2.86834E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.32500E+001 2.70901E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.37500E+001 2.55388E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.42500E+001 2.40291E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.47500E+001 2.25604E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.52500E+001 2.11321E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.57500E+001 1.97432E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.62500E+001 1.83931E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.67500E+001 1.70807E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.72500E+001 1.58051E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.77500E+001 1.45653E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.82500E+001 1.33603E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.87500E+001 1.21891E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.92500E+001 1.10506E+011 5.00000E-001 </ContInterval>
+            <ContInterval> 2.97500E+001 9.94388E+010 5.00000E-001 </ContInterval>
+            <ContInterval> 3.02500E+001 8.86791E+010 5.00000E-001 </ContInterval>
+            <ContInterval> 3.07500E+001 7.82169E+010 5.00000E-001 </ContInterval>
+            <ContInterval> 3.12500E+001 6.80428E+010 5.00000E-001 </ContInterval>
+            <ContInterval> 3.17500E+001 5.81471E+010 5.00000E-001 </ContInterval>
+            <ContInterval> 3.22500E+001 4.85207E+010 5.00000E-001 </ContInterval>
+            <ContInterval> 3.27500E+001 3.91546E+010 5.00000E-001 </ContInterval>
+            <ContInterval> 3.32500E+001 3.00401E+010 5.00000E-001 </ContInterval>
+            <ContInterval> 3.37500E+001 2.11686E+010 5.00000E-001 </ContInterval>
+            <ContInterval> 3.42500E+001 1.25319E+010 5.00000E-001 </ContInterval>
+            <ContInterval> 3.47500E+001 4.12219E+009 5.00000E-001 </ContInterval>
+          </Continuum>
+        </XRayTube>
+      </DIRECT_TUBE>
+    </Excitation>
+  </ExperimentalConditions>
+  <Model>
+    <Calibration>
+      <Zero>
+        <Initial> 0.00000E+000  </Initial>
+        <InitialConstraint> 0.00000E+000 </InitialConstraint>
+        <Fitted> 0.00000E+000 </Fitted>
+        <FittedConstraint> 0.00000E+000 </FittedConstraint>
+        <StandardDeviation> 0.00000E+000 </StandardDeviation>
+      </Zero>
+      <Gain>
+        <Initial> 2.04000E-002  </Initial>
+        <InitialConstraint> 1.00000E-003 </InitialConstraint>
+        <Fitted> 2.03734E-002 </Fitted>
+        <FittedConstraint> 1.00000E-003 </FittedConstraint>
+        <StandardDeviation> 5.53185E-007 </StandardDeviation>
+      </Gain>
+      <Noise>
+        <Initial> 1.00000E-001  </Initial>
+        <InitialConstraint> 5.00000E-002 </InitialConstraint>
+        <Fitted> 1.20260E-001 </Fitted>
+        <FittedConstraint> 5.00000E-002 </FittedConstraint>
+        <StandardDeviation> 5.35301E-004 </StandardDeviation>
+      </Noise>
+      <Fano>
+        <Initial> 1.14000E-001  </Initial>
+        <InitialConstraint> 0.00000E+000 </InitialConstraint>
+        <Fitted> 1.14000E-001 </Fitted>
+        <FittedConstraint> 0.00000E+000 </FittedConstraint>
+        <StandardDeviation> 0.00000E+000 </StandardDeviation>
+      </Fano>
+    </Calibration>
+    <ShapeCalibration DetectorZ="14">
+      <Step>
+        <SFIntercept>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </SFIntercept>
+        <SFSlope>
+          <Initial> 3.00000E-005  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 3.00000E-005 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </SFSlope>
+      </Step>
+      <Tail>
+        <TFIntercept>
+          <Initial> 8.60000E-003  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 8.60000E-003 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </TFIntercept>
+        <TFSlope>
+          <Initial> 3.30000E-005  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 3.30000E-005 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </TFSlope>
+        <TGIntercept>
+          <Initial> 2.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 2.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </TGIntercept>
+        <TGSlope>
+          <Initial> 1.30000E-001  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.30000E-001 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </TGSlope>
+      </Tail>
+    </ShapeCalibration>
+    <Continuum>
+      <Filter NumIter="12"/>
+    </Continuum>
+    <FitControl>
+      <Quality>
+        <NumberIteration> 4 </NumberIteration>
+        <ChiSquare> 1.0118E+001 </ChiSquare>
+        <PrevChiSquare> 1.0118E+001 </PrevChiSquare>
+      </Quality>
+      <StopCriteria>
+        <MaxNumberIteration> 40 </MaxNumberIteration>
+        <MinChiSquare> 0.0000E+000 </MinChiSquare>
+        <MinChiSquareDiff> 1.0000E-002 </MinChiSquareDiff>
+      </StopCriteria>
+      <WeighingMode> 1 </WeighingMode>
+    </FitControl>
+    <ROI FirstChan="120" LastChan="1220" Mode="0">
+      <Fit>45.6 45.9 45.7 45.5 45.9 45.6 45.4 45.7 45.5 45.2 44.8 44.5 44.7 44.6 44.5 44.8 44.6 44.3 44.5 44.1 43.8 43.5 43.2 43.1 42.9 42.7 42.8 42.6 42.4 42.4 42.3 42.1 42.2 42.7 43.9 47.8 54.1 63.9 78.4 96.3 115.7 133.2 144.3 146.3 139.0 124.6 106.8 89.8 77.3 72.2 78.9 108.8 186.5 356.1 686.1 1259.1 2142.0 3338.7 4742.9 6125.3 7183.1 7644.5 7381.5 6467.0 5142.4 3714.5 2442.8 1471.9 829.1 465.8 308.5 292.2 371.2 512.5 684.0 848.4 966.3 1006.3 957.2 832.3 662.3 484.6 329.1 211.0 131.7 84.3 58.7 46.0 39.9 36.9 35.8 34.8 34.5 36.4 39.2 44.0 51.5 61.3 72.8 84.3 93.5 98.3 97.5 91.8 83.2 73.1 63.7 56.0 50.1 45.7 42.3 39.5 37.2 35.3 33.9 33.4 33.6 34.2 35.2 36.4 37.6 38.4 38.5 37.8 36.4 35.0 33.5 32.0 30.8 29.9 29.1 28.5 28.1 27.8 27.5 27.3 27.5 27.6 27.7 27.7 27.6 27.4 27.1 27.0 26.7 26.4 25.9 25.5 25.2 24.8 24.4 24.3 23.9 23.6 24.5 25.1 25.7 26.5 28.0 30.3 34.5 42.1 54.6 73.8 100.9 134.9 173.0 209.8 238.6 253.3 250.8 231.7 200.2 162.8 125.9 94.2 70.1 53.6 43.5 38.1 36.2 37.3 42.8 56.4 85.4 142.0 242.8 407.3 652.0 981.6 1380.6 1807.5 2199.0 2484.0 2604.5 2534.9 2290.8 1923.6 1502.6 1094.3 745.8 478.8 293.4 175.5 106.5 69.2 50.4 41.5 37.7 36.1 35.7 35.9 36.5 37.7 39.8 43.3 48.8 57.6 71.5 92.6 122.5 162.2 210.7 263.4 313.5 352.7 372.8 369.7 343.9 300.2 246.6 191.9 143.0 104.2 76.5 59.5 52.6 54.2 65.4 88.2 123.8 173.6 236.5 307.3 377.7 436.9 474.2 482.3 459.4 410.3 344.5 272.3 204.1 147.0 103.1 72.5 53.0 41.2 34.5 30.9 28.9 27.8 27.3 27.0 27.0 28.0 29.5 32.0 35.6 40.4 46.2 52.7 58.9 64.2 67.7 68.9 68.1 65.9 63.6 62.4 63.3 66.7 72.0 78.2 83.7 86.9 86.9 83.3 76.6 67.8 58.4 49.7 42.5 37.3 34.4 33.8 35.3 39.0 44.5 51.4 59.0 66.3 72.2 75.6 75.9 73.2 67.7 60.5 52.7 45.4 39.3 34.7 31.6 29.9 28.9 28.6 28.6 28.5 28.1 27.5 26.6 25.6 24.7 23.8 23.2 23.0 23.2 23.7 24.5 25.5 26.6 27.6 28.5 29.0 28.9 28.5 27.7 26.6 25.5 24.4 23.5 23.0 22.8 22.9 23.4 24.1 24.9 25.8 26.5 26.9 27.0 26.6 25.8 24.9 23.8 22.7 21.6 20.7 20.1 19.5 19.1 18.9 18.6 18.4 18.6 18.7 18.8 18.9 19.0 19.1 19.1 19.0 19.1 19.1 19.1 19.4 19.6 19.8 20.0 20.2 20.4 20.6 20.6 20.8 20.9 20.9 21.3 21.7 22.5 23.7 25.3 27.3 29.7 32.3 34.9 37.0 38.3 38.9 38.3 36.9 34.7 32.1 29.5 27.0 25.0 23.4 22.2 21.4 20.9 20.6 20.5 20.4 20.4 20.4 20.5 20.5 20.5 20.5 20.6 20.6 20.6 20.6 20.7 20.6 20.6 20.6 20.6 20.6 20.6 20.6 20.6 21.0 21.3 21.6 21.9 22.2 22.4 22.7 22.9 23.2 23.3 23.4 23.8 24.1 24.4 24.8 25.2 25.6 26.2 27.0 28.3 30.2 33.2 38.0 45.4 56.3 71.6 92.1 118.1 148.7 182.1 215.4 245.2 267.7 279.6 279.4 267.2 244.3 214.0 180.4 146.7 115.9 90.0 69.7 54.6 44.1 37.2 33.2 30.7 29.3 29.1 29.2 29.5 30.0 30.5 30.9 31.4 31.8 32.1 32.2 32.2 32.5 32.7 32.8 32.8 32.8 32.9 32.9 33.0 33.2 33.3 33.5 33.6 33.8 33.9 33.9 33.9 34.1 34.1 34.0 35.0 35.9 36.9 37.9 38.9 39.8 40.7 41.6 42.7 43.7 45.0 47.2 49.7 53.2 57.9 63.9 71.6 81.2 92.4 105.0 118.3 131.5 144.2 154.8 162.4 166.7 167.0 163.6 157.1 148.1 137.5 126.4 115.7 106.3 98.4 92.2 87.8 84.7 83.0 82.3 82.3 82.8 83.7 84.9 86.4 88.7 92.0 97.5 107.1 123.8 152.3 199.3 273.9 387.2 550.8 775.8 1069.8 1433.7 1858.8 2325.3 2801.6 3247.4 3618.9 3875.1 3985.7 3936.4 3732.3 3397.3 2968.9 2492.0 2011.1 1563.0 1173.6 855.9 611.7 434.2 312.3 233.1 184.4 156.2 140.8 133.1 129.7 128.6 128.6 129.2 130.2 131.3 133.3 135.6 138.2 141.5 145.3 150.0 155.9 162.9 171.0 180.0 189.9 199.9 209.3 217.5 223.7 227.4 228.5 227.0 223.2 217.7 211.3 205.0 199.3 194.2 190.2 187.4 186.0 185.5 185.4 185.8 186.4 187.6 188.6 189.6 191.3 192.5 193.7 198.0 201.9 206.3 211.9 218.3 226.3 236.9 250.8 268.9 292.5 323.4 363.8 413.8 474.6 546.8 628.2 716.3 806.8 893.0 967.8 1023.9 1055.6 1059.5 1034.7 984.5 915.4 834.5 750.6 671.5 602.2 546.0 503.4 473.3 453.2 439.8 430.3 423.0 416.0 409.1 402.4 396.0 390.5 386.1 383.4 383.1 384.2 386.6 390.1 394.6 399.3 404.4 410.0 416.4 422.6 429.0 436.8 444.5 451.5 457.9 463.9 469.7 474.7 479.2 483.4 487.2 490.2 492.6 494.8 497.8 499.7 501.5 506.8 510.9 515.4 520.9 526.0 531.3 537.2 543.2 548.6 553.8 559.0 564.7 569.6 574.6 581.6 587.8 594.1 601.4 608.1 615.2 622.9 630.4 637.9 645.6 654.8 664.1 673.6 682.6 691.6 700.9 709.8 718.6 728.0 737.0 746.3 755.9 765.6 775.1 784.5 793.2 801.2 808.1 814.0 818.8 822.7 826.0 829.1 832.3 835.8 839.9 845.4 853.0 861.0 869.5 878.7 887.8 896.9 906.4 915.5 924.6 933.8 941.8 949.2 956.8 970.9 988.2 1005.7 1023.4 1041.6 1060.1 1078.1 1095.9 1114.4 1133.8 1153.7 1174.3 1195.8 1218.3 1241.9 1266.6 1292.0 1318.5 1346.7 1376.8 1408.7 1442.5 1478.3 1516.2 1556.3 1598.9 1643.8 1690.5 1739.5 1791.0 1845.1 1901.8 1960.6 2021.3 2083.7 2147.5 2212.2 2277.2 2341.8 2405.3 2467.5 2528.4 2587.2 2643.1 2695.7 2744.8 2789.6 2829.2 2863.6 2892.6 2914.0 2928.6 2937.1 2940.2 2936.5 2926.9 2911.9 2891.3 2865.3 2834.4 2799.4 2759.6 2715.2 2668.3 2620.9 2570.8 2520.1 2470.0 2419.4 2369.5 2321.1 2274.0 2227.3 2182.1 2139.2 2099.9 2061.6 2026.6 1996.9 1969.9 1948.1 1934.5 1927.8 1931.8 1949.5 1983.0 2035.7 2110.2 2208.3 2330.3 2474.3 2638.5 2820.4 3010.0 3203.2 3394.6 3572.1 3729.3 3859.0 3949.7 3994.9 3989.2 3928.6 3814.1 3651.4 3450.3 3224.0 2985.8 2750.8 2531.9 2336.7 2171.2 2037.8 1933.7 1856.1 1801.3 1762.8 1737.1 1722.7 1718.1 1717.6 1719.3 1722.5 1726.6 1732.0 1735.6 1739.5 1747.1 1753.4 1760.0 1767.7 1775.1 1782.6 1790.3 1798.4 1806.1 1813.6 1821.6 1829.9 1837.6 1845.7 1855.0 1864.1 1873.7 1883.6 1893.6 1903.9 1914.5 1924.7 1934.1 1943.1 1952.1 1961.0 1969.4 1977.5 1985.3 1992.6 1999.2 2004.9 2009.6 2012.8 2014.9 2016.3 2016.0 2014.6 2012.3 2009.4 2005.3 2000.2 1993.6 1985.7 1976.7 1966.4 1955.2 1942.7 1929.4 1915.5 1901.2 1886.4 1871.4 1855.6 1839.4 1822.8 1805.7 1788.4 1770.6 1752.7 1735.0 1717.5 1700.0 1682.8 1665.5 1648.2 1630.9 1613.3 1595.9 1578.3 1560.8 1543.7 1526.9 1510.2 1493.7 1477.2 1460.8 1444.1 1427.5 1411.2 1395.2 1380.0 1366.1 1354.1 1344.4 1337.6 1334.8 1336.9 1344.2 1357.4 1376.6 1401.0 1429.0 1458.3 1485.6 1507.7 1521.4 1523.9 1513.5 1489.4 1452.2 1404.1 1348.1 1287.4 1225.2 1164.7 1108.3 1057.8 1013.8 976.4 945.5 920.7 900.7 884.6 871.8 860.8 850.7 840.6 830.0 818.3 804.3 788.4 771.4 752.1 731.5 710.4 688.7 667.1 646.0 625.9 606.7 588.2 570.8 554.7 539.1 524.1 510.0 496.2 482.5 469.0 455.8 442.9 429.9 417.1 404.5 392.0 379.5 367.2 355.1 343.1 331.2 319.5 308.1 296.9 285.6 274.4 263.4 252.9 242.3 232.0 221.8 211.9 202.1 192.3 182.8 174.1 165.2 156.5 148.3 140.2 132.1 124.2 116.6 109.3 101.9 94.7 88.6 82.3 76.2 70.6 65.1 59.6 54.3 49.3 44.6 39.8 35.3 32.8 30.4 29.5 28.6 27.7 26.8 25.9 25.6 25.4 26.1 26.9 28.1 29.3 30.5 31.9 33.0 34.2 </Fit>
+      <Continuum>45.5 45.9 45.7 45.4 45.9 45.6 45.4 45.7 45.5 45.2 44.7 44.3 44.5 44.3 44.1 44.3 44.1 43.9 44.1 43.9 43.6 43.4 43.1 43.1 42.9 42.7 42.8 42.6 42.4 42.4 42.2 42.0 41.9 41.8 41.7 42.8 43.6 44.5 45.6 46.5 47.4 48.4 49.4 50.3 51.3 52.3 52.8 53.1 53.3 53.8 54.1 54.4 54.9 55.2 55.4 55.7 55.7 55.6 55.4 55.1 54.8 54.5 54.2 53.8 53.5 53.0 52.5 52.0 51.4 50.9 50.1 49.4 48.6 47.9 47.0 46.1 45.5 44.6 43.7 43.1 42.2 41.3 40.8 40.2 39.6 38.9 38.2 37.5 36.6 35.7 35.1 34.2 33.2 33.5 33.4 33.3 33.5 33.4 33.4 33.3 33.3 33.1 32.7 32.3 32.4 32.3 32.3 32.3 32.3 32.2 32.1 31.9 31.7 31.4 31.2 31.2 31.2 31.1 31.0 30.8 30.7 30.5 30.2 29.7 29.3 29.3 29.2 29.1 29.0 28.8 28.5 28.2 27.9 27.6 27.3 27.0 27.0 27.0 27.0 26.9 26.7 26.5 26.3 26.2 26.2 25.9 25.7 25.4 25.2 24.8 24.4 24.3 23.9 23.5 24.3 24.8 25.1 25.4 25.8 26.1 26.4 26.9 27.2 27.5 27.9 28.3 28.6 29.0 29.4 29.7 29.9 30.2 30.4 30.7 30.9 31.2 31.4 31.6 31.9 32.1 32.4 32.6 32.7 32.8 33.0 33.1 33.2 33.3 33.5 33.6 33.7 33.8 33.9 34.0 34.2 34.3 34.4 34.5 34.6 34.6 34.7 34.7 34.8 34.8 34.8 34.9 34.9 34.9 35.0 34.9 34.9 35.0 35.0 35.0 35.0 35.0 34.9 34.8 34.8 34.8 34.6 34.4 34.4 34.2 34.0 34.0 33.8 33.6 33.7 33.7 33.6 33.4 33.3 33.2 32.8 32.5 32.5 32.1 31.7 31.8 31.5 31.3 31.3 31.1 31.0 30.8 30.7 30.4 29.9 29.5 29.5 29.2 28.9 28.9 28.5 28.2 28.1 27.9 27.6 27.4 27.1 26.8 26.6 26.3 26.0 26.1 26.1 26.2 26.3 26.3 26.4 26.5 26.5 26.5 26.6 26.6 26.6 26.6 26.6 26.6 26.6 26.6 26.6 26.5 26.5 26.4 26.4 26.3 26.2 26.2 26.1 26.0 26.0 25.9 25.8 25.7 25.6 25.5 25.4 25.3 25.2 25.0 24.9 24.7 24.5 24.5 24.4 24.2 24.2 24.1 24.0 23.8 23.7 23.5 23.3 23.0 23.0 22.9 22.8 22.6 22.4 22.2 22.0 21.8 21.6 21.5 21.5 21.4 21.4 21.3 21.3 21.3 21.2 21.1 21.1 21.0 21.0 20.9 20.9 20.9 20.9 20.8 20.7 20.7 20.6 20.5 20.4 20.3 20.2 20.1 20.1 19.9 19.8 19.8 19.7 19.6 19.4 19.3 19.2 19.0 18.8 18.7 18.5 18.3 18.5 18.7 18.8 18.9 19.0 19.1 19.0 19.0 19.1 19.0 19.0 19.1 19.2 19.3 19.4 19.5 19.6 19.5 19.5 19.5 19.5 19.5 19.6 19.7 19.7 19.8 19.9 19.9 19.9 19.9 19.9 19.9 19.9 20.0 20.0 20.1 20.1 20.2 20.2 20.2 20.2 20.2 20.2 20.2 20.3 20.3 20.3 20.4 20.4 20.4 20.4 20.5 20.5 20.5 20.6 20.6 20.6 20.6 20.7 20.6 20.6 20.6 20.6 20.6 20.6 20.6 20.6 21.0 21.3 21.6 21.9 22.2 22.4 22.7 22.9 23.1 23.3 23.4 23.7 24.0 24.3 24.6 24.8 25.1 25.3 25.5 25.6 25.8 25.9 26.1 26.3 26.5 26.6 26.7 26.9 27.1 27.2 27.3 27.3 27.4 27.4 27.3 27.4 27.3 27.3 27.5 27.7 27.9 28.1 28.3 28.3 28.2 28.1 28.1 28.0 27.8 28.2 28.5 28.7 29.2 29.4 29.7 30.0 30.3 30.5 30.6 30.8 31.2 31.5 31.8 32.0 32.3 32.5 32.7 32.9 33.1 33.2 33.4 33.6 33.8 33.9 33.9 33.9 34.1 34.1 34.0 35.0 35.9 36.9 37.9 38.9 39.8 40.6 41.4 42.4 43.2 44.0 45.3 46.4 47.5 48.8 50.0 51.2 52.4 53.6 54.7 55.6 56.6 58.0 59.3 60.5 61.9 63.1 64.4 65.7 67.0 68.3 69.5 70.7 72.1 73.4 74.7 75.9 77.1 78.2 79.5 80.7 81.8 83.1 84.3 85.6 86.9 88.1 89.3 90.4 91.5 92.7 93.7 94.7 95.9 96.9 98.0 99.2 100.3 101.4 102.5 103.6 104.7 105.6 106.6 107.7 108.6 109.6 110.7 111.7 112.7 113.8 114.8 115.8 116.7 117.7 118.7 119.6 120.7 121.7 122.8 123.8 124.8 125.9 126.8 127.8 128.8 129.8 130.8 132.6 134.3 135.9 137.7 139.4 141.1 143.0 144.7 146.4 148.1 150.0 151.8 153.7 155.5 157.2 158.9 160.7 162.4 164.1 165.7 167.4 169.4 171.4 173.2 174.8 176.5 178.4 180.2 181.8 183.2 184.6 186.3 187.5 188.8 190.7 191.9 193.2 197.3 200.7 204.1 208.1 211.7 215.4 219.2 223.0 226.5 229.8 233.2 237.3 240.9 244.5 248.7 252.4 256.1 260.2 264.1 267.8 271.6 275.3 279.5 283.3 287.2 291.4 295.3 299.3 303.5 307.6 311.6 315.5 319.6 323.9 328.0 332.2 336.6 340.8 345.1 349.5 353.9 358.0 362.2 366.3 371.3 376.1 380.9 385.7 390.5 394.9 399.1 403.3 407.9 412.1 416.3 421.9 427.5 432.5 437.3 442.1 447.2 451.9 456.7 461.6 466.6 471.0 475.0 479.1 484.2 488.0 491.8 498.8 504.6 510.4 517.0 522.9 528.8 535.1 541.3 546.9 552.2 557.6 563.3 568.4 573.4 580.4 586.6 592.8 599.8 606.1 612.5 619.3 625.7 631.8 637.9 645.4 652.8 660.4 667.6 674.8 682.5 689.8 697.1 705.0 712.4 719.8 727.3 734.7 741.9 749.1 756.2 763.2 770.2 777.3 784.5 791.6 798.8 806.0 813.2 820.4 827.6 835.4 844.8 853.9 863.1 872.6 881.9 891.2 900.9 910.3 919.8 929.4 937.7 945.4 953.2 967.3 984.4 1001.4 1018.4 1035.5 1052.8 1069.1 1084.8 1100.7 1117.0 1133.2 1149.4 1165.6 1181.8 1198.1 1214.3 1229.7 1244.7 1259.8 1275.0 1290.1 1304.9 1319.6 1334.2 1348.5 1362.7 1376.8 1390.0 1402.9 1415.5 1428.3 1440.9 1453.3 1465.5 1477.4 1489.2 1500.8 1511.8 1522.2 1531.9 1541.2 1550.5 1559.7 1568.6 1577.5 1586.3 1595.2 1603.7 1611.9 1620.2 1626.8 1632.4 1638.1 1644.5 1650.2 1656.0 1662.1 1668.1 1673.7 1679.2 1684.7 1689.1 1691.9 1694.7 1698.9 1701.8 1704.8 1708.7 1711.8 1714.9 1718.5 1721.8 1723.8 1725.1 1726.4 1728.7 1729.1 1729.6 1731.8 1732.3 1732.8 1734.7 1735.4 1736.0 1736.8 1737.1 1737.2 1737.1 1737.1 1736.9 1735.7 1734.6 1735.3 1733.7 1732.0 1732.5 1730.9 1729.3 1729.2 1727.9 1726.5 1725.9 1724.9 1723.5 1722.1 1720.6 1719.5 1717.5 1715.6 1714.4 1712.5 1710.5 1709.4 1707.4 1705.5 1704.3 1702.4 1700.4 1700.9 1705.0 1709.4 1713.6 1717.8 1722.0 1727.1 1730.0 1732.9 1739.3 1744.1 1749.0 1754.9 1760.0 1765.0 1770.0 1774.9 1779.1 1782.7 1786.4 1790.0 1792.5 1795.1 1798.4 1801.1 1803.8 1806.5 1808.8 1811.2 1813.5 1815.2 1815.8 1816.0 1816.1 1816.1 1815.8 1815.3 1814.7 1814.0 1813.1 1811.6 1809.9 1807.3 1804.4 1801.4 1797.7 1793.6 1789.6 1785.8 1781.8 1777.7 1772.9 1767.7 1762.1 1756.1 1749.8 1742.8 1735.5 1728.2 1720.9 1713.4 1706.0 1697.9 1689.5 1680.9 1671.7 1662.3 1652.2 1641.9 1631.6 1621.2 1610.6 1600.0 1589.0 1577.7 1566.0 1553.9 1541.5 1528.6 1515.6 1502.6 1489.7 1476.5 1463.4 1449.8 1436.1 1421.9 1407.3 1392.6 1377.6 1362.5 1347.4 1332.5 1317.5 1302.3 1286.8 1271.4 1255.4 1239.2 1223.1 1206.8 1190.6 1174.4 1158.2 1141.9 1125.5 1109.1 1092.9 1076.3 1059.6 1042.9 1026.3 1009.8 993.2 976.6 960.1 943.7 927.4 910.9 894.5 878.5 862.4 846.4 830.8 815.1 799.4 783.7 768.1 752.9 737.2 721.7 707.1 692.1 677.3 663.1 648.7 634.3 620.0 605.9 591.9 577.5 563.3 549.7 535.8 522.1 508.7 495.5 482.1 468.8 455.7 442.9 429.9 417.1 404.5 392.0 379.5 367.2 355.1 343.1 331.2 319.5 308.1 296.9 285.6 274.4 263.4 252.9 242.3 232.0 221.8 211.9 202.1 192.3 182.8 174.1 165.2 156.5 148.3 140.2 132.1 124.2 116.6 109.3 101.9 94.7 88.6 82.3 76.2 70.6 65.1 59.6 54.3 49.3 44.6 39.8 35.3 32.8 30.4 29.5 28.6 27.7 26.8 25.9 25.6 25.4 26.1 26.9 28.1 29.3 30.5 31.9 33.0 34.2 </Continuum>
+    </ROI>
+    <XrayLines>
+      <LineGroup Z="19" ID="1" Label="K -K" RadiationType="0" CreationMode="0">
+        <Area> 858 </Area>
+        <StdArea> 50 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 3.3111 </Energy>
+          <TransitionProbability> 2.99590E-001 </TransitionProbability>
+          <LineWidth> 0.0009 </LineWidth>
+          <RelativeIntensity> 2.95599E-001 </RelativeIntensity>
+          <Continuum> 638.6 </Continuum>
+          <ChiSqr> 7.72E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 3.3138 </Energy>
+          <TransitionProbability> 5.96810E-001 </TransitionProbability>
+          <LineWidth> 0.0009 </LineWidth>
+          <RelativeIntensity> 5.89047E-001 </RelativeIntensity>
+          <Continuum> 638.6 </Continuum>
+          <ChiSqr> 7.72E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 3.5896 </Energy>
+          <TransitionProbability> 1.03600E-001 </TransitionProbability>
+          <LineWidth> 0.0007 </LineWidth>
+          <RelativeIntensity> 1.04583E-001 </RelativeIntensity>
+          <Continuum> 768.8 </Continuum>
+          <ChiSqr> 4.23E+001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 1.5611 </Energy>
+          <RelativeIntensity> 0.0032548 </RelativeIntensity>
+          <Continuum> 0.0 </Continuum>
+          <ChiSqr> 0.000000 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 1.5638 </Energy>
+          <RelativeIntensity> 0.0064794 </RelativeIntensity>
+          <Continuum> 0.0 </Continuum>
+          <ChiSqr> 0.000000 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 1.8396 </Energy>
+          <RelativeIntensity> 0.0010365 </RelativeIntensity>
+          <Continuum> 0.0 </Continuum>
+          <ChiSqr> 0.000000 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="20" ID="1" Label="Ca-K" RadiationType="0" CreationMode="0">
+        <Area> 69238 </Area>
+        <StdArea> 271 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 3.6881 </Energy>
+          <TransitionProbability> 2.97460E-001 </TransitionProbability>
+          <LineWidth> 0.0010 </LineWidth>
+          <RelativeIntensity> 2.93862E-001 </RelativeIntensity>
+          <Continuum> 761.1 </Continuum>
+          <ChiSqr> 4.92E+001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 3.6917 </Energy>
+          <TransitionProbability> 5.90840E-001 </TransitionProbability>
+          <LineWidth> 0.0010 </LineWidth>
+          <RelativeIntensity> 5.83868E-001 </RelativeIntensity>
+          <Continuum> 761.1 </Continuum>
+          <ChiSqr> 4.92E+001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 4.0127 </Energy>
+          <TransitionProbability> 1.11700E-001 </TransitionProbability>
+          <LineWidth> 0.0019 </LineWidth>
+          <RelativeIntensity> 1.12952E-001 </RelativeIntensity>
+          <Continuum> 630.4 </Continuum>
+          <ChiSqr> 5.09E+001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 1.9381 </Energy>
+          <RelativeIntensity> 0.00280432 </RelativeIntensity>
+          <Continuum> 0.0 </Continuum>
+          <ChiSqr> 0.000000 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 1.9417 </Energy>
+          <RelativeIntensity> 0.00556412 </RelativeIntensity>
+          <Continuum> 0.0 </Continuum>
+          <ChiSqr> 0.000000 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 2.2627 </Energy>
+          <RelativeIntensity> 0.000950143 </RelativeIntensity>
+          <Continuum> 0.0 </Continuum>
+          <ChiSqr> 0.000000 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="22" ID="1" Label="Ti-K" RadiationType="0" CreationMode="0">
+        <Area> 614 </Area>
+        <StdArea> 42 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 4.5049 </Energy>
+          <TransitionProbability> 2.97490E-001 </TransitionProbability>
+          <LineWidth> 0.0011 </LineWidth>
+          <RelativeIntensity> 2.94943E-001 </RelativeIntensity>
+          <Continuum> 461.0 </Continuum>
+          <ChiSqr> 9.05E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 4.5109 </Energy>
+          <TransitionProbability> 5.87510E-001 </TransitionProbability>
+          <LineWidth> 0.0011 </LineWidth>
+          <RelativeIntensity> 5.82621E-001 </RelativeIntensity>
+          <Continuum> 493.3 </Continuum>
+          <ChiSqr> 8.50E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 4.9318 </Energy>
+          <TransitionProbability> 1.15000E-001 </TransitionProbability>
+          <LineWidth> 0.0021 </LineWidth>
+          <RelativeIntensity> 1.15687E-001 </RelativeIntensity>
+          <Continuum> 422.2 </Continuum>
+          <ChiSqr> 2.85E+000 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 2.7549 </Energy>
+          <RelativeIntensity> 0.00204381 </RelativeIntensity>
+          <Continuum> 574.4 </Continuum>
+          <ChiSqr> 18.729997 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 2.7609 </Energy>
+          <RelativeIntensity> 0.0040277 </RelativeIntensity>
+          <Continuum> 574.4 </Continuum>
+          <ChiSqr> 18.729997 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 3.1818 </Energy>
+          <RelativeIntensity> 0.000677396 </RelativeIntensity>
+          <Continuum> 620.2 </Continuum>
+          <ChiSqr> 0.653049 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="25" ID="1" Label="Mn-K" RadiationType="0" CreationMode="0">
+        <Area> 2276 </Area>
+        <StdArea> 61 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 5.8876 </Energy>
+          <TransitionProbability> 2.98150E-001 </TransitionProbability>
+          <LineWidth> 0.0014 </LineWidth>
+          <RelativeIntensity> 2.96687E-001 </RelativeIntensity>
+          <Continuum> 469.3 </Continuum>
+          <ChiSqr> 1.47E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 5.8987 </Energy>
+          <TransitionProbability> 5.83750E-001 </TransitionProbability>
+          <LineWidth> 0.0014 </LineWidth>
+          <RelativeIntensity> 5.80981E-001 </RelativeIntensity>
+          <Continuum> 442.3 </Continuum>
+          <ChiSqr> 1.48E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 6.4904 </Energy>
+          <TransitionProbability> 1.18100E-001 </TransitionProbability>
+          <LineWidth> 0.0024 </LineWidth>
+          <RelativeIntensity> 1.18409E-001 </RelativeIntensity>
+          <Continuum> 517.2 </Continuum>
+          <ChiSqr> 8.32E+000 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 4.1376 </Energy>
+          <RelativeIntensity> 0.00120015 </RelativeIntensity>
+          <Continuum> 567.7 </Continuum>
+          <ChiSqr> 29.616592 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 4.1487 </Energy>
+          <RelativeIntensity> 0.00234032 </RelativeIntensity>
+          <Continuum> 557.4 </Continuum>
+          <ChiSqr> 25.505776 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 4.7404 </Energy>
+          <RelativeIntensity> 0.00038276 </RelativeIntensity>
+          <Continuum> 475.1 </Continuum>
+          <ChiSqr> 2.061369 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="26" ID="1" Label="Fe-K" RadiationType="0" CreationMode="0">
+        <Area> 26472 </Area>
+        <StdArea> 172 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 6.3909 </Energy>
+          <TransitionProbability> 2.98610E-001 </TransitionProbability>
+          <LineWidth> 0.0015 </LineWidth>
+          <RelativeIntensity> 2.97399E-001 </RelativeIntensity>
+          <Continuum> 510.3 </Continuum>
+          <ChiSqr> 1.03E+001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 6.4039 </Energy>
+          <TransitionProbability> 5.82990E-001 </TransitionProbability>
+          <LineWidth> 0.0016 </LineWidth>
+          <RelativeIntensity> 5.80709E-001 </RelativeIntensity>
+          <Continuum> 511.7 </Continuum>
+          <ChiSqr> 9.64E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 7.0580 </Energy>
+          <TransitionProbability> 1.18400E-001 </TransitionProbability>
+          <LineWidth> 0.0025 </LineWidth>
+          <RelativeIntensity> 1.18645E-001 </RelativeIntensity>
+          <Continuum> 508.6 </Continuum>
+          <ChiSqr> 7.31E+000 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 4.6409 </Energy>
+          <RelativeIntensity> 0.000997028 </RelativeIntensity>
+          <Continuum> 450.2 </Continuum>
+          <ChiSqr> 0.938865 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 4.6539 </Energy>
+          <RelativeIntensity> 0.00193755 </RelativeIntensity>
+          <Continuum> 481.4 </Continuum>
+          <ChiSqr> 0.959606 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 5.308 </Energy>
+          <RelativeIntensity> 0.000312986 </RelativeIntensity>
+          <Continuum> 398.6 </Continuum>
+          <ChiSqr> 0.581177 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="27" ID="1" Label="Co-K" RadiationType="0" CreationMode="0">
+        <Area> 135 </Area>
+        <StdArea> 48 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 6.9153 </Energy>
+          <TransitionProbability> 2.99010E-001 </TransitionProbability>
+          <LineWidth> 0.0017 </LineWidth>
+          <RelativeIntensity> 2.98008E-001 </RelativeIntensity>
+          <Continuum> 518.6 </Continuum>
+          <ChiSqr> 4.45E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 6.9303 </Energy>
+          <TransitionProbability> 5.82090E-001 </TransitionProbability>
+          <LineWidth> 0.0017 </LineWidth>
+          <RelativeIntensity> 5.80211E-001 </RelativeIntensity>
+          <Continuum> 552.2 </Continuum>
+          <ChiSqr> 4.81E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 7.6494 </Energy>
+          <TransitionProbability> 1.18900E-001 </TransitionProbability>
+          <LineWidth> 0.0026 </LineWidth>
+          <RelativeIntensity> 1.19097E-001 </RelativeIntensity>
+          <Continuum> 480.7 </Continuum>
+          <ChiSqr> 7.46E-001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 5.1653 </Energy>
+          <RelativeIntensity> 0.000826733 </RelativeIntensity>
+          <Continuum> 417.3 </Continuum>
+          <ChiSqr> 0.507016 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 5.1803 </Energy>
+          <RelativeIntensity> 0.00160109 </RelativeIntensity>
+          <Continuum> 414.5 </Continuum>
+          <ChiSqr> 0.494179 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 5.8994 </Energy>
+          <RelativeIntensity> 0.000256447 </RelativeIntensity>
+          <Continuum> 442.3 </Continuum>
+          <ChiSqr> 1.475496 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="28" ID="1" Label="Ni-K" RadiationType="0" CreationMode="0">
+        <Area> 4893 </Area>
+        <StdArea> 81 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 7.4609 </Energy>
+          <TransitionProbability> 2.99410E-001 </TransitionProbability>
+          <LineWidth> 0.0019 </LineWidth>
+          <RelativeIntensity> 2.98580E-001 </RelativeIntensity>
+          <Continuum> 487.3 </Continuum>
+          <ChiSqr> 9.59E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 7.4781 </Energy>
+          <TransitionProbability> 5.81202E-001 </TransitionProbability>
+          <LineWidth> 0.0019 </LineWidth>
+          <RelativeIntensity> 5.79653E-001 </RelativeIntensity>
+          <Continuum> 484.2 </Continuum>
+          <ChiSqr> 8.15E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 8.2647 </Energy>
+          <TransitionProbability> 1.19388E-001 </TransitionProbability>
+          <LineWidth> 0.0028 </LineWidth>
+          <RelativeIntensity> 1.19549E-001 </RelativeIntensity>
+          <Continuum> 448.0 </Continuum>
+          <ChiSqr> 1.10E+000 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 5.7109 </Energy>
+          <RelativeIntensity> 0.000685234 </RelativeIntensity>
+          <Continuum> 396.9 </Continuum>
+          <ChiSqr> 1.409639 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 5.7281 </Energy>
+          <RelativeIntensity> 0.00132252 </RelativeIntensity>
+          <Continuum> 402.8 </Continuum>
+          <ChiSqr> 1.405484 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 6.5147 </Energy>
+          <RelativeIntensity> 0.000210396 </RelativeIntensity>
+          <Continuum> 553.1 </Continuum>
+          <ChiSqr> 9.124266 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="29" ID="1" Label="Cu-K" RadiationType="0" CreationMode="0">
+        <Area> 453 </Area>
+        <StdArea> 39 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 8.0279 </Energy>
+          <TransitionProbability> 3.00450E-001 </TransitionProbability>
+          <LineWidth> 0.0020 </LineWidth>
+          <RelativeIntensity> 2.99761E-001 </RelativeIntensity>
+          <Continuum> 423.7 </Continuum>
+          <ChiSqr> 5.56E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 8.0478 </Energy>
+          <TransitionProbability> 5.81550E-001 </TransitionProbability>
+          <LineWidth> 0.0021 </LineWidth>
+          <RelativeIntensity> 5.80271E-001 </RelativeIntensity>
+          <Continuum> 424.1 </Continuum>
+          <ChiSqr> 8.23E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 8.9053 </Energy>
+          <TransitionProbability> 1.18000E-001 </TransitionProbability>
+          <LineWidth> 0.0029 </LineWidth>
+          <RelativeIntensity> 1.18132E-001 </RelativeIntensity>
+          <Continuum> 388.1 </Continuum>
+          <ChiSqr> 6.44E-001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 6.2779 </Energy>
+          <RelativeIntensity> 0.00056949 </RelativeIntensity>
+          <Continuum> 534.2 </Continuum>
+          <ChiSqr> 9.703309 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 6.2978 </Energy>
+          <RelativeIntensity> 0.00109528 </RelativeIntensity>
+          <Continuum> 536.2 </Continuum>
+          <ChiSqr> 9.742489 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 7.1553 </Energy>
+          <RelativeIntensity> 0.000170232 </RelativeIntensity>
+          <Continuum> 532.0 </Continuum>
+          <ChiSqr> 6.972952 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="30" ID="1" Label="Zn-K" RadiationType="0" CreationMode="0">
+        <Area> 583 </Area>
+        <StdArea> 40 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 8.6158 </Energy>
+          <TransitionProbability> 3.00200E-001 </TransitionProbability>
+          <LineWidth> 0.0022 </LineWidth>
+          <RelativeIntensity> 2.99627E-001 </RelativeIntensity>
+          <Continuum> 397.2 </Continuum>
+          <ChiSqr> 6.46E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 8.6389 </Energy>
+          <TransitionProbability> 5.79400E-001 </TransitionProbability>
+          <LineWidth> 0.0022 </LineWidth>
+          <RelativeIntensity> 5.78341E-001 </RelativeIntensity>
+          <Continuum> 395.3 </Continuum>
+          <ChiSqr> 6.82E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 9.5720 </Energy>
+          <TransitionProbability> 1.20400E-001 </TransitionProbability>
+          <LineWidth> 0.0031 </LineWidth>
+          <RelativeIntensity> 1.20513E-001 </RelativeIntensity>
+          <Continuum> 342.0 </Continuum>
+          <ChiSqr> 7.08E-001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 6.8658 </Energy>
+          <RelativeIntensity> 0.000472003 </RelativeIntensity>
+          <Continuum> 555.6 </Continuum>
+          <ChiSqr> 2.668244 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 6.8889 </Energy>
+          <RelativeIntensity> 0.000904542 </RelativeIntensity>
+          <Continuum> 554.7 </Continuum>
+          <ChiSqr> 3.396355 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 7.822 </Energy>
+          <RelativeIntensity> 0.000142527 </RelativeIntensity>
+          <Continuum> 427.6 </Continuum>
+          <ChiSqr> 0.341964 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="31" ID="1" Label="Ga-K" RadiationType="0" CreationMode="0">
+        <Area> 92 </Area>
+        <StdArea> 30 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 9.2248 </Energy>
+          <TransitionProbability> 2.99910E-001 </TransitionProbability>
+          <LineWidth> 0.0024 </LineWidth>
+          <RelativeIntensity> 2.99431E-001 </RelativeIntensity>
+          <Continuum> 360.1 </Continuum>
+          <ChiSqr> 2.59E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 9.2517 </Energy>
+          <TransitionProbability> 5.77190E-001 </TransitionProbability>
+          <LineWidth> 0.0025 </LineWidth>
+          <RelativeIntensity> 5.76311E-001 </RelativeIntensity>
+          <Continuum> 358.6 </Continuum>
+          <ChiSqr> 3.92E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 10.2642 </Energy>
+          <TransitionProbability> 1.22900E-001 </TransitionProbability>
+          <LineWidth> 0.0033 </LineWidth>
+          <RelativeIntensity> 1.22998E-001 </RelativeIntensity>
+          <Continuum> 352.2 </Continuum>
+          <ChiSqr> 9.17E-001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 7.4748 </Energy>
+          <RelativeIntensity> 0.000391998 </RelativeIntensity>
+          <Continuum> 484.2 </Continuum>
+          <ChiSqr> 0.815129 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 7.5017 </Energy>
+          <RelativeIntensity> 0.000748484 </RelativeIntensity>
+          <Continuum> 480.7 </Continuum>
+          <ChiSqr> 1.094459 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 8.5142 </Energy>
+          <RelativeIntensity> 0.000119754 </RelativeIntensity>
+          <Continuum> 406.1 </Continuum>
+          <ChiSqr> 0.933965 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="33" ID="1" Label="As-K" RadiationType="0" CreationMode="0">
+        <Area> 232 </Area>
+        <StdArea> 33 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 10.5081 </Energy>
+          <TransitionProbability> 2.99390E-001 </TransitionProbability>
+          <LineWidth> 0.0029 </LineWidth>
+          <RelativeIntensity> 2.99052E-001 </RelativeIntensity>
+          <Continuum> 359.4 </Continuum>
+          <ChiSqr> 6.54E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 10.5436 </Energy>
+          <TransitionProbability> 5.72910E-001 </TransitionProbability>
+          <LineWidth> 0.0029 </LineWidth>
+          <RelativeIntensity> 5.72298E-001 </RelativeIntensity>
+          <Continuum> 340.3 </Continuum>
+          <ChiSqr> 6.48E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 11.7262 </Energy>
+          <TransitionProbability> 1.27700E-001 </TransitionProbability>
+          <LineWidth> 0.0037 </LineWidth>
+          <RelativeIntensity> 1.27775E-001 </RelativeIntensity>
+          <Continuum> 500.7 </Continuum>
+          <ChiSqr> 5.12E-001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 8.7581 </Energy>
+          <RelativeIntensity> 0.000272546 </RelativeIntensity>
+          <Continuum> 407.8 </Continuum>
+          <ChiSqr> 0.862831 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 8.7936 </Energy>
+          <RelativeIntensity> 0.000516633 </RelativeIntensity>
+          <Continuum> 403.3 </Continuum>
+          <ChiSqr> 1.010839 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 9.9762 </Energy>
+          <RelativeIntensity> 8.52061E-005 </RelativeIntensity>
+          <Continuum> 321.3 </Continuum>
+          <ChiSqr> 1.677672 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="35" ID="1" Label="Br-K" RadiationType="0" CreationMode="0">
+        <Area> 3315 </Area>
+        <StdArea> 73 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 11.8777 </Energy>
+          <TransitionProbability> 2.95930E-001 </TransitionProbability>
+          <LineWidth> 0.0035 </LineWidth>
+          <RelativeIntensity> 2.96493E-001 </RelativeIntensity>
+          <Continuum> 488.9 </Continuum>
+          <ChiSqr> 1.01E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 11.9238 </Energy>
+          <TransitionProbability> 5.63084E-001 </TransitionProbability>
+          <LineWidth> 0.0035 </LineWidth>
+          <RelativeIntensity> 5.61898E-001 </RelativeIntensity>
+          <Continuum> 492.5 </Continuum>
+          <ChiSqr> 1.18E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 13.2922 </Energy>
+          <TransitionProbability> 1.31087E-001 </TransitionProbability>
+          <LineWidth> 0.0042 </LineWidth>
+          <RelativeIntensity> 1.31094E-001 </RelativeIntensity>
+          <Continuum> 1108.0 </Continuum>
+          <ChiSqr> 6.23E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 403</FinalState>
+          <Label>K-N3</Label>
+          <Energy> 13.4691 </Energy>
+          <TransitionProbability> 9.89901E-003 </TransitionProbability>
+          <LineWidth> 0.0024 </LineWidth>
+          <RelativeIntensity> 9.90164E-003 </RelativeIntensity>
+          <Continuum> 1320.0 </Continuum>
+          <ChiSqr> 5.40E-001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 10.128 </Energy>
+          <RelativeIntensity> 0.00019055 </RelativeIntensity>
+          <Continuum> 346.8 </Continuum>
+          <ChiSqr> 1.670020 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 10.174 </Energy>
+          <RelativeIntensity> 0.000357115 </RelativeIntensity>
+          <Continuum> 328.9 </Continuum>
+          <ChiSqr> 1.310664 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 11.542 </Energy>
+          <RelativeIntensity> 6.08126E-005 </RelativeIntensity>
+          <Continuum> 468.8 </Continuum>
+          <ChiSqr> 0.650520 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 403 </FinalState>
+          <Label>K-N3 esc</Label>
+          <Energy> 11.719 </Energy>
+          <RelativeIntensity> 4.41952E-006 </RelativeIntensity>
+          <Continuum> 473.3 </Continuum>
+          <ChiSqr> 0.510589 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="37" ID="1" Label="Rb-K" RadiationType="0" CreationMode="0">
+        <Area> 1041 </Area>
+        <StdArea> 71 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 13.3358 </Energy>
+          <TransitionProbability> 2.94691E-001 </TransitionProbability>
+          <LineWidth> 0.0042 </LineWidth>
+          <RelativeIntensity> 2.94611E-001 </RelativeIntensity>
+          <Continuum> 1154.5 </Continuum>
+          <ChiSqr> 6.34E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 13.3953 </Energy>
+          <TransitionProbability> 5.57524E-001 </TransitionProbability>
+          <LineWidth> 0.0041 </LineWidth>
+          <RelativeIntensity> 5.57412E-001 </RelativeIntensity>
+          <Continuum> 1225.0 </Continuum>
+          <ChiSqr> 7.38E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 14.9612 </Energy>
+          <TransitionProbability> 1.32587E-001 </TransitionProbability>
+          <LineWidth> 0.0048 </LineWidth>
+          <RelativeIntensity> 1.32368E-001 </RelativeIntensity>
+          <Continuum> 3194.8 </Continuum>
+          <ChiSqr> 1.19E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 403</FinalState>
+          <Label>K-N3</Label>
+          <Energy> 15.1857 </Energy>
+          <TransitionProbability> 1.51985E-002 </TransitionProbability>
+          <LineWidth> 0.0029 </LineWidth>
+          <RelativeIntensity> 1.51736E-002 </RelativeIntensity>
+          <Continuum> 3571.3 </Continuum>
+          <ChiSqr> 5.98E-001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 11.586 </Energy>
+          <RelativeIntensity> 0.000135367 </RelativeIntensity>
+          <Continuum> 453.4 </Continuum>
+          <ChiSqr> 0.594700 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 11.645 </Energy>
+          <RelativeIntensity> 0.000252816 </RelativeIntensity>
+          <Continuum> 487.9 </Continuum>
+          <ChiSqr> 0.531355 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 13.211 </Energy>
+          <RelativeIntensity> 4.34369E-005 </RelativeIntensity>
+          <Continuum> 1016.3 </Continuum>
+          <ChiSqr> 0.757655 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 403 </FinalState>
+          <Label>K-N3 esc</Label>
+          <Energy> 13.436 </Energy>
+          <RelativeIntensity> 4.76617E-006 </RelativeIntensity>
+          <Continuum> 1272.0 </Continuum>
+          <ChiSqr> 0.566356 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="38" ID="1" Label="Sr-K" RadiationType="0" CreationMode="0">
+        <Area> 55955 </Area>
+        <StdArea> 268 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 14.0978 </Energy>
+          <TransitionProbability> 2.93980E-001 </TransitionProbability>
+          <LineWidth> 0.0045 </LineWidth>
+          <RelativeIntensity> 2.93897E-001 </RelativeIntensity>
+          <Continuum> 2099.1 </Continuum>
+          <ChiSqr> 9.62E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 14.1650 </Energy>
+          <TransitionProbability> 5.54620E-001 </TransitionProbability>
+          <LineWidth> 0.0044 </LineWidth>
+          <RelativeIntensity> 5.54502E-001 </RelativeIntensity>
+          <Continuum> 2063.8 </Continuum>
+          <ChiSqr> 1.02E+001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 15.8355 </Energy>
+          <TransitionProbability> 1.34200E-001 </TransitionProbability>
+          <LineWidth> 0.0051 </LineWidth>
+          <RelativeIntensity> 1.34057E-001 </RelativeIntensity>
+          <Continuum> 5555.7 </Continuum>
+          <ChiSqr> 2.87E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 403</FinalState>
+          <Label>K-N3</Label>
+          <Energy> 16.0847 </Energy>
+          <TransitionProbability> 1.72000E-002 </TransitionProbability>
+          <LineWidth> 0.0031 </LineWidth>
+          <RelativeIntensity> 1.71738E-002 </RelativeIntensity>
+          <Continuum> 6898.9 </Continuum>
+          <ChiSqr> 1.91E+000 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 12.348 </Energy>
+          <RelativeIntensity> 0.000114805 </RelativeIntensity>
+          <Continuum> 536.5 </Continuum>
+          <ChiSqr> 0.482903 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 12.415 </Energy>
+          <RelativeIntensity> 0.00021361 </RelativeIntensity>
+          <Continuum> 582.9 </Continuum>
+          <ChiSqr> 0.927578 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 14.086 </Energy>
+          <RelativeIntensity> 3.7229E-005 </RelativeIntensity>
+          <Continuum> 1984.3 </Continuum>
+          <ChiSqr> 9.350210 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 403 </FinalState>
+          <Label>K-N3 esc</Label>
+          <Energy> 14.335 </Energy>
+          <RelativeIntensity> 4.5553E-006 </RelativeIntensity>
+          <Continuum> 2217.8 </Continuum>
+          <ChiSqr> 5.718728 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="39" ID="1" Label="Y -K" RadiationType="0" CreationMode="0">
+        <Area> 854 </Area>
+        <StdArea> 97 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 14.8829 </Energy>
+          <TransitionProbability> 2.93450E-001 </TransitionProbability>
+          <LineWidth> 0.0049 </LineWidth>
+          <RelativeIntensity> 2.93496E-001 </RelativeIntensity>
+          <Continuum> 2917.3 </Continuum>
+          <ChiSqr> 1.15E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 14.9584 </Energy>
+          <TransitionProbability> 5.52050E-001 </TransitionProbability>
+          <LineWidth> 0.0048 </LineWidth>
+          <RelativeIntensity> 5.52150E-001 </RelativeIntensity>
+          <Continuum> 3194.8 </Continuum>
+          <ChiSqr> 1.19E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 16.7381 </Energy>
+          <TransitionProbability> 1.36000E-001 </TransitionProbability>
+          <LineWidth> 0.0054 </LineWidth>
+          <RelativeIntensity> 1.35616E-001 </RelativeIntensity>
+          <Continuum> 9994.8 </Continuum>
+          <ChiSqr> 5.53E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 403</FinalState>
+          <Label>K-N3</Label>
+          <Energy> 17.0128 </Energy>
+          <TransitionProbability> 1.85000E-002 </TransitionProbability>
+          <LineWidth> 0.0037 </LineWidth>
+          <RelativeIntensity> 1.84231E-002 </RelativeIntensity>
+          <Continuum> 10978.2 </Continuum>
+          <ChiSqr> 6.51E-001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 13.133 </Energy>
+          <RelativeIntensity> 9.7807E-005 </RelativeIntensity>
+          <Continuum> 930.6 </Continuum>
+          <ChiSqr> 0.723572 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 13.208 </Energy>
+          <RelativeIntensity> 0.00018129 </RelativeIntensity>
+          <Continuum> 1016.3 </Continuum>
+          <ChiSqr> 0.757655 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 14.988 </Energy>
+          <RelativeIntensity> 3.19955E-005 </RelativeIntensity>
+          <Continuum> 3265.7 </Continuum>
+          <ChiSqr> 1.098812 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 403 </FinalState>
+          <Label>K-N3 esc</Label>
+          <Energy> 15.263 </Energy>
+          <RelativeIntensity> 4.14332E-006 </RelativeIntensity>
+          <Continuum> 3722.0 </Continuum>
+          <ChiSqr> 0.345829 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="40" ID="1" Label="Zr-K" RadiationType="0" CreationMode="0">
+        <Area> 3225 </Area>
+        <StdArea> 166 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 15.6909 </Energy>
+          <TransitionProbability> 2.92990E-001 </TransitionProbability>
+          <LineWidth> 0.0053 </LineWidth>
+          <RelativeIntensity> 2.93336E-001 </RelativeIntensity>
+          <Continuum> 5015.9 </Continuum>
+          <ChiSqr> 1.52E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 15.7753 </Energy>
+          <TransitionProbability> 5.49610E-001 </TransitionProbability>
+          <LineWidth> 0.0052 </LineWidth>
+          <RelativeIntensity> 5.50201E-001 </RelativeIntensity>
+          <Continuum> 5321.4 </Continuum>
+          <ChiSqr> 2.34E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 17.6671 </Energy>
+          <TransitionProbability> 1.37700E-001 </TransitionProbability>
+          <LineWidth> 0.0057 </LineWidth>
+          <RelativeIntensity> 1.36692E-001 </RelativeIntensity>
+          <Continuum> 16176.3 </Continuum>
+          <ChiSqr> 5.07E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 403</FinalState>
+          <Label>K-N3</Label>
+          <Energy> 17.9689 </Energy>
+          <TransitionProbability> 1.97000E-002 </TransitionProbability>
+          <LineWidth> 0.0043 </LineWidth>
+          <RelativeIntensity> 1.95021E-002 </RelativeIntensity>
+          <Continuum> 19558.5 </Continuum>
+          <ChiSqr> 4.53E-001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 13.941 </Energy>
+          <RelativeIntensity> 8.36899E-005 </RelativeIntensity>
+          <Continuum> 1842.0 </Continuum>
+          <ChiSqr> 5.691060 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 14.025 </Energy>
+          <RelativeIntensity> 0.000154518 </RelativeIntensity>
+          <Continuum> 1924.0 </Continuum>
+          <ChiSqr> 7.032567 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 15.917 </Energy>
+          <RelativeIntensity> 2.75131E-005 </RelativeIntensity>
+          <Continuum> 5873.0 </Continuum>
+          <ChiSqr> 2.446607 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 403 </FinalState>
+          <Label>K-N3 esc</Label>
+          <Energy> 16.219 </Energy>
+          <RelativeIntensity> 3.73478E-006 </RelativeIntensity>
+          <Continuum> 7130.2 </Continuum>
+          <ChiSqr> 0.845303 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="41" ID="1" Label="Nb-K" RadiationType="0" CreationMode="0">
+        <Area> 304 </Area>
+        <StdArea> 156 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 16.5209 </Energy>
+          <TransitionProbability> 2.92689E-001 </TransitionProbability>
+          <LineWidth> 0.0057 </LineWidth>
+          <RelativeIntensity> 2.93496E-001 </RelativeIntensity>
+          <Continuum> 8506.9 </Continuum>
+          <ChiSqr> 6.62E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 16.6151 </Energy>
+          <TransitionProbability> 5.47495E-001 </TransitionProbability>
+          <LineWidth> 0.0056 </LineWidth>
+          <RelativeIntensity> 5.48813E-001 </RelativeIntensity>
+          <Continuum> 9373.0 </Continuum>
+          <ChiSqr> 3.72E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 18.6226 </Energy>
+          <TransitionProbability> 1.39314E-001 </TransitionProbability>
+          <LineWidth> 0.0062 </LineWidth>
+          <RelativeIntensity> 1.37343E-001 </RelativeIntensity>
+          <Continuum> 29414.0 </Continuum>
+          <ChiSqr> 2.01E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 403</FinalState>
+          <Label>K-N3</Label>
+          <Energy> 18.9517 </Energy>
+          <TransitionProbability> 2.05021E-002 </TransitionProbability>
+          <LineWidth> 0.0050 </LineWidth>
+          <RelativeIntensity> 2.01165E-002 </RelativeIntensity>
+          <Continuum> 33678.3 </Continuum>
+          <ChiSqr> 2.50E+000 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 14.771 </Energy>
+          <RelativeIntensity> 7.19562E-005 </RelativeIntensity>
+          <Continuum> 2880.7 </Continuum>
+          <ChiSqr> 0.857117 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 14.865 </Energy>
+          <RelativeIntensity> 0.00013232 </RelativeIntensity>
+          <Continuum> 3053.2 </Continuum>
+          <ChiSqr> 1.123546 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 16.873 </Energy>
+          <RelativeIntensity> 2.36833E-005 </RelativeIntensity>
+          <Continuum> 10196.2 </Continuum>
+          <ChiSqr> 0.714908 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 403 </FinalState>
+          <Label>K-N3 esc</Label>
+          <Energy> 17.202 </Energy>
+          <RelativeIntensity> 3.29525E-006 </RelativeIntensity>
+          <Continuum> 12755.6 </Continuum>
+          <ChiSqr> 0.416130 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="42" ID="1" Label="Mo-K" RadiationType="0" CreationMode="0">
+        <Area> 282 </Area>
+        <StdArea> 198 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 17.3744 </Energy>
+          <TransitionProbability> 2.92400E-001 </TransitionProbability>
+          <LineWidth> 0.0062 </LineWidth>
+          <RelativeIntensity> 2.93854E-001 </RelativeIntensity>
+          <Continuum> 13895.4 </Continuum>
+          <ChiSqr> 2.70E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 17.4793 </Energy>
+          <TransitionProbability> 5.45400E-001 </TransitionProbability>
+          <LineWidth> 0.0060 </LineWidth>
+          <RelativeIntensity> 5.47697E-001 </RelativeIntensity>
+          <Continuum> 14645.4 </Continuum>
+          <ChiSqr> 3.41E-001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 19.6072 </Energy>
+          <TransitionProbability> 1.40900E-001 </TransitionProbability>
+          <LineWidth> 0.0067 </LineWidth>
+          <RelativeIntensity> 1.37599E-001 </RelativeIntensity>
+          <Continuum> 37786.5 </Continuum>
+          <ChiSqr> 2.47E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 403</FinalState>
+          <Label>K-N3</Label>
+          <Energy> 19.9647 </Energy>
+          <TransitionProbability> 2.13000E-002 </TransitionProbability>
+          <LineWidth> 0.0060 </LineWidth>
+          <RelativeIntensity> 2.06503E-002 </RelativeIntensity>
+          <Continuum> 38140.7 </Continuum>
+          <ChiSqr> 2.42E+000 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 15.624 </Energy>
+          <RelativeIntensity> 6.21235E-005 </RelativeIntensity>
+          <Continuum> 4789.9 </Continuum>
+          <ChiSqr> 1.054822 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 15.729 </Energy>
+          <RelativeIntensity> 0.000113757 </RelativeIntensity>
+          <Continuum> 5168.1 </Continuum>
+          <ChiSqr> 1.686177 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 17.857 </Energy>
+          <RelativeIntensity> 2.0405E-005 </RelativeIntensity>
+          <Continuum> 17655.9 </Continuum>
+          <ChiSqr> 0.564894 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 403 </FinalState>
+          <Label>K-N3 esc</Label>
+          <Energy> 18.215 </Energy>
+          <RelativeIntensity> 2.90488E-006 </RelativeIntensity>
+          <Continuum> 22756.2 </Continuum>
+          <ChiSqr> 0.458738 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="45" ID="1" Label="Rh-K Coh" RadiationType="1" CreationMode="0">
+        <Area> 42877 </Area>
+        <StdArea> 393 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 0.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 1.00000E+000  </Initial>
+          <InitialConstraint> 0.00000E+000 </InitialConstraint>
+          <Fitted> 1.00000E+000 </Fitted>
+          <FittedConstraint> 0.00000E+000 </FittedConstraint>
+          <StandardDeviation> 0.00000E+000 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 20.0738 </Energy>
+          <TransitionProbability> 2.91870E-001 </TransitionProbability>
+          <LineWidth> 0.0077 </LineWidth>
+          <RelativeIntensity> 2.96212E-001 </RelativeIntensity>
+          <Continuum> 38086.6 </Continuum>
+          <ChiSqr> 4.55E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 20.2161 </Energy>
+          <TransitionProbability> 5.39830E-001 </TransitionProbability>
+          <LineWidth> 0.0075 </LineWidth>
+          <RelativeIntensity> 5.46108E-001 </RelativeIntensity>
+          <Continuum> 37928.1 </Continuum>
+          <ChiSqr> 8.86E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 302</FinalState>
+          <Label>K-M2</Label>
+          <Energy> 22.6989 </Energy>
+          <TransitionProbability> 4.91000E-002 </TransitionProbability>
+          <LineWidth> 0.0081 </LineWidth>
+          <RelativeIntensity> 4.61016E-002 </RelativeIntensity>
+          <Continuum> 25491.3 </Continuum>
+          <ChiSqr> 5.63E+001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 22.7237 </Energy>
+          <TransitionProbability> 9.56000E-002 </TransitionProbability>
+          <LineWidth> 0.0081 </LineWidth>
+          <RelativeIntensity> 8.96805E-002 </RelativeIntensity>
+          <Continuum> 25115.4 </Continuum>
+          <ChiSqr> 5.57E+001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 403</FinalState>
+          <Label>K-N3</Label>
+          <Energy> 23.1720 </Energy>
+          <TransitionProbability> 2.36000E-002 </TransitionProbability>
+          <LineWidth> 0.0094 </LineWidth>
+          <RelativeIntensity> 2.17673E-002 </RelativeIntensity>
+          <Continuum> 17019.2 </Continuum>
+          <ChiSqr> 5.23E+000 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 18.324 </Energy>
+          <RelativeIntensity> 4.10108E-005 </RelativeIntensity>
+          <Continuum> 23436.2 </Continuum>
+          <ChiSqr> 0.760316 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 18.466 </Energy>
+          <RelativeIntensity> 7.40676E-005 </RelativeIntensity>
+          <Continuum> 25760.0 </Continuum>
+          <ChiSqr> 1.555301 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 302 </FinalState>
+          <Label>K-M2 esc</Label>
+          <Energy> 20.949 </Energy>
+          <RelativeIntensity> 4.47055E-006 </RelativeIntensity>
+          <Continuum> 39241.3 </Continuum>
+          <ChiSqr> 53.304959 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 20.974 </Energy>
+          <RelativeIntensity> 8.66922E-006 </RelativeIntensity>
+          <Continuum> 41133.8 </Continuum>
+          <ChiSqr> 62.040623 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 403 </FinalState>
+          <Label>K-N3 esc</Label>
+          <Energy> 21.422 </Energy>
+          <RelativeIntensity> 1.98952E-006 </RelativeIntensity>
+          <Continuum> 41340.7 </Continuum>
+          <ChiSqr> 31.916283 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+      <LineGroup Z="45" ID="1" Label="Rh-K Inc" RadiationType="2" CreationMode="0">
+        <Area> 56332 </Area>
+        <StdArea> 634 </StdArea>
+        <Flags>
+          <ProfileType> 0 </ProfileType>
+          <EscPeaks> 1 </EscPeaks>
+          <Step> 0 </Step>
+          <LeftTail> 0 </LeftTail>
+          <RightTail> 0 </RightTail>
+        </Flags>
+        <DeltaEnergy>
+          <Initial> 0.00000E+000  </Initial>
+          <InitialConstraint> 1.00000E+000 </InitialConstraint>
+          <Fitted> -4.20699E-002 </Fitted>
+          <FittedConstraint> 1.00000E+000 </FittedConstraint>
+          <StandardDeviation> 3.91512E-003 </StandardDeviation>
+        </DeltaEnergy>
+        <WidthFactor>
+          <Initial> 4.00000E+000  </Initial>
+          <InitialConstraint> 1.00000E+001 </InitialConstraint>
+          <Fitted> 2.75356E+000 </Fitted>
+          <FittedConstraint> 1.00000E+001 </FittedConstraint>
+          <StandardDeviation> 3.69581E-002 </StandardDeviation>
+        </WidthFactor>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 202</FinalState>
+          <Label>K-L2</Label>
+          <Energy> 19.1484 </Energy>
+          <TransitionProbability> 2.91870E-001 </TransitionProbability>
+          <LineWidth> 0.0077 </LineWidth>
+          <RelativeIntensity> 2.94987E-001 </RelativeIntensity>
+          <Continuum> 91958.3 </Continuum>
+          <ChiSqr> 1.88E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="1">
+          <InitialState>101</InitialState>
+          <FinalState> 203</FinalState>
+          <Label>K-L3</Label>
+          <Energy> 19.2779 </Energy>
+          <TransitionProbability> 5.39830E-001 </TransitionProbability>
+          <LineWidth> 0.0075 </LineWidth>
+          <RelativeIntensity> 5.44403E-001 </RelativeIntensity>
+          <Continuum> 94319.5 </Continuum>
+          <ChiSqr> 2.13E+000 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 302</FinalState>
+          <Label>K-M2</Label>
+          <Energy> 21.5227 </Energy>
+          <TransitionProbability> 4.91000E-002 </TransitionProbability>
+          <LineWidth> 0.0081 </LineWidth>
+          <RelativeIntensity> 4.69189E-002 </RelativeIntensity>
+          <Continuum> 106174.9 </Continuum>
+          <ChiSqr> 3.90E+001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 303</FinalState>
+          <Label>K-M3</Label>
+          <Energy> 21.5450 </Energy>
+          <TransitionProbability> 9.56000E-002 </TransitionProbability>
+          <LineWidth> 0.0081 </LineWidth>
+          <RelativeIntensity> 9.12909E-002 </RelativeIntensity>
+          <Continuum> 105907.8 </Continuum>
+          <ChiSqr> 3.92E+001 </ChiSqr>
+        </Peak>
+        <Peak AnalyticalLine="0">
+          <InitialState>101</InitialState>
+          <FinalState> 403</FinalState>
+          <Label>K-N3</Label>
+          <Energy> 21.9476 </Energy>
+          <TransitionProbability> 2.36000E-002 </TransitionProbability>
+          <LineWidth> 0.0094 </LineWidth>
+          <RelativeIntensity> 2.22500E-002 </RelativeIntensity>
+          <Continuum> 97117.5 </Continuum>
+          <ChiSqr> 1.91E+001 </ChiSqr>
+        </Peak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 202 </FinalState>
+          <Label>K-L2 esc</Label>
+          <Energy> 17.398 </Energy>
+          <RelativeIntensity> 4.6882E-005 </RelativeIntensity>
+          <Continuum> 37934.5 </Continuum>
+          <ChiSqr> 0.516654 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 203 </FinalState>
+          <Label>K-L3 esc</Label>
+          <Energy> 17.528 </Energy>
+          <RelativeIntensity> 8.48311E-005 </RelativeIntensity>
+          <Continuum> 40341.4 </Continuum>
+          <ChiSqr> 0.457667 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 302 </FinalState>
+          <Label>K-M2 esc</Label>
+          <Energy> 19.773 </Energy>
+          <RelativeIntensity> 5.30468E-006 </RelativeIntensity>
+          <Continuum> 101065.1 </Continuum>
+          <ChiSqr> 4.218885 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 303 </FinalState>
+          <Label>K-M3 esc</Label>
+          <Energy> 19.795 </Energy>
+          <RelativeIntensity> 1.02905E-005 </RelativeIntensity>
+          <Continuum> 101145.2 </Continuum>
+          <ChiSqr> 4.332760 </ChiSqr>
+        </EscPeak>
+        <EscPeak>
+          <InitialState> 101 </InitialState>
+          <FinalState> 403 </FinalState>
+          <Label>K-N3 esc</Label>
+          <Energy> 20.198 </Energy>
+          <RelativeIntensity> 2.37733E-006 </RelativeIntensity>
+          <Continuum> 101817.5 </Continuum>
+          <ChiSqr> 4.355796 </ChiSqr>
+        </EscPeak>
+      </LineGroup>
+    </XrayLines>
+    <AnalyticalLines>
+      <Line>
+        <Z> 19 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 759 </Area>
+        <StdArea> 45 </StdArea>
+        <Energy> 3.31290E+000 </Energy>
+        <ChiSquare> 7.72E-001 </ChiSquare>
+        <Continuum> 639 </Continuum>
+      </Line>
+      <Line>
+        <Z> 20 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 60773 </Area>
+        <StdArea> 237 </StdArea>
+        <Energy> 3.69049E+000 </Energy>
+        <ChiSquare> 4.92E+001 </ChiSquare>
+        <Continuum> 761 </Continuum>
+      </Line>
+      <Line>
+        <Z> 22 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 539 </Area>
+        <StdArea> 37 </StdArea>
+        <Energy> 4.50888E+000 </Energy>
+        <ChiSquare> 8.68E-001 </ChiSquare>
+        <Continuum> 482 </Continuum>
+      </Line>
+      <Line>
+        <Z> 25 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 1998 </Area>
+        <StdArea> 54 </StdArea>
+        <Energy> 5.89495E+000 </Energy>
+        <ChiSquare> 1.47E+000 </ChiSquare>
+        <Continuum> 451 </Continuum>
+      </Line>
+      <Line>
+        <Z> 26 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 23245 </Area>
+        <StdArea> 151 </StdArea>
+        <Energy> 6.39950E+000 </Energy>
+        <ChiSquare> 9.85E+000 </ChiSquare>
+        <Continuum> 511 </Continuum>
+      </Line>
+      <Line>
+        <Z> 27 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 119 </Area>
+        <StdArea> 42 </StdArea>
+        <Energy> 6.92521E+000 </Energy>
+        <ChiSquare> 4.69E+000 </ChiSquare>
+        <Continuum> 541 </Continuum>
+      </Line>
+      <Line>
+        <Z> 28 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 4297 </Area>
+        <StdArea> 71 </StdArea>
+        <Energy> 7.47225E+000 </Energy>
+        <ChiSquare> 8.64E-001 </ChiSquare>
+        <Continuum> 485 </Continuum>
+      </Line>
+      <Line>
+        <Z> 29 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 399 </Area>
+        <StdArea> 35 </StdArea>
+        <Energy> 8.04102E+000 </Energy>
+        <ChiSquare> 7.32E-001 </ChiSquare>
+        <Continuum> 424 </Continuum>
+      </Line>
+      <Line>
+        <Z> 30 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 512 </Area>
+        <StdArea> 35 </StdArea>
+        <Energy> 8.63102E+000 </Energy>
+        <ChiSquare> 6.70E-001 </ChiSquare>
+        <Continuum> 396 </Continuum>
+      </Line>
+      <Line>
+        <Z> 31 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 80 </Area>
+        <StdArea> 26 </StdArea>
+        <Energy> 9.24250E+000 </Energy>
+        <ChiSquare> 3.46E-001 </ChiSquare>
+        <Continuum> 359 </Continuum>
+      </Line>
+      <Line>
+        <Z> 33 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 202 </Area>
+        <StdArea> 29 </StdArea>
+        <Energy> 1.05314E+001 </Energy>
+        <ChiSquare> 6.50E-001 </ChiSquare>
+        <Continuum> 347 </Continuum>
+      </Line>
+      <Line>
+        <Z> 35 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 2845 </Area>
+        <StdArea> 62 </StdArea>
+        <Energy> 1.19079E+001 </Energy>
+        <ChiSquare> 1.12E+000 </ChiSquare>
+        <Continuum> 491 </Continuum>
+      </Line>
+      <Line>
+        <Z> 37 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 887 </Area>
+        <StdArea> 60 </StdArea>
+        <Energy> 1.33747E+001 </Energy>
+        <ChiSquare> 7.02E-001 </ChiSquare>
+        <Continuum> 1201 </Continuum>
+      </Line>
+      <Line>
+        <Z> 38 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 47472 </Area>
+        <StdArea> 227 </StdArea>
+        <Energy> 1.41417E+001 </Energy>
+        <ChiSquare> 9.98E+000 </ChiSquare>
+        <Continuum> 2076 </Continuum>
+      </Line>
+      <Line>
+        <Z> 39 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 722 </Area>
+        <StdArea> 82 </StdArea>
+        <Energy> 1.49322E+001 </Energy>
+        <ChiSquare> 1.18E+000 </ChiSquare>
+        <Continuum> 3098 </Continuum>
+      </Line>
+      <Line>
+        <Z> 40 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 2720 </Area>
+        <StdArea> 140 </StdArea>
+        <Energy> 1.57460E+001 </Energy>
+        <ChiSquare> 2.05E+000 </ChiSquare>
+        <Continuum> 5215 </Continuum>
+      </Line>
+      <Line>
+        <Z> 41 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 256 </Area>
+        <StdArea> 131 </StdArea>
+        <Energy> 1.65823E+001 </Energy>
+        <ChiSquare> 4.73E-001 </ChiSquare>
+        <Continuum> 9071 </Continuum>
+      </Line>
+      <Line>
+        <Z> 42 </Z>
+        <ID> 1 </ID>
+        <Label>Ka</Label>
+        <Area> 237 </Area>
+        <StdArea> 166 </StdArea>
+        <Energy> 1.74427E+001 </Energy>
+        <ChiSquare> 3.16E-001 </ChiSquare>
+        <Continuum> 14384 </Continuum>
+      </Line>
+      <Line>
+        <Z> 45 </Z>
+        <ID> 1 </ID>
+        <Label>Ka-Inc</Label>
+        <Area> 47285 </Area>
+        <StdArea> 533 </StdArea>
+        <Energy> 1.92324E+001 </Energy>
+        <ChiSquare> 2.04E+000 </ChiSquare>
+        <Continuum> 93490 </Continuum>
+      </Line>
+      <Line>
+        <Z> 45 </Z>
+        <ID> 1 </ID>
+        <Label>Ka-Coh</Label>
+        <Area> 36117 </Area>
+        <StdArea> 331 </StdArea>
+        <Energy> 2.01661E+001 </Energy>
+        <ChiSquare> 7.34E+000 </ChiSquare>
+        <Continuum> 37984 </Continuum>
+      </Line>
+    </AnalyticalLines>
+  </Model>
+</bAxil>
