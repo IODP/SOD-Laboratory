@@ -56,6 +56,14 @@ def _parse_sample_metadata(sample:str):
         data['bot'] = sample['depths'][0]['bot']
         data['scale_id'] = sample['depths'][0]['scale_id']
         
+        data['expedition'] = sample.get('x_expedition',None)
+        data['site'] = sample.get('x_site', None)
+        data['hole'] = sample.get('x_hole',None)
+        data['core'] = sample.get('x_core', None)
+        data['core_type'] = sample.get('x_core_type', None)
+        data['section'] = sample.get('x_section', None)
+        data['sect_half'] = sample.get('x_sect_half', None)
+        
         return (key, data)
         
         

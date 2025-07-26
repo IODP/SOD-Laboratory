@@ -1,0 +1,345 @@
+{
+	"PWAVE_L": {
+		"analysis": "PWAVE_L",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {},
+			"add_depths": {
+				"active": "False",
+				"offset_col": "offset",
+				"sample_number_col": "text_id",
+				"is_textid_col": "True"
+			}
+		},
+		"files": {
+			"velocity_wfm": {
+				"func": "iodp.pwavel.read_pwavel_csv",
+				"kwargs": {}
+			},
+			"config": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		}
+	},
+	"MS": {
+		"analysis": "MS",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {},
+			"add_depths": {
+				"active": "False",
+				"offset_col": "offset",
+				"sample_number_col": "text_id",
+				"is_textid_col": "True"
+			}
+		},
+		"files": {
+			"aux_file": {
+				"func": "iodp.ms.read_ms_csv",
+				"kwargs": {},
+				"add_depths": {
+					"active": "False",
+					"offset_col": "offset(cm)",
+					"sample_number_col": "text_id",
+					"is_textid_col": "True"
+				}
+			},
+			"config": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		}
+	},
+	"GRA": {
+		"analysis": "GRA",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {},
+			"add_depths": {
+				"active": "False",
+				"offset_col": "offset",
+				"sample_number_col": "text_id",
+				"is_textid_col": "True"
+			}
+		},
+		"files": {
+			"config": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		}
+	},
+	"RSC": {
+		"analysis": "RSC",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {},
+			"add_depths": {
+				"active": "False",
+				"offset_col": "offset",
+				"sample_number_col": "text_id",
+				"is_textid_col": "True"
+			}
+		},
+		"files": {
+			"rsc_norm": {
+				"func": "pandas.read_csv",
+				"kwargs": {}
+			},
+			"rsc_raw": {
+				"func": "pandas.read_csv",
+				"kwargs": {}
+			},
+			"config": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		}
+	},
+	"PROFILE": {
+		"analysis": "PROFILE",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {}
+		},
+		"files": {
+			"profile": {
+				"func": "pandas.read_csv",
+				"kwargs": {},
+				"add_depths": {
+					"active": "False",
+					"offset_col": "benchmark offset(cm)",
+					"sample_number_col": "text_id",
+					"is_textid_col": "True"
+				}
+			},
+			"config": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		}
+	},
+	"MSPOINT": {
+		"analysis": "MSPOINT",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {},
+			"add_depths": {
+				"active": "False",
+				"offset_col": "offset",
+				"sample_number_col": "text_id",
+				"is_textid_col": "True"
+			}
+		},
+		"files": {
+			"aux_file": {
+				"func": "pandas.read_csv",
+				"kwargs": {}
+			},
+			"config": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		}
+	},
+	"RGB": {
+		"analysis": "RGB",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {},
+			"add_depths": {
+				"active": "False",
+				"offset_col": "offset",
+				"sample_number_col": "text_id",
+				"is_textid_col": "True"
+			}
+		},
+		"files": {
+			"config": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		},
+		"rgb_high_res": {
+			"func": "iodp.rgb.read_rgb_high_res_dat",
+			"kwargs": {
+				"as_dataframe": "True"
+			}
+		}
+	},
+	"ROI": {
+		"analysis": "LSIMG",
+		"files": {
+			"original_image": {
+				"func": "iodp.utils.copy_file",
+				"kwargs": {}
+			},
+			"consumer_image": {
+				"func": "iodp.utils.copy_file",
+				"kwargs": {}
+			},
+			"cropped_image": {
+				"func": "iodp.utils.copy_file",
+				"kwargs": {}
+			},
+			"config": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		}
+	},
+	"NGR": {
+		"analysis": "NGR",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {},
+			"add_depths": {
+				"active": "False",
+				"offset_col": "offset",
+				"sample_number_col": "text_id",
+				"is_textid_col": "True"
+			}
+		},
+		"files": {
+			"archive": {
+				"func": "iodp.ngr.read_zip_file",
+				"kwargs": {}
+			},
+			"configuration": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			},
+			"summary": {
+				"func": "pandas.read_csv",
+				"kwargs": {},
+				"add_depths": {
+					"active": "False",
+					"offset_col": "Offset",
+					"sample_number_col": "Text_ID",
+					"is_textid_col": "True"
+				}
+			}
+		}
+	},
+	"SRM": {
+		"analysis": "SRM",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {},
+			"add_depths": {
+				"active": "False",
+				"offset_col": "offset",
+				"sample_number_col": "text_id",
+				"is_textid_col": "True"
+			}
+		},
+		"files": {
+			"file_srm_section_bkgnd": {
+				"func": "iodp.srm.read_srm_csv",
+				"kwargs": {}
+			},
+			"file_raw": {
+				"func": "iodp.srm.read_srm_csv",
+				"kwargs": {}
+			},
+			"file_srm_sequence": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			},
+			"file_configuration": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		}
+	},
+	"DSC": {
+		"analysis": "DSC",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {},
+			"add_depths": {
+				"active": "False",
+				"offset_col": "offset",
+				"sample_number_col": "text_id",
+				"is_textid_col": "True"
+			}
+		},
+		"files": {
+			"file_srm_discrete_bkgnd": {
+				"func": "iodp.srm.read_srm_csv",
+				"kwargs": {}
+			},
+			"file_raw": {
+				"func": "iodp.srm.read_srm_csv",
+				"kwargs": {}
+			},
+			"file_srm_sequence": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			},
+			"file_configuration": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		}
+	},
+	"XSCAN": {
+		"analysis": "XSCAN",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {
+				"drop_fields": [
+					"calib_dark_raw",
+					"calib_white_raw"
+				]
+			}
+		},
+		"files": {
+			"raw_image": {
+				"func": "iodp.utils.copy_file",
+				"kwargs": {}
+			},
+			"processed_crop_image": {
+				"func": "iodp.utils.copy_file",
+				"kwargs": {}
+			},
+			"processed_ruler_image": {
+				"func": "iodp.utils.copy_file",
+				"kwargs": {}
+			},
+			"config": {
+				"func": "iodp.utils.read_instrument_ini",
+				"kwargs": {
+					"as_dataframe": "True"
+				}
+			}
+		}
+	}
+}
