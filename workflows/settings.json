@@ -183,7 +183,17 @@
 		}
 	},
 	"ROI": {
-		"analysis": "LSIMG",
+		"analysis": "ROI",
+		"instrument_file": {
+			"func": "iodp.utils.read_instrument_file",
+			"kwargs": {},
+			"add_depths": {
+				"active": "False",
+				"offset_col": "offset",
+				"sample_number_col": "text_id",
+				"is_textid_col": "True"
+			}
+		},
 		"files": {
 			"original_image": {
 				"func": "iodp.utils.copy_file",

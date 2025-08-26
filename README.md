@@ -3,7 +3,7 @@
 ![SOD-Laboratory Overview](./assets/graphics/i-gcr.png)
 
 
-This repository provides code and how-to examples for processing raw data from instrument systems owned and operated by Scientific Ocean Drilling at Texas A&M University. Many of these systems were housed on the R/V JOIDES Resolution overseen by the JOIDES Science Operator (JRSO) as part of the International Ocean Discovery Program and were shipped back to shore laboratories located at the Gulf Core Repository (GCR) in College Station, TX after the completion of the ship demobilization.
+This repository provides code and how-to examples for processing raw data from instrument systems owned and operated by Scientific Ocean Drilling at Texas A&M University. Many of these systems were housed on the R/V JOIDES Resolution overseen by the JOIDES Resolution Science Operator (JRSO) as part of the International Ocean Discovery Program and were shipped back to shore laboratories located at the Gulf Core Repository (GCR) in College Station, TX after the completion of the ship demobilization.
 
 Folders are organized by laboratory. The `iodp` module contains Python code used within many of the Jupyter Notebooks. Consult the Installation section below to configure a Python environment.
 

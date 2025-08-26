@@ -1,11 +1,15 @@
 from typing import Union
 import re
+import logging
 
 import pandas as pd
 import configparser
 import numpy as np
 import io
 from iodp import iodp_io, ngr
+
+
+logger = logging.getLogger(__name__)
 
 def read_instrument_file(file:str, as_dataframe:bool=False, **kwargs) -> Union[dict,pd.DataFrame]:
 
@@ -168,11 +172,28 @@ def read_instrument_ini(file:Union[str,io.BytesIO], as_dataframe:bool=False, **k
     return config
 
 
-def copy_file(file:str, outfile):
-    with open(file, "rb") as src, open(outfile, "wb") as dst:
-        dst.write(src.read())
+# def copy_file(file:str, outfile:None):
+    
+#     if not outfile:
+#         return
+    
+#     try:
+#         with open(file, "rb") as src, open(outfile, "wb") as dst:
+#             dst.write(src.read())
+        
+#         logger.info(f'File copied to: {outfile}')
+#     except Exception as ex:
+#        logger.error(ex)
+#        logger.error(f'Failed to copy file to: {outfile}')
+   
+#     return
+            
+    
 
-
+def copy_file(filepath: str) -> io.BytesIO:
+    with open(filepath, "rb") as f:
+        content = f.read()
+    return io.BytesIO(content)
 
 
 

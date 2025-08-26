@@ -13,10 +13,9 @@
             "console": "integratedTerminal",
             "args": [
                 "--systems",
-                "MS",
-                "GRA",
+                "ROI",
                 "--input",
-                "I:/YIGE_RAW/IN",
+                "D:/archive/hd_files/data_analysis/50_laboratory_notebooks/SOD-Laboratory/Imaging/data/input/LSIMG",
                 "--output",
                 "C:/SOD_OUTPUT",
                 "--compile",
