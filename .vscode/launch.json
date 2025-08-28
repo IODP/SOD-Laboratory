@@ -22,6 +22,50 @@
                 "--settings",
                 "workflows/settings.json"
             ]
+        },
+        {
+            "name": "archive_transform_rgb",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--archive",
+                "--transform",
+                "--input",
+                "C:/Data/projects/ProjectManySystems/instrument_files",
+                "--output",
+                "C:/Data/projects/ProjectManySystems",
+                "--system",
+                "RGB",
+                "--settings",
+                "workflows/settings.json",
+                "--step"
+            ]
+        },
+        {
+            "name": "archive_only_rgb",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--archive",
+                "--input",
+                "C:/Data/projects/ProjectManySystems/instrument_files",
+                "--output",
+                "C:/Data/projects/ProjectManySystems",
+                "--system",
+                "RGB",
+                "--settings",
+                "workflows/settings.json",
+                "--step",
+                "--force",
+                "--logfile",
+                "output"
+                
+            ]
         }
+
     ]
 }
