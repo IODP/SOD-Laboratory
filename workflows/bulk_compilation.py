@@ -10,53 +10,58 @@ from importlib import import_module
 
 import pandas as pd
 
+# NOTE: Many of these modules are imported at runtime from module methods specified in settings.json
 from iodp import utils
 
 
-def configure_logging(outdir:str=None):
-    
-    outfile = 'sodlab.log'
+def configure_logging(outdir: str = None):
+
+    outfile = "sodlab.log"
 
     if outdir:
         if not os.path.exists(outdir):
-            raise FileNotFoundError(f'Logging directory does not exist at: {outdir}')
+            raise FileNotFoundError(f"Logging directory does not exist at: {outdir}")
         outfile = os.path.normpath(os.path.join(outdir, outfile))
     else:
         # get location of where this script is running:
         path = os.path.dirname(os.path.abspath(__file__))
         outfile = os.path.normpath(os.path.join(path, outfile))
-        
+
     logging.basicConfig(
-        level=logging.DEBUG,
+        level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
         handlers=[
             logging.StreamHandler(),
-            logging.handlers.RotatingFileHandler(outfile, 
-                                                mode="a",
-                                                maxBytes = 50 * (1024)**2,
-                                                backupCount=5,
-                                                encoding='utf-8')
-            ]
-        )
-    
+            logging.handlers.RotatingFileHandler(
+                outfile,
+                mode="a",
+                maxBytes=50 * (1024) ** 2,
+                backupCount=5,
+                encoding="utf-8",
+            ),
+        ],
+    )
+
     print("")
     print(f"Logs will be written to: {outfile}")
     print("")
 
+
 # NOTE: The configuration for this logger is set in main()
 logger = logging.getLogger(__name__)
 
+
 class DataLoader:
-    """Class to handle archiving and transforming raw data files from SOD track systems controlled by IMS.
-    """
+    """Class to handle archiving and transforming raw data files from SOD track systems controlled by IMS."""
+
     def __init__(
         self,
         path: str,
         analysis: str,
         output_dir: str,
         recursive: bool = False,
-        force:bool = False,
-        settings:str=None,
+        force: bool = False,
+        settings: str = None,
     ):
 
         self.path = path
@@ -73,7 +78,7 @@ class DataLoader:
         #     raise ValueError(f"Source path '{path}' and output directory '{output_dir}' are not on the same drive.")
 
         # TODO: Use dictionary get commands to verify keys exist
-        self.graph =  self._settings["systems"][self.analysis]
+        self.graph = self._settings["systems"][self.analysis]
 
         try:
             if not os.path.exists(output_dir):
@@ -84,26 +89,19 @@ class DataLoader:
             raise
 
     def get_instrument_files(self):
-        
+
         pattern = rf".+\.{self.analysis}$"
-        
-        return self._get_files(
-            path = self.path,
-            pattern = pattern,
-            recursive=self._recursive
-        )
-        
-    def get_summary_files(self):
-        
-        pattern = rf"^summary_{self.analysis.lower()}.+\.json$"
 
         return self._get_files(
-            path = self.output_dir,
-            pattern=pattern,
-            recursive=True
+            path=self.path, pattern=pattern, recursive=self._recursive
         )
-        
-        
+
+    def get_summary_files(self):
+
+        pattern = rf"^summary_{self.analysis.lower()}.+\.json$"
+
+        return self._get_files(path=self.output_dir, pattern=pattern, recursive=True)
+
     def _get_files(self, path: str, pattern: str, recursive: bool):
 
         files = None
@@ -138,13 +136,14 @@ class DataLoader:
 
         return files
 
-        
-    def archive(self, instrument_file:str, hardlink: True):
+    def archive(self, instrument_file: str, hardlink: True):
 
         print("")
         GREEN = "\033[92m"
         RESET = "\033[0m"
-        logger.info(f"{GREEN}Organizing raw data files for file: {instrument_file}{RESET}")
+        logger.info(
+            f"{GREEN}Organizing raw data files for file: {instrument_file}{RESET}"
+        )
 
         if not os.path.isfile(instrument_file):
             logger.error(f"File does not exist: {instrument_file}")
@@ -165,23 +164,25 @@ class DataLoader:
 
         # location where RDF will be stored for TEST
         analysis_path = os.path.normpath(os.path.join(self.output_dir, self.analysis))
-        test_path = os.path.normpath(os.path.join(self.output_dir, self.analysis, testid))
+        test_path = os.path.normpath(
+            os.path.join(self.output_dir, self.analysis, testid)
+        )
         test_raw_path = os.path.normpath(os.path.join(test_path, "raw"))
-        
-        
+
         # check for existence of the summary json
-        summary_path = os.path.join(test_path, f"summary_{self.analysis.lower()}_{testid}.json")
-        
+        summary_path = os.path.join(
+            test_path, f"summary_{self.analysis.lower()}_{testid}.json"
+        )
+
         summary = {}
         if os.path.exists(summary_path):
-            with open(summary_path, 'r') as f:
+            with open(summary_path, "r") as f:
                 summary = json.load(f)
-            
-        
-        summary["raw_files"] = summary.get('raw_files', {})
-        summary["testid"] = summary.get('testid',testid)
-        summary["analysis"] = summary.get('analysis',self.analysis)
-        summary["instrument_file"] = summary.get('instrument_file',instrument_file)
+
+        summary["raw_files"] = summary.get("raw_files", {})
+        summary["testid"] = summary.get("testid", testid)
+        summary["analysis"] = summary.get("analysis", self.analysis)
+        summary["instrument_file"] = summary.get("instrument_file", instrument_file)
 
         try:
             os.makedirs(test_raw_path, exist_ok=True)
@@ -189,14 +190,15 @@ class DataLoader:
             logger.error(f"Error creating folder for test {testid}.")
             raise
 
-    
         try:
             # Add instrument file reference to raw files. It must be exported too.
             raw_files.append(("instrument_file", instrument_file))
 
             # archive the RDF. They will either be hard-links or file copies.
             for file_name_key, file in raw_files:
-                summary["raw_files"][file_name_key] = summary['raw_files'].get(file_name_key, {})
+                summary["raw_files"][file_name_key] = summary["raw_files"].get(
+                    file_name_key, {}
+                )
 
                 # verify raw file exists at source:
                 if not os.path.exists(file):
@@ -210,9 +212,11 @@ class DataLoader:
 
                 if os.path.exists(new_path):
                     if not self._force:
-                        logger.warning(f"{file_name_key}: File already exists at {new_path}. Skipping archiving.")
+                        logger.warning(
+                            f"{file_name_key}: File already exists at {new_path}. Skipping archiving."
+                        )
                         continue
-                
+
                     os.unlink(new_path)
 
                 if hardlink:
@@ -228,14 +232,15 @@ class DataLoader:
 
                 summary["raw_files"][file_name_key]["original_path"] = file
                 summary["raw_files"][file_name_key]["basename"] = filename
-                summary["raw_files"][file_name_key]["relative_path"] = os.path.relpath(new_path, analysis_path)
+                summary["raw_files"][file_name_key]["relative_path"] = os.path.relpath(
+                    new_path, analysis_path
+                )
 
         except Exception as e:
             logger.error(e)
             logger.error(f"Error creating file archive for test: {testid}")
             raise
 
-         
         with open(summary_path, "w") as f:
             summary_ordered = self._sort_summary(summary)
             json.dump(summary_ordered, f, indent=4)
@@ -266,7 +271,7 @@ class DataLoader:
         with open(summary_file, "r") as f:
             summary = json.load(f)
 
-        summary["transformed_files"] = summary.get('transformed_files',{})
+        summary["transformed_files"] = summary.get("transformed_files", {})
 
         raw_data_files = summary["raw_files"]
 
@@ -283,25 +288,34 @@ class DataLoader:
 
             src = os.path.join(test_parent_dir, src)
 
-            summary["transformed_files"][file_name_key] = summary["transformed_files"].get(file_name_key,{})
+            summary["transformed_files"][file_name_key] = summary[
+                "transformed_files"
+            ].get(file_name_key, {})
             summary["transformed_files"][file_name_key]["original_path"] = src
-            
+
             # test if tranformed file already exists
-            trans_file = summary["transformed_files"][file_name_key].get("relative_path", None)
+            trans_file = summary["transformed_files"][file_name_key].get(
+                "relative_path", None
+            )
 
             if trans_file and os.path.exists(os.path.join(test_parent_dir, trans_file)):
                 if not self._force:
-                    logger.warning(f"{file_name_key}: Transformed file already exists at {trans_file}. Skipping transformation.")
+                    logger.warning(
+                        f"{file_name_key}: Transformed file already exists at {trans_file}. Skipping transformation."
+                    )
                     continue
-                
 
             if file_name_key == "instrument_file":
-                transform_func = self.graph["instrument_file"]["func"]
-                kwargs = self.graph["instrument_file"]["kwargs"]
+                transform_func = resolve_function(
+                    self.graph["instrument_file"].get("func", None)
+                )
+                kwargs = self.graph["instrument_file"].get("kwargs", None)
                 depths_spec = self.graph["instrument_file"].get("add_depths", None)
             else:
-                transform_func = self.graph["files"][file_name_key]["func"]
-                kwargs = self.graph["files"][file_name_key]["kwargs"]
+                transform_func = resolve_function(
+                    self.graph["files"][file_name_key].get("func", None)
+                )
+                kwargs = self.graph["files"][file_name_key].get("kwargs", None)
                 depths_spec = self.graph["files"][file_name_key].get("add_depths", None)
 
             # RDF will exist in the test directory
@@ -309,8 +323,6 @@ class DataLoader:
                 raise FileNotFoundError(
                     f"{file_name_key}: File does not exist at: {src}"
                 )
-            
-            
 
             logger.info(f"{file_name_key}: Source file location: {src}")
 
@@ -403,7 +415,6 @@ class DataLoader:
             json.dump(summary_ordered, f, indent=4)
             logger.info(f"Summary written to: {summary_file}")
 
-
     def _sort_summary(self, dict: dict):
         """Sorts the summary dictionary in a pre-defined key ordering.
 
@@ -425,6 +436,7 @@ class DataLoader:
         sorted_dict = {k: dict[k] for k in key_order if k in dict}
 
         return sorted_dict
+
 
 def resolve_function(func_path: str):
     """Convert 'module.func' string into a function reference."""
@@ -480,7 +492,7 @@ def main():
         action="store_true",
         help="If set, the files are copied to subdirectories of --output. If not set, the files are hardlinked to subdirectories.",
     )
-    
+
     parser.add_argument(
         "--transform",
         action="store_true",
@@ -512,46 +524,47 @@ def main():
         type=str,
         help="Specify a settings .json file. If none specified, uses default settings.json in local directory.",
     )
-    
+
     parser.add_argument(
         "--step",
         action="store_true",
-        help="If set, pauses execution after each test archive or transformation."
+        help="If set, pauses execution after each test archive or transformation.",
     )
-    
+
     parser.add_argument(
         "--force",
         action="store_true",
-        help="If set, will overwrite existing files in archive or transform locations."
+        help="If set, will overwrite existing files in archive or transform locations.",
     )
     parser.add_argument(
         "--logfile",
-        choices=['default','output'],
-        help="If set to output, log files are written to the directory specified by --output, otherwise they are written to sodlab.exe directory."
+        choices=["default", "output"],
+        help="If set to output, log files are written to the directory specified by --output, otherwise they are written to sodlab.exe directory.",
     )
 
-    
     args = parser.parse_args()
-    
-    if args.logfile and args.logfile == 'output':
+
+    if args.logfile and args.logfile == "output":
 
         configure_logging(args.output)
     else:
         configure_logging()
 
     try:
+        # NOTE: Default settings should be from where the app is running
         settings_path = None
         if args.settings:
             settings_path = args.settings
         else:
             logger.info(f"Using default application settings in local directory")
-            settings_path = os.path.join(os.getcwd(),'settings.json')
-            
-            
+            settings_path = os.path.join(
+                os.path.dirname(os.path.abspath(__file__)),
+                "settings.json"
+            )
         with open(settings_path, "r") as file:
-            temp = json.load(file)
-            SETTINGS = recursively_resolve_funcs(temp)
-        logger.info(f"Loaded settings from {args.settings}")
+            settings = json.load(file)
+            
+        logger.info(f"Loaded settings from {settings_path}")
     except Exception as ex:
         logger.error(ex)
         logger.error(
@@ -562,37 +575,40 @@ def main():
         logger.warning("No instrument systems specified")
         exit(0)
 
-
     for system in args.system:
         dataLoader = DataLoader(
             path=args.input,
             analysis=system,
             output_dir=args.output,
             recursive=args.recursive,
-            force= args.force,
-            settings = SETTINGS,
+            force=args.force,
+            settings=settings,
         )
-        
+
         keep_stepping = args.step
-        
+
         # if copy is specified true, archive files are copied otherwise they are hardlinked.
         hardlink = not args.copy
-            
+
         if args.archive:
             for file in dataLoader.get_instrument_files():
                 dataLoader.archive(file, hardlink=hardlink)
                 if keep_stepping:
-                    val = input("Press Enter to step or enter any key to continue processing...")
+                    val = input(
+                        "Press Enter to step or enter any key to continue processing..."
+                    )
                     if val:
                         keep_stepping = False
-                        
+
         keep_stepping = args.step
-        
+
         if args.transform:
             for file in dataLoader.get_summary_files():
                 dataLoader.transform(file)
                 if keep_stepping:
-                    val = input("Press Enter to step or enter any key to continue processing...")
+                    val = input(
+                        "Press Enter to step or enter any key to continue processing..."
+                    )
                     if val:
                         keep_stepping = False
 
@@ -600,8 +616,6 @@ def main():
 if __name__ == "__main__":
 
     main()
-
-
 
     TEST = False
     if TEST:
@@ -622,7 +636,5 @@ if __name__ == "__main__":
         for f in instrument_files:
             dl.archive(f, hardlink=True)
 
-        
         for f in dl.get_summary_files():
             dl.transform(f)
-

@@ -122,7 +122,7 @@ def read_ngr_edge_correction_txt(file: Union[str, io.BytesIO])->pd.DataFrame:
     df = pd.read_csv(file, sep='\t', nrows=first_blank_row)
     return df
 
-def read_zip_file(zip_path: str, **kwargs):
+def read_zip_file(zip_path: str, **kwargs) -> io.BytesIO:
     """Transforms the contents of a NGR .zip into .csv files. 
 
     Args:
@@ -169,7 +169,15 @@ def read_zip_file(zip_path: str, **kwargs):
             #########
             # Spectral Measurements
             #########
-            pat = r"^.+_SECT\d+_\d+_NaI_\d.SPE$"
+            
+            # The sample spectral files end in .SPE and cannot have "STND-NGRBACK_" or "CALIB_" at the beginning of the filename
+            # Regex here is using a negative lookahead.
+            # The NGR blank follows the form: BLANK-20250825-2_20cm_BLANK_20250825142405_NaI_7.SPE
+            # The NGR sample follows the form: 28-273A-1R-1_0cm_SECT7776512_20250813094315_NaI_8.SPE
+            # Sample types may be SECT, SHLF, WRND, etc
+    
+            pat = r"^(?!STND-NGRBACK|CALIB).+_\d+_NaI_\d.SPE$"
+            
 
             matched_files = [f for f in input_zip.infolist() if re.match(pat, f.filename)]
             
@@ -225,6 +233,9 @@ def read_zip_file(zip_path: str, **kwargs):
        
             matched_files = [f for f in input_zip.infolist() if re.match(pat, f.filename)]
             
+            # In each zip file, there should be only 1 .txt.
+            assert(len(matched_files)) == 1
+            
             df = pd.DataFrame()
             
             # looping through the matched files and using the zip archive to open the file contents
@@ -252,6 +263,9 @@ def read_zip_file(zip_path: str, **kwargs):
        
             matched_files = [f for f in input_zip.infolist() if re.match(pat, f.filename)]
             
+            # In each zip file, there should be only 1 .ini.
+            assert(len(matched_files)) == 1
+            
             df = pd.DataFrame()
             
             # looping through the matched files and using the zip archive to open the file contents
@@ -273,9 +287,13 @@ def read_zip_file(zip_path: str, **kwargs):
             # NGR Summary file
             #########
 
-            pat = r"^.+_(SECT|SHLF)\d+_\d+.CSV$"
+
+            pat = r"^.+\.CSV$"
        
             matched_files = [f for f in input_zip.infolist() if re.match(pat, f.filename)]
+            
+            # In each zip file, there should be only 1 CSV.
+            assert(len(matched_files)) == 1
             
             df = pd.DataFrame()
             
