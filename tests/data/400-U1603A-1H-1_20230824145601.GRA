@@ -1,0 +1,104 @@
+GRA
+
+2023-08-24 14:56:01 UTC, 400-U1603A-1H-1
+
+<HEADER>
+user =JR_PINERO
+text_id = SECT12641451
+instrument = 0) ORTEC MODEL: ORTEC DIGIBASE S/N: 15340
+instrument_group = WRMSL
+observed_length = 151.60
+comment = 
+</HEADER>
+
+<SINGLE>
+period = 3.000
+slope = -2.160534
+intercept = 23.264003
+r_value = 0.999791
+core_diameter = 6.600
+calibration_timestamp = 2023-08-23 00:27:33
+</SINGLE>
+
+<MULTI>
+offset = 4.00, density_bulk_gra = 1.263, total_counts_sec = 26457, timestamp = 2023-08-24 14:48:33
+offset = 6.00, density_bulk_gra = 1.264, total_counts_sec = 26439, timestamp = 2023-08-24 14:48:37
+offset = 8.00, density_bulk_gra = 1.336, total_counts_sec = 25580, timestamp = 2023-08-24 14:48:42
+offset = 10.00, density_bulk_gra = 1.348, total_counts_sec = 25438, timestamp = 2023-08-24 14:48:46
+offset = 12.00, density_bulk_gra = 1.330, total_counts_sec = 25648, timestamp = 2023-08-24 14:48:51
+offset = 14.00, density_bulk_gra = 1.359, total_counts_sec = 25307, timestamp = 2023-08-24 14:48:56
+offset = 16.00, density_bulk_gra = 1.368, total_counts_sec = 25203, timestamp = 2023-08-24 14:49:00
+offset = 18.00, density_bulk_gra = 1.327, total_counts_sec = 25685, timestamp = 2023-08-24 14:49:05
+offset = 20.00, density_bulk_gra = 1.369, total_counts_sec = 25185, timestamp = 2023-08-24 14:49:09
+offset = 22.00, density_bulk_gra = 1.385, total_counts_sec = 24999, timestamp = 2023-08-24 14:49:14
+offset = 24.00, density_bulk_gra = 1.420, total_counts_sec = 24594, timestamp = 2023-08-24 14:49:19
+offset = 26.00, density_bulk_gra = 1.385, total_counts_sec = 24996, timestamp = 2023-08-24 14:49:23
+offset = 28.00, density_bulk_gra = 1.383, total_counts_sec = 25022, timestamp = 2023-08-24 14:49:28
+offset = 30.00, density_bulk_gra = 1.394, total_counts_sec = 24894, timestamp = 2023-08-24 14:49:32
+offset = 32.00, density_bulk_gra = 1.388, total_counts_sec = 24962, timestamp = 2023-08-24 14:49:37
+offset = 34.00, density_bulk_gra = 1.389, total_counts_sec = 24954, timestamp = 2023-08-24 14:49:42
+offset = 36.00, density_bulk_gra = 1.382, total_counts_sec = 25039, timestamp = 2023-08-24 14:49:46
+offset = 38.00, density_bulk_gra = 1.386, total_counts_sec = 24993, timestamp = 2023-08-24 14:49:51
+offset = 40.00, density_bulk_gra = 1.401, total_counts_sec = 24818, timestamp = 2023-08-24 14:49:55
+offset = 42.00, density_bulk_gra = 1.370, total_counts_sec = 25171, timestamp = 2023-08-24 14:50:00
+offset = 44.00, density_bulk_gra = 1.353, total_counts_sec = 25376, timestamp = 2023-08-24 14:50:05
+offset = 46.00, density_bulk_gra = 1.355, total_counts_sec = 25345, timestamp = 2023-08-24 14:50:09
+offset = 48.00, density_bulk_gra = 1.393, total_counts_sec = 24913, timestamp = 2023-08-24 14:50:14
+offset = 50.00, density_bulk_gra = 1.459, total_counts_sec = 24160, timestamp = 2023-08-24 14:50:18
+offset = 52.00, density_bulk_gra = 1.423, total_counts_sec = 24567, timestamp = 2023-08-24 14:50:23
+offset = 54.00, density_bulk_gra = 1.444, total_counts_sec = 24324, timestamp = 2023-08-24 14:50:27
+offset = 56.00, density_bulk_gra = 1.503, total_counts_sec = 23676, timestamp = 2023-08-24 14:50:32
+offset = 58.00, density_bulk_gra = 1.531, total_counts_sec = 23368, timestamp = 2023-08-24 14:50:37
+offset = 60.00, density_bulk_gra = 1.564, total_counts_sec = 23010, timestamp = 2023-08-24 14:50:41
+offset = 62.00, density_bulk_gra = 1.621, total_counts_sec = 22419, timestamp = 2023-08-24 14:50:46
+offset = 64.00, density_bulk_gra = 1.445, total_counts_sec = 24319, timestamp = 2023-08-24 14:50:51
+offset = 66.00, density_bulk_gra = 1.519, total_counts_sec = 23493, timestamp = 2023-08-24 14:50:56
+offset = 68.00, density_bulk_gra = 1.460, total_counts_sec = 24144, timestamp = 2023-08-24 14:51:01
+offset = 70.00, density_bulk_gra = 1.425, total_counts_sec = 24542, timestamp = 2023-08-24 14:51:06
+offset = 72.00, density_bulk_gra = 1.416, total_counts_sec = 24642, timestamp = 2023-08-24 14:51:11
+offset = 74.00, density_bulk_gra = 1.404, total_counts_sec = 24778, timestamp = 2023-08-24 14:51:16
+offset = 76.00, density_bulk_gra = 1.384, total_counts_sec = 25011, timestamp = 2023-08-24 14:51:21
+offset = 78.00, density_bulk_gra = 1.443, total_counts_sec = 24341, timestamp = 2023-08-24 14:51:26
+offset = 80.00, density_bulk_gra = 1.510, total_counts_sec = 23593, timestamp = 2023-08-24 14:51:31
+offset = 82.00, density_bulk_gra = 1.507, total_counts_sec = 23630, timestamp = 2023-08-24 14:51:36
+offset = 84.00, density_bulk_gra = 1.480, total_counts_sec = 23924, timestamp = 2023-08-24 14:51:42
+offset = 86.00, density_bulk_gra = 1.379, total_counts_sec = 25069, timestamp = 2023-08-24 14:51:47
+offset = 88.00, density_bulk_gra = 1.367, total_counts_sec = 25209, timestamp = 2023-08-24 14:51:52
+offset = 90.00, density_bulk_gra = 1.378, total_counts_sec = 25076, timestamp = 2023-08-24 14:51:57
+offset = 92.00, density_bulk_gra = 1.374, total_counts_sec = 25133, timestamp = 2023-08-24 14:52:02
+offset = 94.00, density_bulk_gra = 1.392, total_counts_sec = 24925, timestamp = 2023-08-24 14:52:07
+offset = 96.00, density_bulk_gra = 1.407, total_counts_sec = 24753, timestamp = 2023-08-24 14:52:12
+offset = 98.00, density_bulk_gra = 1.425, total_counts_sec = 24547, timestamp = 2023-08-24 14:52:17
+offset = 100.00, density_bulk_gra = 1.438, total_counts_sec = 24395, timestamp = 2023-08-24 14:52:22
+offset = 102.00, density_bulk_gra = 1.448, total_counts_sec = 24283, timestamp = 2023-08-24 14:52:27
+offset = 104.00, density_bulk_gra = 1.430, total_counts_sec = 24491, timestamp = 2023-08-24 14:52:32
+offset = 106.00, density_bulk_gra = 1.413, total_counts_sec = 24683, timestamp = 2023-08-24 14:52:38
+offset = 108.00, density_bulk_gra = 1.426, total_counts_sec = 24535, timestamp = 2023-08-24 14:52:43
+offset = 110.00, density_bulk_gra = 1.387, total_counts_sec = 24980, timestamp = 2023-08-24 14:52:48
+offset = 112.00, density_bulk_gra = 1.385, total_counts_sec = 25000, timestamp = 2023-08-24 14:52:53
+offset = 114.00, density_bulk_gra = 1.386, total_counts_sec = 24991, timestamp = 2023-08-24 14:52:58
+offset = 116.00, density_bulk_gra = 1.399, total_counts_sec = 24837, timestamp = 2023-08-24 14:53:03
+offset = 118.00, density_bulk_gra = 1.385, total_counts_sec = 24996, timestamp = 2023-08-24 14:53:08
+offset = 120.00, density_bulk_gra = 1.391, total_counts_sec = 24929, timestamp = 2023-08-24 14:53:13
+offset = 122.00, density_bulk_gra = 1.396, total_counts_sec = 24875, timestamp = 2023-08-24 14:53:18
+offset = 124.00, density_bulk_gra = 1.391, total_counts_sec = 24934, timestamp = 2023-08-24 14:53:23
+offset = 126.00, density_bulk_gra = 1.416, total_counts_sec = 24650, timestamp = 2023-08-24 14:53:28
+offset = 128.00, density_bulk_gra = 1.431, total_counts_sec = 24472, timestamp = 2023-08-24 14:53:33
+offset = 130.00, density_bulk_gra = 1.495, total_counts_sec = 23764, timestamp = 2023-08-24 14:53:38
+offset = 132.00, density_bulk_gra = 1.456, total_counts_sec = 24189, timestamp = 2023-08-24 14:55:26
+offset = 134.00, density_bulk_gra = 1.498, total_counts_sec = 23728, timestamp = 2023-08-24 14:55:31
+offset = 136.00, density_bulk_gra = 1.475, total_counts_sec = 23976, timestamp = 2023-08-24 14:55:36
+offset = 138.00, density_bulk_gra = 1.469, total_counts_sec = 24043, timestamp = 2023-08-24 14:55:41
+offset = 140.00, density_bulk_gra = 1.446, total_counts_sec = 24299, timestamp = 2023-08-24 14:55:46
+offset = 142.00, density_bulk_gra = 1.443, total_counts_sec = 24341, timestamp = 2023-08-24 14:55:51
+offset = 144.00, density_bulk_gra = 1.444, total_counts_sec = 24324, timestamp = 2023-08-24 14:55:56
+offset = 146.00, density_bulk_gra = 1.406, total_counts_sec = 24754, timestamp = 2023-08-24 14:56:01
+</MULTI>
+
+<FILE>
+config = c:\ims\config_wrmsl\i_pi_gra.ini
+</FILE>
+
+<NOTES>
+positions_excluded = FALSE
+</NOTES>

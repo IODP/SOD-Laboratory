@@ -24,7 +24,7 @@
             ]
         },
         {
-            "name": "archive_transform_rgb",
+            "name": "archive_transform_rgb_ngr",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
@@ -33,14 +33,41 @@
                 "--archive",
                 "--transform",
                 "--input",
-                "C:/Data/projects/ProjectManySystems/instrument_files",
+                "C:/Data/projects/ProjectManySystems/NGR",
                 "--output",
-                "C:/Data/projects/ProjectManySystems",
+                "C:/Data/projects/ProjectManySystems/derp",
                 "--system",
                 "RGB",
+                "NGR",
                 "--settings",
                 "workflows/settings.json",
-                "--step"
+                "--step",
+                "--recursive",
+                "--force"
+        
+
+            ]
+        },
+                {
+            "name": "compile_ngr",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+             
+                "--compile",
+                "--input",
+                "C:/Data/projects/ProjectManySystems/NGR",
+                "--output",
+                "C:/Data/projects/ProjectManySystems/derp",
+                "--system",
+                "NGR",
+                "--settings",
+                "workflows/settings.json",
+                "--step",
+                "--recursive",
+                "--force"
             ]
         },
         {

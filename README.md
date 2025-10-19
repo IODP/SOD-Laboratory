@@ -67,6 +67,48 @@ pip install -e iodp
 
 ```
 
+# Usage
+
+This section includes examples of CLI commands. The `--archive` and `--transform` commands may be specified seperately or together, but neither can be used when `--compile` is specified because the `--input` directory is handled differently.
+
+There is no forced order of the `sodlab` command parameters.
+
+```shell
+# View options:
+sodlab --help
+
+# Archive and Transform files:
+
+# Recursively search input directory for instrument files. Create archive directories by test at output folder.
+sodlab --archive --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive
+
+# Same as above except search for raw test files in same folder as test instrument file.
+sodlab --archive --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force_relative_paths
+
+# Recursively search input directory for instrument files. Create transform directories at output folder.
+sodlab --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive
+
+# Archive and apply transformations. The --force option will overwrite existing files.
+sodlab --archive --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force
+
+# Same as above except pause after each operation for user to review behavior.
+sodlab --archive --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force --step
+
+# Specify custom location of settings.json file
+sodlab --archive --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force --settings "C:\Project\settings.json"
+
+# Same as above except store logfile in Output directory
+sodlab --archive --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force --settings "C:\Project\settings.json" --logfile
+
+
+# Create compilation files:
+
+# NOTE: This step must be performed individually by system. --compile cannot be used with --transform or --archive in the same command.
+sodlab --compile --system NGR --input "C:\data\SOD_OUTPUT\NGR" --recursive --output "C:\data\SOD_OUTPUT\NGR"
+sodlab --compile --system GRA --input "C:\data\SOD_OUTPUT\GRA" --recursive --output "C:\data\SOD_OUTPUT\GRA"
+sodlab --compile --system RGB --input "C:\data\SOD_OUTPUT\RGB" --recursive --output "C:\data\SOD_OUTPUT\RGB"
+```
+
 # Funding
 
 - `NSF-OCE 2412279`: Closeout of JOIDES Resolution IODP Expedition Obligations and Operation of an Instrumented Gulf Coast Repository, US National Science Foundation. https://www.nsf.gov/awardsearch/showAward?AWD_ID=2412279

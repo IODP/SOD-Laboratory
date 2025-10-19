@@ -7,7 +7,7 @@
 # --add-data tag will include other files (e.g. settings.json) in build product
 
 Write-Host "Building sodlab as one file..."
-pyinstaller workflows/bulk_compilation.py `
+pyinstaller workflows/sodlab.py `
     --name "sodlab" `
     --onefile `
     --distpath temp/build/bin `
@@ -17,7 +17,7 @@ pyinstaller workflows/bulk_compilation.py `
 # Size is ~114 MB
 
 Write-Host "Building sodlab as one directory"
-pyinstaller workflows/bulk_compilation.py `
+pyinstaller workflows/sodlab.py `
     --name "sodlab" `
     --onedir `
     --distpath temp/onedir/bin `

@@ -215,7 +215,7 @@ def add_depths_to_dataframe(df:pd.DataFrame, offset_col:str, sample_number_col:s
     # need to add csf-a depth, it should not already be present
     assert not csfa_col in df.columns
     
-    df[csfa_col] = None
+    # df[csfa_col] = None
     
     for (idx, row), sample_number in zip(df.iterrows(), sample_numbers):
         offset = 0
@@ -232,11 +232,11 @@ def add_depths_to_dataframe(df:pd.DataFrame, offset_col:str, sample_number_col:s
                 # Skip this row if offset cannot be cast to float
                 continue
             
-        # TODO: Certain files have textids in rows, then footers with non-textid vals in the columns
-        df.loc[idx, csfa_col] = float(data[sample_number]['top']) + (offset / 100)
-
         for col in ['expedition', 'site', 'hole', 'core', 'core_type', 'section', 'sect_half']:
             df.loc[idx, col] = data[sample_number].get(col, None)
+        
+        # TODO: Certain files have textids in rows, then footers with non-textid vals in the columns
+        df.loc[idx, csfa_col] = float(data[sample_number]['top']) + (offset / 100)
         
     return df
     
