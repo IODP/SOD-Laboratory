@@ -1,5 +1,8 @@
 
+
 import os
+import sys
+from pathlib import Path
 import shutil
 import argparse
 import json
@@ -8,7 +11,6 @@ import logging
 import logging.handlers
 import io
 from importlib import import_module
-from pathlib import Path
 from tqdm import tqdm
 
 import pandas as pd
@@ -63,7 +65,7 @@ def configure_logging(outdir: str = None):
     print(f"Logs will be written to: {outfile}")
     print("")
 
-def get_files(path: str, pattern: str, recursive: bool) -> list:
+def get_files(path: str, pattern: str, recursive: bool, flag:re.RegexFlag=0) -> list:
     """Get full path references to files within a directory.
 
     Args:
@@ -82,7 +84,9 @@ def get_files(path: str, pattern: str, recursive: bool) -> list:
 
     # Adjust the lambda to include the regex match if specified.
     try:
-        reg = re.compile(pattern)
+        # e.g. will find .RGB, .rGB, .rgb, etc
+        reg = re.compile(pattern, flags=flag)
+        
         predicate = lambda x: reg.match(x)
 
         path = os.path.normpath(path)
@@ -189,7 +193,8 @@ class TestSet:
     def get_ifile(self, pattern):
         """Indicates if the folder has one and only one instrument file.
         """
-        inst_file = get_files(path = self.testfolder, pattern=pattern, recursive=False)
+        # e.g. will find .RGB, .rgB, .rgb, etc
+        inst_file = get_files(path = self.testfolder, pattern=pattern, recursive=False, flag=re.IGNORECASE)
         
         if inst_file:
             if not len(inst_file) == 1:
@@ -226,46 +231,51 @@ def _archive(files:list, dest:str, analysis: str, testid:str, method:str, force:
         
     # stage files
     for path in files:
-        oldpath = Path(path)
-        newpath = os.path.join(dest,oldpath.name)
+        oldpath, filename = os.path.split(path)
+        newpath = os.path.join(dest,filename)
         
         if path == newpath:
             logger.warning(f"Destination path same as source path. Skipping {path}")
             continue
         
+        if os.path.exists(newpath) and not force:
+            logger.warning(f'File already exists at: {newpath}. Will not overwrite.')
+            continue
+            
+        
         if method  == 'hardlink':
             # Check new path is on same drive:
-            if os.path.splitdrive(oldpath) != os.path.splitdrive(newpath):
+            if str(os.path.splitdrive(oldpath)[0]).lower() != str(os.path.splitdrive(newpath)[0]).lower():
                 raise Exception("Cannot hard-link files on different volumes.")
             
-            if os.path.exists(newpath):
-                if not force:
-                    logger.warning(f'File already exists at: {newpath}. Will not overwrite.')
-                    continue
-                else:
-                    # NOTE: Unlinking when st_nlink == 1 deletes the original.
-                    if os.stat(oldpath).st_nlink > 1:
-                        oldpath.unlink()
-
-            oldpath.link_to(newpath)
-            logger.info(f"File hardlinked to: {newpath}")
+            
+            if not os.path.exists(newpath):
+                os.link(path, newpath)
+                logger.info(f"File hardlinked to: {newpath}")
+                continue
+            
+            if os.path.exists(newpath) and force:
+                # NOTE: Unlinking when st_nlink == 1 deletes the original.
+                assert path != newpath
+                
+                os.remove(newpath)
+                os.link(path, newpath)
+                logger.warning(f'Force hardlinking {path} to {newpath}')
+                
             continue
+
         
         if method == 'copy':
-            if os.path.exists(newpath) and not force:
-                logger.warning(f'File already exists at: {newpath}. Will not overwrite.')
-                continue
-
-            
+            assert path != newpath
+            if os.path.exists(newpath): os.remove(newpath)
             shutil.copy2(path,newpath)
             logger.info(f"File copied to: {newpath}")
             continue
 
         if method == 'move':
-            if os.path.exists(newpath) and not force:
-                logger.warning(f'File already exists at: {newpath}. Will not overwrite.')
-                continue
-            
+            assert path != newpath
+            if os.path.exists(newpath): os.remove(newpath)
+            os.remove(newpath)
             shutil.move(path,newpath)
             logger.info(f"File moved to: {newpath}")
             continue
@@ -426,7 +436,7 @@ def _verify_ifile(ifile:str, filekeys, force_relative=False) -> list:
           
             _, base = os.path.split(filepath)
             check_path = os.path.join(localdir, base)
-            if not os.path.exists(check_path):
+            if not Path(check_path).exists():
                 raise FileNotFoundError(f'Raw data file does not exist at path: {filepath}')
             
             files[key] = os.path.normpath(check_path)
@@ -434,7 +444,7 @@ def _verify_ifile(ifile:str, filekeys, force_relative=False) -> list:
             
         
         if os.path.isabs(filepath):
-            if not os.path.exists(filepath):
+            if not Path(filepath).exists():
                 raise FileNotFoundError(f'Raw data file does not exist at path: {filepath}')
             
         
@@ -447,7 +457,7 @@ def _verify_ifile(ifile:str, filekeys, force_relative=False) -> list:
             
             assert os.path.isabs(created_filepath)
             
-            if not os.path.exists(filepath):
+            if not Path(filepath).exists():
                 raise FileNotFoundError(f'Raw data file does not exist at path: {filepath}')
             
             files[key] = os.path.normpath(created_filepath)
@@ -640,6 +650,28 @@ def main():
         action="store_true",
         help="If set, search for instrument files in --input directory, and archive raw data in the directory specified by --output",
     )
+    
+    group = parser.add_mutually_exclusive_group()
+    
+    group.add_argument(
+        "--copy",
+        action="store_true",
+        help="If used with --archive, copies the raw data files to --output directory. Cannot be used with --move or --hardlink."
+    )
+    
+    group.add_argument(
+        "--move",
+        action="store_true",
+        help="If used with --archive, moves the raw data files to --output directory. Cannot be used with --copy or --hardlink."
+    )
+    
+    group.add_argument(
+        "--hardlink",
+        action="store_true",
+        help="If used with --archive, hard links the raw data files to --output directory. Cannot be used with --copy or --move."
+    )
+    
+    
     parser.add_argument(
         "--transform",
         action="store_true",
@@ -672,13 +704,12 @@ def main():
     
     parser.add_argument(
         "--force_relative_paths",
-        action="store_false",
+        action="store_true",
         help="Forces interpretation of filepaths in instrument file as paths relative to the folder storing the instrument file.",
     )
 
     parser.add_argument(
         "--output",
-        required=True,
         type=str,
         default="C:/Data/",
         help="Output directory for processed files.",
@@ -686,7 +717,6 @@ def main():
     parser.add_argument(
         "--system",
         type=str,
-        required=True,
         nargs="+",
         default=[],
         help="List of systems to process (space separated). Currently supported are: GRA PWAVE_L MS NGR SRM DSC RSC MSPOINT PROFILE RGB ROI XSCAN",
@@ -715,13 +745,15 @@ def main():
     )
 
 
+        
     args = parser.parse_args()
-    
+ 
+        
     try:
         if args.compile and (args.archive or args.transform):
-            parser.error("--compile cannot be used with --archive or --transform")
+            logger.error("--compile cannot be used with --archive or --transform")
     except:
-        exit(0)
+        sys.exit(0)
 
     if args.logfile and args.logfile == "output":
 
@@ -752,9 +784,15 @@ def main():
 
     if len(args.system) == 0:
         logger.warning("No instrument systems specified")
-        exit(0)
+        sys.exit(0)
 
-    
+    if not args.system:
+        logger.warning("No system specified")
+        sys.exit(0)
+        
+    if not args.output:
+        logger.warning("No output folder specified")
+        sys.exit(0)
     
     for system in args.system:
         
@@ -773,12 +811,19 @@ def main():
             data_loader.collect_tests(how='byfile', force_relative_paths=args.force_relative_paths)
                     
             if args.archive:
-                data_loader.archive(method='copy', step=args.step)
+                if args.copy:
+                    data_loader.archive(method='copy', step=args.step)
+                elif args.hardlink:
+                    data_loader.archive(method='hardlink', step=args.step)
+                elif args.move:
+                    data_loader.archive(method='move', step=args.step)
+                else:
+                    raise ValueError(f"--archive requires a --copy, --move or --hardlink command.")
+                
+                
                 
             if args.transform:
                 data_loader.transform(step=args.step)
-
-
 
 
         if args.compile:

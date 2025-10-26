@@ -79,26 +79,29 @@ sodlab --help
 
 # Archive and Transform files:
 
-# Recursively search input directory for instrument files. Create archive directories by test at output folder.
-sodlab --archive --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive
+# Recursively search input directory for instrument files. Create archive directories by test at output folder. Copy original files.
+sodlab --archive --copy --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive
+
+# Same as above except hardlink the files to new location.
+sodlab --archive --hardlink --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive
 
 # Same as above except search for raw test files in same folder as test instrument file.
-sodlab --archive --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force_relative_paths
+sodlab --archive --copy --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force_relative_paths
 
 # Recursively search input directory for instrument files. Create transform directories at output folder.
 sodlab --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive
 
 # Archive and apply transformations. The --force option will overwrite existing files.
-sodlab --archive --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force
+sodlab --archive --copy --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force
 
 # Same as above except pause after each operation for user to review behavior.
-sodlab --archive --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force --step
+sodlab --archive --copy --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force --step
 
 # Specify custom location of settings.json file
-sodlab --archive --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force --settings "C:\Project\settings.json"
+sodlab --archive --copy --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force --settings "C:\Project\settings.json"
 
 # Same as above except store logfile in Output directory
-sodlab --archive --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force --settings "C:\Project\settings.json" --logfile
+sodlab --archive --copy --transform --system NGR GRA --input "C:\data\in" --output "C:\data\SOD_OUTPUT" --recursive --force --settings "C:\Project\settings.json" --logfile
 
 
 # Create compilation files:

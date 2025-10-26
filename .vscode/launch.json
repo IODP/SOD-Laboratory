@@ -31,21 +31,30 @@
             "console": "integratedTerminal",
             "args": [
                 "--archive",
+                "--copy",
                 "--transform",
                 "--input",
                 "C:/Data/projects/ProjectManySystems/NGR",
                 "--output",
                 "C:/Data/projects/ProjectManySystems/derp",
                 "--system",
-                "RGB",
                 "NGR",
                 "--settings",
                 "workflows/settings.json",
                 "--step",
                 "--recursive",
                 "--force"
-        
-
+              
+            ]
+        },
+        {
+            "name": "help_menu",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--help",
             ]
         },
                 {
