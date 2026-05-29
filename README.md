@@ -112,6 +112,106 @@ sodlab --compile --system GRA --input "C:\data\SOD_OUTPUT\GRA" --recursive --out
 sodlab --compile --system RGB --input "C:\data\SOD_OUTPUT\RGB" --recursive --output "C:\data\SOD_OUTPUT\RGB"
 ```
 
+
+
+# Settings 
+
+Application settings are given in a `settings.json` file. If a settings file is not specified as a commandline argument a default copy is imported from the executing app directory.
+
+
+- `other`: Unimplemented
+- `logfile`: Unimplemented
+- `check_raw_file_existence`. Default `False`. When `True` will skip processing Tests which have at least one missing raw data file. The skipping occurs during a step which finds and validates Tests. Missing files are always logged.
+
+- `systems.{analysis}`:
+    - `analysis`: The analysis code.
+    - `files`: A list of key/value raw file references. Keys are codes to indicate file types. Values are filepaths (may be absolute or relative).
+- `systems.{analysis}.files.{filekey}`
+    - `func`: Reference to a python function that will be resolved at runtime. The format should be given as `module.submodule.function` e.g. `pd.read_csv`, `iodp.ngr.read_ngr_spe`, etc
+    - `kwargs`: Keyword arguments to be passed to the `func` function when it is invoked.
+    - `add_depths`:
+        - `active`: `True` or `False`. Enables or disables adding depth columns.
+        - `offset_col`: The column name of the offset column. Delete if not used.
+        - `sample_number_col`: Column name identifying the sample number or textid.
+        - `is_textid_col`: `True` or `False`. Whether the sample column uses text IDs.
+
+
+
+## Example
+```json
+{
+	"other": "",
+	"logfile":"", 
+	"check_raw_file_existence":"False",
+	"systems": {
+        "NGR": {
+			"analysis": "NGR",
+			"files": {
+				"archive": {
+					"func": "iodp.ngr.read_zip_file",
+					"kwargs": {}
+				},
+				"configuration": {
+					"func": "iodp.utils.read_instrument_ini",
+					"kwargs": {
+						"as_dataframe": "True"
+					}
+				},
+				"summary": {
+					"func": "pandas.read_csv",
+					"kwargs": {},
+					"add_depths": {
+						"active": "False",
+						"offset_col": "Offset",
+						"sample_number_col": "Text_ID",
+						"is_textid_col": "True"
+					}
+				},
+				"instrument_file": {
+					"pattern": "^.+\\.NGR",
+					"func": "iodp.utils.read_instrument_file",
+					"kwargs": {"as_dataframe": "True"},
+					"add_depths": {
+						"active": "False",
+						"offset_col": "offset",
+						"sample_number_col": "text_id",
+						"is_textid_col": "True"
+					}
+				}
+			}
+		},
+		"PWAVE_L": {
+			"analysis": "PWAVE_L",
+			"files": {
+				"velocity_wfm": {
+					"func": "iodp.pwavel.read_pwavel_csv",
+					"kwargs": {}
+				},
+				"config": {
+					"func": "iodp.utils.read_instrument_ini",
+					"kwargs": {
+						"as_dataframe": "True"
+					}
+				},
+				"instrument_file": {
+					"pattern": "^.+\\.PWAVE_L",
+					"func": "iodp.utils.read_instrument_file",
+					"kwargs": {"as_dataframe": "True"},
+					"add_depths": {
+						"active": "False",
+						"offset_col": "offset",
+						"sample_number_col": "text_id",
+						"is_textid_col": "True"
+					}
+				}
+			}
+		}
+    }
+}
+
+```
+
+
 # Funding
 
 - `NSF-OCE 2412279`: Closeout of JOIDES Resolution IODP Expedition Obligations and Operation of an Instrumented Gulf Coast Repository, US National Science Foundation. https://www.nsf.gov/awardsearch/showAward?AWD_ID=2412279

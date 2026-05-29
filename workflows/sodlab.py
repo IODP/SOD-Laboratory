@@ -18,6 +18,11 @@ import pandas as pd
 # NOTE: Many of these modules are imported at runtime from module methods specified in settings.json
 from iodp import utils
 
+# NOTE: Pyinstaller won't always include dynamically loaded libraries. It just can't find them at compile time.
+# So we need to include a dummy reference to them here so Pyinstaller recognizes they need to be included.
+if False:
+    import iodp
+
 
 def get_nested_dict(data, keys, default=None):
     """Safely get nested dictionary values using dot notation or list of keys."""
@@ -159,14 +164,14 @@ class TestSet:
         return msg
 
         
-    def assign_raw_files(self, how) -> None:
+    def assign_raw_files(self, how, check_exists:bool=False) -> None:
         """Assembles references to raw data files."""
         
         # By Instrument file
         if how == 'byfile':
             
             # NOTE: relative path will return file references relative to ifile location.
-            self.raw_files = _get_raw_files_by_ifile(path=self.ifile, filekeys=self.filekeys, force_relative=self.force_relative)
+            self.raw_files = _get_raw_files_by_ifile(path=self.ifile, filekeys=self.filekeys, force_relative=self.force_relative, check_exists=False)
 
         # By Folder
         if how == 'byfolder':
@@ -238,6 +243,10 @@ def _archive(files:list, dest:str, analysis: str, testid:str, method:str, force:
             logger.warning(f"Destination path same as source path. Skipping {path}")
             continue
         
+        if not os.path.exists(path):
+            logger.error(f"Does not exist: {path}")
+            continue
+        
         if os.path.exists(newpath) and not force:
             logger.warning(f'File already exists at: {newpath}. Will not overwrite.')
             continue
@@ -251,7 +260,7 @@ def _archive(files:list, dest:str, analysis: str, testid:str, method:str, force:
             
             if not os.path.exists(newpath):
                 os.link(path, newpath)
-                logger.info(f"File hardlinked to: {newpath}")
+                logger.info(f"Hardlinked {path} to {newpath}")
                 continue
             
             if os.path.exists(newpath) and force:
@@ -260,16 +269,22 @@ def _archive(files:list, dest:str, analysis: str, testid:str, method:str, force:
                 
                 os.remove(newpath)
                 os.link(path, newpath)
-                logger.warning(f'Force hardlinking {path} to {newpath}')
+                logger.warning(f'Force hardlinked {path} to {newpath}')
                 
             continue
 
-        
+    
         if method == 'copy':
             assert path != newpath
             if os.path.exists(newpath): os.remove(newpath)
-            shutil.copy2(path,newpath)
-            logger.info(f"File copied to: {newpath}")
+            
+            try:
+                shutil.copy2(path,newpath)
+            except FileNotFoundError as e:
+                logger.error(f"Does not exist: {path}")
+                continue
+            
+            logger.info(f"Copied {path} to {newpath}")
             continue
 
         if method == 'move':
@@ -277,7 +292,7 @@ def _archive(files:list, dest:str, analysis: str, testid:str, method:str, force:
             if os.path.exists(newpath): os.remove(newpath)
             os.remove(newpath)
             shutil.move(path,newpath)
-            logger.info(f"File moved to: {newpath}")
+            logger.info(f"Moved {path} to {newpath}")
             continue
 
 
@@ -306,7 +321,7 @@ def _transform(test, dest:str, settings:str):
                 logger.info(f"No transform function specified. Skipping.")
                 continue
             
-            logger.info(f"{key}: Transform function: {func.__module__}.{func.__name__}, kwargs: {kwargs}")
+            logger.info(f"{key}: {file}, Transform function: {func.__module__}.{func.__name__}, kwargs: {kwargs}")
             
             # perform transform:
             depths_added = False
@@ -378,9 +393,9 @@ def is_analysis_folder(path: str, pattern:str):
         logger.error(f"{e}")
         return False
             
-def _get_raw_files_by_ifile(path:str, filekeys, force_relative) -> list:
+def _get_raw_files_by_ifile(path:str, filekeys, force_relative:bool=False, check_exists:bool=False) -> list:
     """User specifies a ifile. The ifile handle, and all files/folders listed within are returned."""
-    files = _verify_ifile(path, filekeys, force_relative)
+    files = _verify_ifile(path, filekeys, force_relative, check_exists=check_exists)
     
     return files
 	
@@ -396,7 +411,7 @@ def _get_raw_files_by_folder(path:str) -> list:
     
     
  
-def _verify_ifile(ifile:str, filekeys, force_relative=False) -> list:
+def _verify_ifile(ifile:str, filekeys, force_relative=False, check_exists:bool=False) -> list:
     """Checks the raw data file references within an instrument file. Verifies their existence. Relative filepaths are relative to the same folder containing the provided instrument file.
 
     Args:
@@ -436,16 +451,19 @@ def _verify_ifile(ifile:str, filekeys, force_relative=False) -> list:
           
             _, base = os.path.split(filepath)
             check_path = os.path.join(localdir, base)
-            if not Path(check_path).exists():
-                raise FileNotFoundError(f'Raw data file does not exist at path: {filepath}')
+            
+            if check_exists:
+                if not Path(check_path).exists():
+                    raise FileNotFoundError(f'Raw data file does not exist at path: {filepath}')
             
             files[key] = os.path.normpath(check_path)
             continue
             
         
         if os.path.isabs(filepath):
-            if not Path(filepath).exists():
-                raise FileNotFoundError(f'Raw data file does not exist at path: {filepath}')
+            if check_exists:
+                if not Path(filepath).exists():
+                    raise FileNotFoundError(f'Raw data file does not exist at path: {filepath}')
             
         
             files[key] = os.path.normpath(filepath)
@@ -457,8 +475,9 @@ def _verify_ifile(ifile:str, filekeys, force_relative=False) -> list:
             
             assert os.path.isabs(created_filepath)
             
-            if not Path(filepath).exists():
-                raise FileNotFoundError(f'Raw data file does not exist at path: {filepath}')
+            if check_exists:
+                if not Path(filepath).exists():
+                    raise FileNotFoundError(f'Raw data file does not exist at path: {filepath}')
             
             files[key] = os.path.normpath(created_filepath)
             continue
@@ -547,7 +566,7 @@ class DataLoader:
                     test.has_ifile = True
                     test.ifile = file
                     test.force_relative = force_relative_paths
-                    test.assign_raw_files(how='byfile')
+                    test.assign_raw_files(how='byfile', check_exists=False)
                     test.get_testid_from_ifile()
                     self.tests.append(test)
                     
@@ -640,15 +659,64 @@ def _convert_bool_value(value):
 
 
 def main():
+    
+    VERSION = "1.0"
+
+    epilog_text = """
+EXAMPLES:
+
+    Archiving:
+    
+        # Recursively search input directory for instrument files. Create archive directories by test at output folder. Copy original files.
+        sodlab --archive --copy --system NGR GRA --input "C:\\data\\in" --output "C:\\data\\projects\\project_smith" --recursive
+
+        # Same as above except hardlink the files to new location.
+        sodlab --archive --hardlink --system NGR GRA --input "C:\\data\\in" --output "C:\\data\\projects\\project_smith" --recursive
+
+        # Same as above except search for raw test files in same folder as test instrument file.
+        # This handles the case in which the files have already been moved from their original locations but exist in a folder with the instrument file.
+        sodlab --archive --copy --system NGR GRA --input "C:\\data\\in" --output "C:\\data\\projects\\project_smith" --recursive --force_relative_paths
+
+    Transforming:
+    
+        # Recursively search input directory for instrument files. Only create transform directories at output folder.
+        # NOTE: This is useful when you only want to generate transformed files and not archive them.
+        sodlab --transform --system NGR GRA --input "C:\\data\\in" --output "C:\\data\\projects\\project_smith" --recursive
+
+        # Archive and apply transformations. The --force option will overwrite existing files.
+        sodlab --archive --copy --transform --system NGR GRA --input "C:\\data\\in" --output "C:\\data\\projects\\project_smith" --recursive --force
+
+        # Same as above except pause after each operation for user to review behavior.
+        sodlab --archive --copy --transform --system NGR GRA --input "C:\\data\\in" --output "C:\\data\\projects\\project_smith" --recursive --force --step
+
+        # Specify custom location of settings.json file.
+        sodlab --archive --copy --transform --system NGR GRA --input "C:\\data\\in" --output "C:\\data\\projects\\project_smith" --recursive --force --settings "C:\\sodlab\\settings.json"
+
+        # Same as above except store logfile in Output directory.
+        sodlab --archive --copy --transform --system NGR GRA --input "C:\\data\\in" --output "C:\\data\\projects\\project_smith" --recursive --force --settings "C:\\sodlab\\settings.json" --logfile
+
+    Compiling:
+
+        # NOTE: This step must be performed individually by system. --compile cannot be combined with --transform or --archive.
+        sodlab --compile --system NGR --input "C:\\data\\projects\\project_smith\\NGR" --recursive --output "C:\\data\\projects\\project_smith\\NGR"
+        sodlab --compile --system GRA --input "C:\\data\\projects\\project_smith\\GRA" --recursive --output "C:\\data\\projects\\project_smith\\GRA"
+        sodlab --compile --system RGB --input "C:\\data\\projects\\project_smith\\RGB" --recursive --output "C:\\data\\projects\\project_smith\\RGB"
+"""
 
     parser = argparse.ArgumentParser(
-        description="Bulk compilation of laboratory instrument files."
+        description=f"""
+        Scientific Ocean Drilling Laboratory (SODLAB)
+        Commandline interface tool to organize, transform and compile laboratory measurement files.
+        Version: "{VERSION}"
+        """,
+        epilog=(epilog_text),
+        formatter_class=argparse.RawDescriptionHelpFormatter
     )
     
     parser.add_argument(
         "--archive",
         action="store_true",
-        help="If set, search for instrument files in --input directory, and archive raw data in the directory specified by --output",
+        help="If set, search for instrument files in --input directory, and archive raw data in the directory specified by --output. Works with --recursive.",
     )
     
     group = parser.add_mutually_exclusive_group()
@@ -675,13 +743,13 @@ def main():
     parser.add_argument(
         "--transform",
         action="store_true",
-        help="If set, search for summary .json files in --output directory and transform archived raw data files as indicated in --settings file",
+        help="If set, search for instrument files (e.g. .GRA, .NGR, etc) in the --input directory, parse raw data file references, and apply transforms with functions indicated in --settings file. Works with --recursive.",
     )
     
     parser.add_argument(
         "--compile",
         action="store_true",
-        help="If set, navigates through the directory specified by --output and compiles transformed files into singular reports"
+        help="If set, navigates through the --input directory and compiles files prepended with 'instrument_file_' into singular reports. Works with --recursive."
     )
     
     parser.add_argument(

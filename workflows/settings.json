@@ -1,6 +1,7 @@
 {
 	"other": "",
 	"logfile":"",
+	"check_raw_file_existence":"False",
 	"systems": {
 		"PWAVE_L": {
 			"analysis": "PWAVE_L",
@@ -62,17 +63,6 @@
 		},
 		"GRA": {
 			"analysis": "GRA",
-			"instrument_file": {
-				"pattern": "^.+\\.GRA$",
-				"func": "iodp.utils.read_instrument_file",
-				"kwargs": {"as_dataframe": "True"},
-				"add_depths": {
-					"active": "False",
-					"offset_col": "offset",
-					"sample_number_col": "text_id",
-					"is_textid_col": "True"
-				}
-			},
 			"files": {
 				"config": {
 					"func": "iodp.utils.read_instrument_ini",
@@ -85,7 +75,7 @@
 					"func": "iodp.utils.read_instrument_file",
 					"kwargs": {"as_dataframe": "True"},
 					"add_depths": {
-						"active": "True",
+						"active": "False",
 						"offset_col": "offset",
 						"sample_number_col": "text_id",
 						"is_textid_col": "True"

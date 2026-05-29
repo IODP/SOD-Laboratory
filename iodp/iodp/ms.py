@@ -8,7 +8,6 @@ import re
 import os
 
 
-
 def read_ms_csv(file:str) -> pd.DataFrame:
     
     content = None
@@ -66,3 +65,4 @@ if __name__ == "__main__":
     
     file = 'PhysicalProperties/data/input/MSLOOP/raw_400-u1603a-1h-1_2308241457173_ms.csv'
     df = read_ms_csv(file)
+    df.head()

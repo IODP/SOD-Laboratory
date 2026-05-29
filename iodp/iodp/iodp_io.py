@@ -27,7 +27,8 @@ def _get_lims_sample_metadata(sample_ids):
             # NOTE: "11311" depth scale is CSF-A. "11331" depth scale is CSF-B 
             "depthfilters": "[\"scale_id= \'11311\'\"]"
         }
-        response = requests.get(base_url, params=params)
+        # TODO: Verify is set to False here because there is an issue with Python trusting CA certificates that are automatically inserted into campus HTTPS traffic.
+        response = requests.get(base_url, params=params, verify=False)
         # print("Requesting URL:", response.url)
         if response.status_code == 200:
             results.extend(response.json())

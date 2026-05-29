@@ -6,7 +6,7 @@ import pandas as pd
 import configparser
 import numpy as np
 import io
-from iodp import iodp_io, ngr
+from iodp import iodp_io
 
 
 logger = logging.getLogger(__name__)

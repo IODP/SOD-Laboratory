@@ -48,6 +48,30 @@
             ]
         },
         {
+            "name": "archive_transform_ms",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--archive",
+                "--copy",
+                "--transform",
+                "--input",
+                "C:/Data/projects/ProjectManySystems",
+                "--output",
+                "C:/Data/projects/ProjectManySystems",
+                "--system",
+                "MS",
+                "--settings",
+                "workflows/settings.json",
+                "--step",
+                "--recursive",
+                "--force"
+              
+            ]
+        },
+        {
             "name": "help_menu",
             "type": "debugpy",
             "request": "launch",
@@ -57,7 +81,7 @@
                 "--help",
             ]
         },
-                {
+        {
             "name": "compile_ngr",
             "type": "debugpy",
             "request": "launch",
@@ -99,7 +123,67 @@
                 "output"
                 
             ]
-        }
+        },
+        {
+            "name": "archive_only_ngr",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--archive",
+                "--copy",
+                "--input",
+                "C:/Data/projects/ProjectManySystems/broken_refs",
+                "--output",
+                "C:/Data/projects/ProjectManySystems/derp",
+                "--system",
+                "NGR",
+                "--step",
+                "--force"
+            ]
+        },
+        {
+            "name": "transform_only_ngr",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--transform",
+                "--input",
+                "C:/Data/projects/ProjectManySystems/broken_refs",
+                "--output",
+                "C:/Data/projects/ProjectManySystems/derp",
+                "--system",
+                "NGR",
+                "--step",
+                "--force"
+            ]
+        },
+        {
+            "name": "archive_transform_leckie",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--compile",
+                "--input",
+                "Q:/IODP_Share/Childress/TRACX_Leckie_Data/processed_data/GRA",
+                "--output",
+                "Q:/IODP_Share/Childress/TRACX_Leckie_Data/processed_data",
+                "--system",
+                "GRA",
+                "--settings",
+                "workflows/settings.json",
+                "--step",
+                "--recursive",
+                "--force"
+              
+            ]
+        },
+
 
     ]
 }
