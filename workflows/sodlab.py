@@ -13,6 +13,11 @@ import io
 from importlib import import_module
 from tqdm import tqdm
 
+# NOTE: Debugging. Check the VSCode Python Interpreter selection. It should match the interpreter used in the "sod" virtual environment. Otherwise modules don't import correctly.
+# print(sys.executable)
+# From CLI: python -c "import sys; print(sys.executable)"
+# The above two python executables should match
+
 import pandas as pd
 
 # NOTE: Many of these modules are imported at runtime from module methods specified in settings.json
@@ -753,6 +758,13 @@ EXAMPLES:
     )
     
     parser.add_argument(
+        "--pattern",
+        type=str,
+        default=None,
+        help="A regex pattern to match filenames.",
+    )
+    
+    parser.add_argument(
         "--recursive",
         action="store_true",
         help="If set, recursively search input directory.",
@@ -896,19 +908,25 @@ EXAMPLES:
 
         if args.compile:
             
+            if not args.pattern:
+                raise ValueError(f"--compile requies a --pattern to compile files")
+            
             try:
-                    
+                
+                pattern = args.pattern    
                 if not os.path.exists(args.output):
                     os.makedirs(args.output)
                     
                 files = []
-                pattern = '^instrument_file_.+\\.csv$'
-            
+                #pattern = '^instrument_file_.+\\.csv$'
+                logger.info(f"Searching input folder for files matching: {pattern}")
                 files = get_files(args.input, pattern=pattern, recursive=args.recursive)
                 
                 if len(files) == 0:
                     logger.warning(f"{system}: No files found in input directory (recursive = {args.recursive})")
                     continue
+                
+                logger.info(f"{system}: {len(files)} files found in input directory (recursive = {args.recursive})")
     
                 df = pd.DataFrame()
                 
@@ -923,6 +941,14 @@ EXAMPLES:
                     except Exception as e:
                         logger.error(f"Error adding {file} to compilation ")
                         continue
+                    
+                    # if args.step:
+                    #     val = input(
+                    #         "Press Enter to step or enter any key to continue processing..."
+                    #     )
+                    #     if val:
+                    #         step = False
+                        
                     
                 df.reset_index(drop=True)
                 

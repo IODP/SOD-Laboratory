@@ -183,6 +183,30 @@
               
             ]
         },
+        {
+            "name": "compile_tabular_test",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--compile",
+                "--pattern",
+                ".+\\.csv",
+                "--input",
+                "C:/Users/vpercuoco/Desktop/GRA_TEST/GRA",
+                "--output",
+                "C:/Users/vpercuoco/Desktop/GRA_TEST/compilations",
+                "--system",
+                "GRA",
+                "--settings",
+                "workflows/settings.json",
+                "--step",
+                "--recursive",
+                "--force"
+              
+            ]
+        },
 
 
     ]

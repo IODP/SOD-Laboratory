@@ -1,7 +1,7 @@
 {
 	"other": "",
-	"logfile":"",
-	"check_raw_file_existence":"False",
+	"logfile": "",
+	"check_raw_file_existence": "False",
 	"systems": {
 		"PWAVE_L": {
 			"analysis": "PWAVE_L",
@@ -19,7 +19,9 @@
 				"instrument_file": {
 					"pattern": "^.+\\.PWAVE_L",
 					"func": "iodp.utils.read_instrument_file",
-					"kwargs": {"as_dataframe": "True"},
+					"kwargs": {
+						"as_dataframe": "True"
+					},
 					"add_depths": {
 						"active": "False",
 						"offset_col": "offset",
@@ -51,7 +53,9 @@
 				"instrument_file": {
 					"pattern": "^.+\\.MS",
 					"func": "iodp.utils.read_instrument_file",
-					"kwargs": {"as_dataframe": "True"},
+					"kwargs": {
+						"as_dataframe": "True"
+					},
 					"add_depths": {
 						"active": "False",
 						"offset_col": "offset",
@@ -73,14 +77,20 @@
 				"instrument_file": {
 					"pattern": "^.+\\.GRA$",
 					"func": "iodp.utils.read_instrument_file",
-					"kwargs": {"as_dataframe": "True"},
+					"kwargs": {
+						"as_dataframe": "True"
+					},
 					"add_depths": {
 						"active": "False",
 						"offset_col": "offset",
 						"sample_number_col": "text_id",
 						"is_textid_col": "True"
 					}
-				}	
+				},
+				"tabular": {
+					"func": "pandas.read_csv",
+					"kwargs": {}
+				}
 			}
 		},
 		"RSC": {
@@ -103,7 +113,9 @@
 				"instrument_file": {
 					"pattern": "^.+\\.RSC",
 					"func": "iodp.utils.read_instrument_file",
-					"kwargs": {"as_dataframe": "True"},
+					"kwargs": {
+						"as_dataframe": "True"
+					},
 					"add_depths": {
 						"active": "False",
 						"offset_col": "offset",
@@ -135,8 +147,10 @@
 				"instrument_file": {
 					"pattern": "^.+\\.PROFILE",
 					"func": "iodp.utils.read_instrument_file",
-					"kwargs": {"as_dataframe": "True"}
-			}
+					"kwargs": {
+						"as_dataframe": "True"
+					}
+				}
 			}
 		},
 		"MSPOINT": {
@@ -155,7 +169,9 @@
 				"instrument_file": {
 					"pattern": "^.+\\.MSPOINT",
 					"func": "iodp.utils.read_instrument_file",
-					"kwargs": {"as_dataframe": "True"},
+					"kwargs": {
+						"as_dataframe": "True"
+					},
 					"add_depths": {
 						"active": "False",
 						"offset_col": "offset",
@@ -174,22 +190,24 @@
 						"as_dataframe": "True"
 					}
 				},
-			"instrument_file": {
-				"pattern": "^.+\\.RGB$",
-				"func": "iodp.utils.read_instrument_file",
-				"kwargs": {"as_dataframe": "True"},
-				"add_depths": {
-					"active": "False",
-					"offset_col": "offset",
-					"sample_number_col": "text_id",
-					"is_textid_col": "True"
-				}
-			}
-			},
-			"rgb_high_res": {
-				"func": "iodp.rgb.read_rgb_high_res_dat",
-				"kwargs": {
-					"as_dataframe": "True"
+				"instrument_file": {
+					"pattern": "^.+\\.RGB$",
+					"func": "iodp.utils.read_instrument_file",
+					"kwargs": {
+						"as_dataframe": "True"
+					},
+					"add_depths": {
+						"active": "False",
+						"offset_col": "offset",
+						"sample_number_col": "text_id",
+						"is_textid_col": "True"
+					}
+				},
+				"rgb_high_res": {
+					"func": "iodp.rgb.read_rgb_high_res_dat",
+					"kwargs": {
+						"as_dataframe": "True"
+					}
 				}
 			}
 		},
@@ -213,11 +231,13 @@
 					"kwargs": {
 						"as_dataframe": "True"
 					}
-				},			
+				},
 				"instrument_file": {
 					"pattern": "^.+\\.ROI",
 					"func": "iodp.utils.read_instrument_file",
-					"kwargs": {"as_dataframe": "True"},
+					"kwargs": {
+						"as_dataframe": "True"
+					},
 					"add_depths": {
 						"active": "False",
 						"offset_col": "offset",
@@ -253,7 +273,9 @@
 				"instrument_file": {
 					"pattern": "^.+\\.NGR",
 					"func": "iodp.utils.read_instrument_file",
-					"kwargs": {"as_dataframe": "True"},
+					"kwargs": {
+						"as_dataframe": "True"
+					},
 					"add_depths": {
 						"active": "False",
 						"offset_col": "offset",
@@ -288,7 +310,9 @@
 				},
 				"instrument_file": {
 					"func": "iodp.utils.read_instrument_file",
-					"kwargs": {"as_dataframe": "True"},
+					"kwargs": {
+						"as_dataframe": "True"
+					},
 					"add_depths": {
 						"active": "False",
 						"offset_col": "offset",
@@ -323,7 +347,9 @@
 				},
 				"instrument_file": {
 					"func": "iodp.utils.read_instrument_file",
-					"kwargs": {"as_dataframe": "True"},
+					"kwargs": {
+						"as_dataframe": "True"
+					},
 					"add_depths": {
 						"active": "False",
 						"offset_col": "offset",
@@ -355,7 +381,7 @@
 					}
 				},
 				"instrument_file": {
-				"func": "iodp.utils.read_instrument_file",
+					"func": "iodp.utils.read_instrument_file",
 					"kwargs": {
 						"drop_fields": [
 							"calib_dark_raw",
